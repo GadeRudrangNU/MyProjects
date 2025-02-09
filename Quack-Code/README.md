@@ -6,6 +6,15 @@ In a rapidly evolving digital workspace, remote collaboration is essential. Deve
 This project aims to solve this challenge by developing a **real-time collaborative code editor**, enabling multiple users to edit code simultaneously with synchronized updates and built-in communication features.
 
 ![Live Collaboration](assets/Collab.png)
+## Real-Time Collaborative User Identification
+
+Our real-time collaborative editor is designed to offer an experience similar to Google Docs. When multiple users join a session, each participant’s label—with their username—is clearly visible to all collaborators. The current user's label is highlighted with a distinctive border (using a color such as `#bdbdff`), making it easy for everyone to quickly identify their own presence in the session.
+
+As users join or leave, the connected users list updates instantly. This ensures that everyone is aware of who is actively editing the document at any given moment, enhancing collaboration and streamlining communication.
+
+Below is an example that demonstrates how multiple user labels are visible to all participants:
+
+![Multiple User Handling](assets/MultiUser.png)
 
 ---
 
