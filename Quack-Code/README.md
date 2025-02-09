@@ -30,14 +30,13 @@ This project follows a **modular development approach** using modern web technol
 ### **Technology Stack**
 - **Frontend**: React.js, Tailwind CSS
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB / Firebase (if applicable)
+- **Database**: MongoDB 
 - **Real-time Communication**: WebSockets (Socket.io)
-- **Deployment**: Vercel / Heroku / AWS
 
 ### **Implementation Details**
 - **Real-time Editing**: WebSocket-based synchronization ensures live updates across all connected users.
 - **User Authentication**: Secure login and session management prevent unauthorized access.
-- **Code Execution**: Embedded code execution (if supported) allows users to test scripts within the editor.
+- **Code Execution**: Embedded code execution allows users to test scripts within the editor.
 - **Scalability Considerations**: Optimized database queries and efficient WebSocket handling improve performance.
 
 ---
