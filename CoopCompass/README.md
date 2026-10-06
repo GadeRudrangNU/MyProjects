@@ -2,7 +2,6 @@
 
 AI-assisted co-op discovery, application preparation, and job-search intelligence for students.
 
-> **Status: in active development.** The full source code, documentation, product case study, experiment designs and screenshots will be published to this folder shortly.
 
 ## What it is
 
