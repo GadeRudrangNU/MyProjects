@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-10-06T19:05:38.617741",
+  "real_users": 0,
+  "research_participants": 0,
+  "jobs_analyzed": 0,
+  "applications_started": 0,
+  "applications_completed": 0,
+  "median_job_evaluation_time_minutes": null,
+  "median_application_preparation_time_minutes": null,
+  "median_baseline_minutes": null,
+  "median_assisted_minutes": null,
+  "median_time_saved_minutes": null,
+  "median_time_reduction_pct": null,
+  "observations_with_baseline": 0,
+  "claim_threshold": 10,
+  "claimable": false,
+  "resume_suggestion_acceptance_rate": null,
+  "application_to_interview_rate": null,
+  "weekly_estimated_time_saved_minutes": null,
+  "notes": [
+    "All values are computed from local data; null means not enough data to compute.",
+    "Time saved compares the user's optional self-reported 'how long would this normally take' (baseline) with tracked active time in CoopCompass for the same application. It is self-reported, not a controlled measurement.",
+    "Time-saved results are only claimable once >= 10 observations exist (currently 0).",
+    "median_time_saved_minutes and median_time_reduction_pct are medians of the per-application differences / percentage reductions."
+  ]
+}

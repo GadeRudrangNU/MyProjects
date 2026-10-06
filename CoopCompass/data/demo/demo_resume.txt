@@ -1,0 +1,28 @@
+Alex Sample (FICTIONAL DEMO RESUME - not a real person)
+Boston, MA
+
+Education
+Northeastern University, Boston, MA
+Master of Science in Data Analytics Engineering (Expected May 2027)
+University of Example, Pune, India
+B.Tech in Computer Engineering, 2022
+
+Experience
+Data Analyst Intern, Example Logistics Pvt Ltd   Jun 2021 - Aug 2021
+• Automated weekly operations reporting using Python and SQL, replacing a manual spreadsheet process
+• Built Power BI dashboards that tracked delivery performance for the operations team
+• Cleaned and merged shipment data from three internal systems using Pandas
+
+Software Engineer, Sample Software Ltd   Jan 2022 - Dec 2023
+• Developed REST APIs in FastAPI backed by PostgreSQL for an internal analytics tool
+• Wrote unit tests with pytest and set up a CI/CD pipeline with GitHub Actions
+• Containerized services with Docker and deployed them to AWS
+
+Projects
+Job Search Tracker
+• Built a React and FastAPI application to track job applications, deployed with Docker
+Retail Demand Forecasting
+• Trained time series forecasting models in Python and scikit-learn and presented results in Tableau dashboards
+
+Skills
+Python, SQL, Pandas, scikit-learn, Tableau, Power BI, FastAPI, PostgreSQL, Docker, Git, AWS, React

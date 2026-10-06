@@ -1,0 +1,28 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# user data: resumes, databases, real survey responses
+uploads/
+data/*.db
+data/*.sqlite*
+data/research/survey_results.csv
+data/research/*.private.*
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# node
+frontend/node_modules/
+frontend/dist/
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
