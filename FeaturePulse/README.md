@@ -2,7 +2,7 @@
 
 Turn fragmented customer feedback into evidence-backed product decisions.
 
-> **Status: in active development.** The full source code, documentation, evaluation results and screenshots will be published to this folder shortly.
+
 
 ## What it is
 
