@@ -1,0 +1,234 @@
+{
+  "n_records": 65669,
+  "density_sample": 20000,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "pca_dims": 48,
+  "noise_reassignment_min_cosine": 0.3,
+  "candidates": [
+    {
+      "name": "kmeans_k20",
+      "algorithm": "kmeans",
+      "params": {
+        "k": 20
+      },
+      "n_clusters": 20,
+      "noise_pct": 0.0,
+      "silhouette_cosine": 0.0405,
+      "davies_bouldin": 2.8945,
+      "mean_cosine_to_centroid": 0.5413,
+      "largest_cluster_share_pct": 14.57,
+      "median_cluster_size": 2952,
+      "topic_diversity": 0.78,
+      "fit_seconds": 40.4,
+      "stability_ari_80pct_subsample": 0.8458,
+      "evaluated_on": 65669
+    },
+    {
+      "name": "kmeans_k40",
+      "algorithm": "kmeans",
+      "params": {
+        "k": 40
+      },
+      "n_clusters": 40,
+      "noise_pct": 0.0,
+      "silhouette_cosine": 0.0201,
+      "davies_bouldin": 2.8714,
+      "mean_cosine_to_centroid": 0.5708,
+      "largest_cluster_share_pct": 5.75,
+      "median_cluster_size": 1388,
+      "topic_diversity": 0.7275,
+      "fit_seconds": 74.3,
+      "stability_ari_80pct_subsample": 0.5896,
+      "evaluated_on": 65669
+    },
+    {
+      "name": "kmeans_k60",
+      "algorithm": "kmeans",
+      "params": {
+        "k": 60
+      },
+      "n_clusters": 60,
+      "noise_pct": 0.0,
+      "silhouette_cosine": 0.0255,
+      "davies_bouldin": 2.8348,
+      "mean_cosine_to_centroid": 0.5896,
+      "largest_cluster_share_pct": 3.52,
+      "median_cluster_size": 1017,
+      "topic_diversity": 0.705,
+      "fit_seconds": 64.7,
+      "stability_ari_80pct_subsample": 0.5149,
+      "evaluated_on": 65669
+    },
+    {
+      "name": "kmeans_k80",
+      "algorithm": "kmeans",
+      "params": {
+        "k": 80
+      },
+      "n_clusters": 80,
+      "noise_pct": 0.0,
+      "silhouette_cosine": 0.0309,
+      "davies_bouldin": 2.8614,
+      "mean_cosine_to_centroid": 0.6027,
+      "largest_cluster_share_pct": 2.84,
+      "median_cluster_size": 752,
+      "topic_diversity": 0.715,
+      "fit_seconds": 84.9,
+      "stability_ari_80pct_subsample": 0.5599,
+      "evaluated_on": 65669
+    },
+    {
+      "name": "kmeans_k120",
+      "algorithm": "kmeans",
+      "params": {
+        "k": 120
+      },
+      "n_clusters": 120,
+      "noise_pct": 0.0,
+      "silhouette_cosine": 0.0327,
+      "davies_bouldin": 2.8761,
+      "mean_cosine_to_centroid": 0.621,
+      "largest_cluster_share_pct": 1.84,
+      "median_cluster_size": 533,
+      "topic_diversity": 0.6908,
+      "fit_seconds": 235.1,
+      "stability_ari_80pct_subsample": 0.517,
+      "evaluated_on": 65669
+    },
+    {
+      "name": "hdbscan_leaf_mcs30",
+      "algorithm": "hdbscan",
+      "params": {
+        "min_cluster_size": 30
+      },
+      "evaluated_on": 20000,
+      "n_clusters": 10,
+      "noise_pct": 94.52,
+      "silhouette_cosine": 0.3582,
+      "davies_bouldin": 1.1303,
+      "mean_cosine_to_centroid": 0.7623,
+      "largest_cluster_share_pct": 2.24,
+      "median_cluster_size": 55,
+      "topic_diversity": 0.74,
+      "fit_seconds": 80.3,
+      "after_noise_reassignment": {
+        "n_clusters": 10,
+        "noise_pct": 16.45,
+        "silhouette_cosine": 0.0697,
+        "davies_bouldin": 3.0066,
+        "mean_cosine_to_centroid": 0.5462,
+        "largest_cluster_share_pct": 37.02,
+        "median_cluster_size": 997,
+        "topic_diversity": 0.87
+      },
+      "stability_ari_80pct_subsample": 0.9203
+    },
+    {
+      "name": "hdbscan_leaf_mcs60",
+      "algorithm": "hdbscan",
+      "params": {
+        "min_cluster_size": 60
+      },
+      "evaluated_on": 20000,
+      "n_clusters": 3,
+      "noise_pct": 93.55,
+      "silhouette_cosine": 0.3913,
+      "davies_bouldin": 1.3005,
+      "mean_cosine_to_centroid": 0.7148,
+      "largest_cluster_share_pct": 3.94,
+      "median_cluster_size": 309,
+      "topic_diversity": 0.8667,
+      "fit_seconds": 101.2,
+      "after_noise_reassignment": {
+        "n_clusters": 3,
+        "noise_pct": 20.99,
+        "silhouette_cosine": 0.1095,
+        "davies_bouldin": 2.8138,
+        "mean_cosine_to_centroid": 0.5212,
+        "largest_cluster_share_pct": 50.64,
+        "median_cluster_size": 4083,
+        "topic_diversity": 0.9333
+      },
+      "stability_ari_80pct_subsample": 0.8866
+    },
+    {
+      "name": "hdbscan_leaf_mcs120",
+      "algorithm": "hdbscan",
+      "params": {
+        "min_cluster_size": 120
+      },
+      "evaluated_on": 20000,
+      "n_clusters": 3,
+      "noise_pct": 93.61,
+      "silhouette_cosine": 0.4253,
+      "davies_bouldin": 1.2455,
+      "mean_cosine_to_centroid": 0.7348,
+      "largest_cluster_share_pct": 4.34,
+      "median_cluster_size": 265,
+      "topic_diversity": 0.8333,
+      "fit_seconds": 93.2,
+      "after_noise_reassignment": {
+        "n_clusters": 3,
+        "noise_pct": 21.55,
+        "silhouette_cosine": 0.1088,
+        "davies_bouldin": 2.815,
+        "mean_cosine_to_centroid": 0.5219,
+        "largest_cluster_share_pct": 51.07,
+        "median_cluster_size": 3764,
+        "topic_diversity": 0.9333
+      },
+      "stability_ari_80pct_subsample": 0.9116
+    },
+    {
+      "name": "dbscan_eps0.4",
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.4,
+        "min_samples": 10
+      },
+      "evaluated_on": 20000,
+      "n_clusters": 0,
+      "noise_pct": 100.0,
+      "silhouette_cosine": null,
+      "fit_seconds": 0.9
+    },
+    {
+      "name": "dbscan_eps0.5",
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.5,
+        "min_samples": 10
+      },
+      "evaluated_on": 20000,
+      "n_clusters": 6,
+      "noise_pct": 98.86,
+      "silhouette_cosine": 0.2468,
+      "davies_bouldin": 1.1447,
+      "mean_cosine_to_centroid": 0.8727,
+      "largest_cluster_share_pct": 0.74,
+      "median_cluster_size": 20,
+      "topic_diversity": 0.3438,
+      "fit_seconds": 0.8,
+      "stability_ari_80pct_subsample": 0.7693
+    },
+    {
+      "name": "dbscan_eps0.6",
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.6,
+        "min_samples": 10
+      },
+      "evaluated_on": 20000,
+      "n_clusters": 27,
+      "noise_pct": 92.44,
+      "silhouette_cosine": 0.2992,
+      "davies_bouldin": 1.2279,
+      "mean_cosine_to_centroid": 0.7906,
+      "largest_cluster_share_pct": 2.94,
+      "median_cluster_size": 20,
+      "topic_diversity": 0.7434,
+      "fit_seconds": 1.1,
+      "stability_ari_80pct_subsample": 0.9011
+    }
+  ]
+}

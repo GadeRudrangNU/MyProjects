@@ -1,0 +1,64 @@
+{
+  "human_evaluation": {
+    "status": "pending",
+    "note": "Human evaluation pending.",
+    "n_labeled": 0,
+    "sample_rows": 150
+  },
+  "clustering_pipeline": {
+    "records": 65669,
+    "themes": 80,
+    "uncategorized": 0,
+    "cluster_info": {
+      "method": "kmeans",
+      "k": 80
+    },
+    "intrinsic": {
+      "n_clusters": 80,
+      "noise_pct": 0.0,
+      "silhouette_cosine": 0.0309,
+      "davies_bouldin": 2.8614,
+      "mean_cosine_to_centroid": 0.6027,
+      "largest_cluster_share_pct": 2.84,
+      "median_cluster_size": 752,
+      "topic_diversity": 0.7238
+    },
+    "seconds": 651.6
+  },
+  "sentiment_vs_star_rating": {
+    "n_evaluated": 3000,
+    "label_source": "dataset star rating (<=2 negative, >=4 positive)",
+    "positive_share": 0.752,
+    "majority_class_accuracy": 0.752,
+    "vader": {
+      "accuracy": 0.8203,
+      "macro_f1": 0.7626,
+      "texts_per_second": 2277,
+      "model_download_mb": 0
+    },
+    "distilbert_sst2": {
+      "accuracy": 0.7887,
+      "macro_f1": 0.7637,
+      "texts_per_second": 6,
+      "model_download_mb": 268
+    },
+    "decision": "VADER is used in the pipeline: see accuracy/throughput trade-off above. The product blends VADER with the star rating as a weak signal when a rating exists, so the blend is not scored against ratings."
+  },
+  "data_preparation": {
+    "raw_records": 288065,
+    "unparseable_date": 0,
+    "empty_text": 12,
+    "too_short_or_noisy": 139442,
+    "non_english": 5835,
+    "exact_duplicates_consolidated": 2622,
+    "kept_before_sampling": 140154,
+    "kept_after_sampling": 65669,
+    "extra": {},
+    "sample_cap_per_app": 600,
+    "products": 395,
+    "date_min": "2014-01-01",
+    "date_max": "2017-05-02",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "seconds": 1369.3
+  }
+}

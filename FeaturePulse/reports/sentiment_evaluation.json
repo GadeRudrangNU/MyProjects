@@ -1,0 +1,19 @@
+{
+  "n_evaluated": 3000,
+  "label_source": "dataset star rating (<=2 negative, >=4 positive)",
+  "positive_share": 0.752,
+  "majority_class_accuracy": 0.752,
+  "vader": {
+    "accuracy": 0.8203,
+    "macro_f1": 0.7626,
+    "texts_per_second": 2277,
+    "model_download_mb": 0
+  },
+  "distilbert_sst2": {
+    "accuracy": 0.7887,
+    "macro_f1": 0.7637,
+    "texts_per_second": 6,
+    "model_download_mb": 268
+  },
+  "decision": "VADER is used in the pipeline: see accuracy/throughput trade-off above. The product blends VADER with the star rating as a weak signal when a rating exists, so the blend is not scored against ratings."
+}

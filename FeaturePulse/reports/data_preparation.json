@@ -1,0 +1,17 @@
+{
+  "raw_records": 288065,
+  "unparseable_date": 0,
+  "empty_text": 12,
+  "too_short_or_noisy": 139442,
+  "non_english": 5835,
+  "exact_duplicates_consolidated": 2622,
+  "kept_before_sampling": 140154,
+  "kept_after_sampling": 65669,
+  "extra": {},
+  "sample_cap_per_app": 600,
+  "products": 395,
+  "date_min": "2014-01-01",
+  "date_max": "2017-05-02",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "seconds": 1369.3
+}

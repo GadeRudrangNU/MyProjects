@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply bg-slate-50 text-slate-800 antialiased; }
+.tnum { font-variant-numeric: tabular-nums; }
+th { @apply text-left text-[11px] font-semibold uppercase tracking-wide text-slate-500 px-3 py-2 bg-slate-50 border-b border-slate-200 whitespace-nowrap; }
+td { @apply px-3 py-2 border-b border-slate-100 text-sm align-middle; }
+input, select, textarea { @apply border border-slate-300 rounded-md px-2 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand-600/30 focus:border-brand-600; }
+input[type='range'] { @apply p-0 border-0 shadow-none focus:ring-0; accent-color: #4f46e5; }
+.btn { @apply inline-flex items-center gap-1 rounded-md border border-slate-300 bg-white px-2.5 py-1 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50; }
+.btn-primary { @apply border-brand-600 bg-brand-600 text-white hover:bg-brand-700; }
+.btn-danger { @apply border-red-300 text-red-700 hover:bg-red-50; }

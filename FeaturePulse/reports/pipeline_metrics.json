@@ -1,0 +1,20 @@
+{
+  "records": 65669,
+  "themes": 80,
+  "uncategorized": 0,
+  "cluster_info": {
+    "method": "kmeans",
+    "k": 80
+  },
+  "intrinsic": {
+    "n_clusters": 80,
+    "noise_pct": 0.0,
+    "silhouette_cosine": 0.0309,
+    "davies_bouldin": 2.8614,
+    "mean_cosine_to_centroid": 0.6027,
+    "largest_cluster_share_pct": 2.84,
+    "median_cluster_size": 752,
+    "topic_diversity": 0.7238
+  },
+  "seconds": 651.6
+}
