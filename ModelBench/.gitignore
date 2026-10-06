@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+node_modules/
+dist/
+coverage/
+backend/data/*.db
+backend/data/uploads/
+*.log
+.claude/

@@ -1,0 +1,8 @@
+﻿fastapi==0.115.6
+uvicorn[standard]==0.34.0
+sqlalchemy==2.0.36
+pydantic==2.10.4
+python-multipart==0.0.20
+prometheus-client==0.21.1
+numpy<2.3
+transformers==4.47.1

@@ -1,0 +1,67 @@
+name: ModelBench Deploy
+
+# Backend  -> Hugging Face Space (Docker SDK, free CPU)
+# Frontend -> GitHub Pages
+# Each job skips itself until its secrets/variables are configured in the repo settings.
+
+on:
+  workflow_run:
+    workflows: [ModelBench CI]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  backend-space:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_SPACE: ${{ vars.HF_SPACE }} # e.g. your-username/modelbench-api
+    steps:
+      - uses: actions/checkout@v4
+      - name: Push backend to the Space
+        if: env.HF_TOKEN != '' && env.HF_SPACE != ''
+        run: |
+          git clone "https://user:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}" space
+          find space -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -r ModelBench/backend/. space/
+          rm -rf space/tests space/.venv space/pytest.ini space/requirements-dev.txt
+          cp ModelBench/deploy/hf-space-README.md space/README.md
+          cd space
+          git config user.email "ci@users.noreply.github.com" && git config user.name "ci"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Deploy ${GITHUB_SHA::7}" && git push)
+
+  frontend-pages:
+    if: vars.API_URL != '' && (github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      VITE_API_URL: ${{ vars.API_URL }} # e.g. https://your-username-modelbench-api.hf.space
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ModelBench/frontend/package-lock.json
+      - run: npm ci --no-audit --no-fund
+        working-directory: ModelBench/frontend
+      - run: npm run build
+        working-directory: ModelBench/frontend
+        env:
+          VITE_BASE: /${{ github.event.repository.name }}/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ModelBench/frontend/dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

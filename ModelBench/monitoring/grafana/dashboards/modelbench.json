@@ -1,0 +1,36 @@
+{
+  "title": "ModelBench inference",
+  "uid": "modelbench",
+  "schemaVersion": 39,
+  "refresh": "5s",
+  "time": { "from": "now-15m", "to": "now" },
+  "panels": [
+    {
+      "id": 1, "type": "timeseries", "title": "Inference latency p95 (s) by model",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "unit": "s", "thresholds": { "mode": "absolute", "steps": [{ "color": "green", "value": null }, { "color": "red", "value": 0.15 }] }, "custom": { "thresholdsStyle": { "mode": "line" } } }, "overrides": [] },
+      "targets": [{ "refId": "A", "legendFormat": "{{model}}", "expr": "histogram_quantile(0.95, sum by (le, model) (rate(inference_latency_seconds_bucket[1m])))" }]
+    },
+    {
+      "id": 2, "type": "timeseries", "title": "Inference latency p50 (s) by model",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "unit": "s" }, "overrides": [] },
+      "targets": [{ "refId": "A", "legendFormat": "{{model}}", "expr": "histogram_quantile(0.50, sum by (le, model) (rate(inference_latency_seconds_bucket[1m])))" }]
+    },
+    {
+      "id": 3, "type": "timeseries", "title": "Requests per second by route",
+      "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "fieldConfig": { "defaults": { "unit": "reqps" }, "overrides": [] },
+      "targets": [{ "refId": "A", "legendFormat": "{{method}} {{path}}", "expr": "sum by (method, path) (rate(http_request_duration_seconds_count[1m]))" }]
+    },
+    {
+      "id": 4, "type": "stat", "title": "Evaluation runs finished",
+      "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 },
+      "datasource": { "type": "prometheus", "uid": "prometheus" },
+      "targets": [{ "refId": "A", "legendFormat": "{{status}}", "expr": "sum by (status) (evaluation_runs_total)" }]
+    }
+  ]
+}

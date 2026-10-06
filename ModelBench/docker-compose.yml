@@ -1,0 +1,34 @@
+# Whole stack on one machine, all free/open source:
+#   docker compose up --build
+# UI http://localhost:8080 | API docs http://localhost:8000/docs | Prometheus :9090 | Grafana :3000 (admin/admin)
+services:
+  backend:
+    build: ./backend
+    ports: ["8000:8000"]
+    volumes: ["modelbench-data:/app/data"]
+
+  frontend:
+    build: ./frontend
+    ports: ["8080:80"]
+    depends_on: [backend]
+
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    ports: ["9090:9090"]
+    volumes: ["./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    depends_on: [backend]
+
+  grafana:
+    image: grafana/grafana:11.4.0
+    ports: ["3000:3000"]
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_AUTH_ANONYMOUS_ENABLED: "true"
+      GF_AUTH_ANONYMOUS_ORG_ROLE: Viewer
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on: [prometheus]
+
+volumes:
+  modelbench-data:
