@@ -1,0 +1,20 @@
+{
+  "raw_rows": 1067371,
+  "exact_duplicates_removed": 34335,
+  "credit_note_rows": 19104,
+  "non_credit_negative_quantity_rows": 3393,
+  "non_credit_zero_or_negative_price_rows": 6019,
+  "non_product_code_rows": 5980,
+  "credit_note_product_rows": 17914,
+  "credit_note_rows_missing_customer": 328,
+  "purchase_rows_valid": 1003214,
+  "purchase_rows_missing_customer": 226637,
+  "purchase_rows_modelled": 776577,
+  "credit_note_rows_modelled": 17586,
+  "matching": {
+    "credit_rows_total": 17586,
+    "credit_rows_with_match": 16003,
+    "credit_units_total": 464292.0,
+    "credit_units_matched": 450259.0
+  }
+}

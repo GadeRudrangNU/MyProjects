@@ -1,0 +1,234 @@
+{
+  "rows_raw": 1067371,
+  "date_range": [
+    "2009-12-01 07:45:00",
+    "2011-12-09 12:50:00"
+  ],
+  "unique_invoices": 53628,
+  "unique_customers": 5942,
+  "unique_products": 5131,
+  "countries": 43,
+  "missing_values": {
+    "invoice": {
+      "missing": 0,
+      "pct": 0.0
+    },
+    "stock_code": {
+      "missing": 0,
+      "pct": 0.0
+    },
+    "description": {
+      "missing": 4382,
+      "pct": 0.41
+    },
+    "quantity": {
+      "missing": 0,
+      "pct": 0.0
+    },
+    "invoice_date": {
+      "missing": 0,
+      "pct": 0.0
+    },
+    "unit_price": {
+      "missing": 0,
+      "pct": 0.0
+    },
+    "customer_id": {
+      "missing": 243007,
+      "pct": 22.77
+    },
+    "country": {
+      "missing": 0,
+      "pct": 0.0
+    }
+  },
+  "duplicate_rows_exact": 34335,
+  "duplicate_note": "The two source sheets overlap on 2010-12-01..2010-12-09, which accounts for a large share of exact duplicates.",
+  "rows_in_sheet_overlap_window": 40480,
+  "prep_stats": {
+    "raw_rows": 1067371,
+    "exact_duplicates_removed": 34335,
+    "credit_note_rows": 19104,
+    "non_credit_negative_quantity_rows": 3393,
+    "non_credit_zero_or_negative_price_rows": 6019,
+    "non_product_code_rows": 5980,
+    "credit_note_product_rows": 17914,
+    "credit_note_rows_missing_customer": 328,
+    "purchase_rows_valid": 1003214,
+    "purchase_rows_missing_customer": 226637,
+    "purchase_rows_modelled": 776577,
+    "credit_note_rows_modelled": 17586,
+    "matching": {
+      "credit_rows_total": 17586,
+      "credit_rows_with_match": 16003,
+      "credit_units_total": 464292.0,
+      "credit_units_matched": 450259.0
+    }
+  },
+  "leakage_audit": [
+    {
+      "field": "Invoice (the 'C' prefix)",
+      "decision": "EXCLUDED",
+      "reason": "The prefix IS the outcome signal: it identifies credit notes. Used only to build labels and historical rates."
+    },
+    {
+      "field": "Quantity < 0",
+      "decision": "EXCLUDED",
+      "reason": "Negative quantity only occurs on credit notes (post-outcome)."
+    },
+    {
+      "field": "cancelled_qty / first_cancel_date / lag_days / cancel_fraction",
+      "decision": "EXCLUDED",
+      "reason": "Derived from the matched credit note of the same line - the label itself."
+    },
+    {
+      "field": "Invoice number (ordering)",
+      "decision": "EXCLUDED",
+      "reason": "Monotone proxy for time; would let a model memorise the period instead of behaviour."
+    },
+    {
+      "field": "Customer ID / StockCode as identifiers",
+      "decision": "EXCLUDED as raw IDs",
+      "reason": "High-cardinality IDs invite memorisation; behaviour is carried by point-in-time history features instead."
+    },
+    {
+      "field": "Historical credit-note rates (customer, product)",
+      "decision": "ALLOWED, point-in-time",
+      "reason": "Counted only from credit notes dated strictly before the purchase timestamp; smoothed toward the base rate."
+    },
+    {
+      "field": "Quantity, price, order composition, timestamp, country",
+      "decision": "ALLOWED",
+      "reason": "All known at checkout time."
+    },
+    {
+      "field": "Credit notes dated within the 30-day window after a purchase",
+      "decision": "EXCLUDED from features",
+      "reason": "Not knowable at purchase time; they are the label. A purge gap of 30 days also separates train/validation/test."
+    }
+  ],
+  "features_used": [
+    "quantity",
+    "unit_price",
+    "line_value",
+    "order_lines",
+    "order_units",
+    "order_value",
+    "line_share_of_order",
+    "month",
+    "day_of_week",
+    "hour",
+    "is_uk",
+    "cust_prior_orders",
+    "cust_prior_spend",
+    "cust_days_since_last_order",
+    "cust_tenure_days",
+    "cust_prior_cancel_lines",
+    "cust_prior_cancel_rate",
+    "prod_prior_lines",
+    "prod_prior_cancel_rate",
+    "prod_qty_ratio",
+    "prod_price_ratio",
+    "unusual_quantity",
+    "unusual_price"
+  ],
+  "target": {
+    "definition": "y=1 if the purchase line is matched to a credit note (same customer, same product, FIFO-from-most-recent) within 30 days",
+    "observable_lines": 712562,
+    "positive_lines": 11321,
+    "positive_rate": 0.015887740294879604,
+    "lag_days_quantiles_all_matched": {
+      "0.1": 0.3275000000000028,
+      "0.25": 4.802777777777778,
+      "0.5": 10.078472222222222,
+      "0.75": 29.940277777777776,
+      "0.9": 84.0113888888889
+    },
+    "share_of_matched_within_7d": 0.3673053663504997,
+    "share_of_matched_within_30d": 0.7510344388567064,
+    "share_of_matched_within_90d": 0.9060411229231651,
+    "matching_coverage": {
+      "credit_rows_total": 17586,
+      "credit_rows_with_match": 16003,
+      "credit_units_total": 464292.0,
+      "credit_units_matched": 450259.0
+    }
+  },
+  "rate_by_country_top8": {
+    "United Kingdom": {
+      "lines": 641339,
+      "rate": 0.01480184426644879
+    },
+    "Germany": {
+      "lines": 14559,
+      "rate": 0.04340957483343636
+    },
+    "EIRE": {
+      "lines": 14168,
+      "rate": 0.02505646527385658
+    },
+    "France": {
+      "lines": 11618,
+      "rate": 0.018247546909967292
+    },
+    "Netherlands": {
+      "lines": 4747,
+      "rate": 0.006109121550452918
+    },
+    "Spain": {
+      "lines": 3305,
+      "rate": 0.018456883509833585
+    },
+    "Switzerland": {
+      "lines": 2861,
+      "rate": 0.01188395665851101
+    },
+    "Belgium": {
+      "lines": 2707,
+      "rate": 0.013298854820834873
+    }
+  },
+  "rate_by_hour": {
+    "6": 0.0,
+    "7": 0.01623686723973257,
+    "8": 0.02451631959828681,
+    "9": 0.024645413142485362,
+    "10": 0.021447801376009573,
+    "11": 0.015149301536283027,
+    "12": 0.014489320541671602,
+    "13": 0.014764397005869664,
+    "14": 0.014019359581767685,
+    "15": 0.014339343173808673,
+    "16": 0.012770308488883088,
+    "17": 0.017022390991226922,
+    "18": 0.019467974438995395,
+    "19": 0.010356078876436374,
+    "20": 0.007250418293363078
+  },
+  "rate_by_month": {
+    "2009-12": 0.013704978813559322,
+    "2010-01": 0.016565278427702387,
+    "2010-02": 0.0159013679532979,
+    "2010-03": 0.0165892501658925,
+    "2010-04": 0.01759047868557955,
+    "2010-05": 0.017050298380221655,
+    "2010-06": 0.015492727569864357,
+    "2010-07": 0.017064075036727314,
+    "2010-08": 0.014105133343610297,
+    "2010-09": 0.018148660175897873,
+    "2010-10": 0.015234801227019127,
+    "2010-11": 0.013062656470868744,
+    "2010-12": 0.013688450858461418,
+    "2011-01": 0.018616003062787136,
+    "2011-02": 0.015486500254712175,
+    "2011-03": 0.017457943925233643,
+    "2011-04": 0.014857910046990379,
+    "2011-05": 0.017703862660944206,
+    "2011-06": 0.018158090976882924,
+    "2011-07": 0.016317896804411876,
+    "2011-08": 0.015777836075403815,
+    "2011-09": 0.01650215135408757,
+    "2011-10": 0.01549032112073399,
+    "2011-11": 0.013470132812991755
+  }
+}

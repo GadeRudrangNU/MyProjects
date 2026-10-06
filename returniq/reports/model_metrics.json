@@ -1,0 +1,217 @@
+{
+  "roc_auc": 0.7699008968532655,
+  "pr_auc": 0.06261647795761793,
+  "precision": 0.11121116614137776,
+  "recall": 0.11972855065438681,
+  "f1": 0.11531279178338003,
+  "test_samples": 131932,
+  "selected_model": "random_forest",
+  "selection_rule": "highest validation PR-AUC among candidates",
+  "calibration_method": "sigmoid (Platt) scaling fitted on the validation period",
+  "label": "purchase line matched to a credit note within 30 days",
+  "threshold_rule": "probability threshold maximising F1 on the validation period",
+  "threshold": 0.09118132791883067,
+  "confusion_matrix": {
+    "tn": 127895,
+    "fp": 1974,
+    "fn": 1816,
+    "tp": 247
+  },
+  "brier": 0.015037795252683773,
+  "positives": 2063,
+  "base_rate": 0.015636843222266016,
+  "brier_uncalibrated": 0.15031971343697512,
+  "top_k": [
+    {
+      "top_fraction": 0.01,
+      "n_flagged": 1319,
+      "precision": 0.12357846853677028,
+      "recall": 0.07901114881240912,
+      "lift": 7.90303175520755
+    },
+    {
+      "top_fraction": 0.05,
+      "n_flagged": 6596,
+      "precision": 0.07974530018192844,
+      "recall": 0.2549684924866699,
+      "lift": 5.099833709938043
+    },
+    {
+      "top_fraction": 0.1,
+      "n_flagged": 13193,
+      "precision": 0.06298794815432426,
+      "recall": 0.4028114396509937,
+      "lift": 4.028175460928894
+    },
+    {
+      "top_fraction": 0.2,
+      "n_flagged": 26386,
+      "precision": 0.04460698855453649,
+      "recall": 0.5705283567619971,
+      "lift": 2.852685028588031
+    }
+  ],
+  "tiers": {
+    "High": {
+      "orders_lines": 9996,
+      "share_of_lines": 0.07576630385350029,
+      "observed_rate": 0.0700280112044818,
+      "share_of_all_positives": 0.3393116820164809
+    },
+    "Medium": {
+      "orders_lines": 22091,
+      "share_of_lines": 0.1674423187702756,
+      "observed_rate": 0.026345570594359696,
+      "share_of_all_positives": 0.28211342704798836
+    },
+    "Low": {
+      "orders_lines": 99845,
+      "share_of_lines": 0.7567913773762242,
+      "observed_rate": 0.007822124292653613,
+      "share_of_all_positives": 0.37857489093553076
+    }
+  },
+  "tier_cutoffs_raw_score": {
+    "raw_medium": 0.4831645700217861,
+    "raw_high": 0.636859674664695
+  },
+  "calibration": {
+    "observed": [
+      0.0005305441867515538,
+      0.0021223376032744636,
+      0.0038656863488213448,
+      0.006973394982187524,
+      0.011293867960281968,
+      0.012809823391192299,
+      0.013113014477374365,
+      0.016448116425377093,
+      0.02622602895474873,
+      0.0629831741700773
+    ],
+    "predicted": [
+      0.0006276828619151782,
+      0.0013207984600289203,
+      0.002337820825321417,
+      0.0038159373154752515,
+      0.006081542858134877,
+      0.009457890913509407,
+      0.013596956167803166,
+      0.018162217671734593,
+      0.026136365522805682,
+      0.06712903144643292
+    ],
+    "uncalibrated_observed": [
+      0.0005305441867515538,
+      0.0021223376032744636,
+      0.0038656863488213448,
+      0.006973394982187524,
+      0.011293867960281968,
+      0.012809823391192299,
+      0.013113014477374365,
+      0.016448116425377093,
+      0.02622602895474873,
+      0.0629831741700773
+    ],
+    "uncalibrated_predicted": [
+      0.07166463262968994,
+      0.11779621522672783,
+      0.16894672387623247,
+      0.22555714321133927,
+      0.29079553179959916,
+      0.36236756606977605,
+      0.4266840554213606,
+      0.4801063179163016,
+      0.5466689236308822,
+      0.6938095128292486
+    ]
+  },
+  "splits": {
+    "train": {
+      "rows": 478272,
+      "positives": 7535,
+      "base_rate": 0.01575463334671484,
+      "start": "2009-12-01 07:45:00",
+      "end": "2011-03-31 19:55:00"
+    },
+    "val": {
+      "rows": 54780,
+      "positives": 982,
+      "base_rate": 0.01792625045637094,
+      "start": "2011-05-01 10:51:00",
+      "end": "2011-06-30 20:08:00"
+    },
+    "test": {
+      "rows": 131932,
+      "positives": 2063,
+      "base_rate": 0.015636843222266016,
+      "start": "2011-07-31 10:28:00",
+      "end": "2011-11-09 12:49:00"
+    },
+    "pending": {
+      "rows": 64015,
+      "positives": null,
+      "base_rate": null,
+      "start": "2011-11-09 13:12:00",
+      "end": "2011-12-09 12:50:00"
+    }
+  },
+  "comparison": {
+    "heuristic_product_history": {
+      "validation": {
+        "roc_auc": 0.7000119118746152,
+        "pr_auc": 0.04491467985921725
+      },
+      "test": {
+        "roc_auc": 0.6849642329648811,
+        "pr_auc": 0.04098043782195971
+      },
+      "note": "Single-feature rule (product's smoothed historical credit-note rate); not a trained model."
+    },
+    "logistic_regression": {
+      "validation": {
+        "roc_auc": 0.7864692840208098,
+        "pr_auc": 0.06111394856176888
+      },
+      "test": {
+        "roc_auc": 0.7844239678234691,
+        "pr_auc": 0.06491523861192543
+      },
+      "fit_seconds": 11.7
+    },
+    "random_forest": {
+      "validation": {
+        "roc_auc": 0.8055318514782119,
+        "pr_auc": 0.07995463074101325
+      },
+      "test": {
+        "roc_auc": 0.7699008968532655,
+        "pr_auc": 0.06261647795761793
+      },
+      "fit_seconds": 274.8
+    },
+    "hist_gradient_boosting": {
+      "validation": {
+        "roc_auc": 0.8135894784510725,
+        "pr_auc": 0.07834350473791922
+      },
+      "test": {
+        "roc_auc": 0.7593410854482481,
+        "pr_auc": 0.05312408774995909
+      },
+      "fit_seconds": 41.2
+    },
+    "xgboost": {
+      "validation": {
+        "roc_auc": 0.8071970721130844,
+        "pr_auc": 0.07630425006757192
+      },
+      "test": {
+        "roc_auc": 0.7548673689214853,
+        "pr_auc": 0.06011260064619377
+      },
+      "fit_seconds": 20.9
+    }
+  },
+  "generated_at": "2026-10-06T14:17:16",
+  "random_state": 42
+}
