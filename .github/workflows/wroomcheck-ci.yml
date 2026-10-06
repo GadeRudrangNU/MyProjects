@@ -1,0 +1,39 @@
+name: WroomCheck CI
+
+on:
+  push:
+    branches: [master]
+    paths: ["WroomCheck/**", ".github/workflows/wroomcheck-*.yml"]
+  pull_request:
+    paths: ["WroomCheck/**", ".github/workflows/wroomcheck-*.yml"]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: WroomCheck
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: WroomCheck/pyproject.toml
+      - run: pip install -e ".[db,api,dev]"
+      - run: pytest
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: WroomCheck/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: WroomCheck/frontend/package-lock.json
+      - run: npm ci
+      - run: npm run build

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wroomcheck"
+version = "0.1.0"
+description = "Early vehicle-defect detection from NHTSA complaints: streaming clustering, spike detection, RAG summaries and a recall backtest."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+# Postgres + pgvector storage (real-data pipeline)
+db = ["psycopg[binary]>=3.1", "pgvector>=0.2.5"]
+# Free local embeddings (all-MiniLM-L6-v2)
+embed = ["sentence-transformers>=2.7"]
+# LangChain + Ollama (free local LLM) for summaries and RAG Q&A
+llm = ["langchain-core>=0.2", "langchain-ollama>=0.1"]
+api = ["fastapi>=0.110", "uvicorn[standard]>=0.29"]
+dev = ["pytest>=8", "httpx>=0.27"]
+all = ["wroomcheck[db,embed,llm,api,dev]"]
+
+[project.scripts]
+wroomcheck = "wroomcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+wroomcheck = ["schema.sql"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
