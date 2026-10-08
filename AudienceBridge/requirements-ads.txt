@@ -1,0 +1,2 @@
+-r requirements.txt
+google-ads>=25

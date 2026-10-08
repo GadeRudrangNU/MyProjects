@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+credentials/
+*service-account*.json
+*-key.json
+google-ads.yaml
+.streamlit/secrets.toml
+
+activation_payloads/
+reports/*
+!reports/.gitkeep

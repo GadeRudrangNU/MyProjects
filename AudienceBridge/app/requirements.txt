@@ -1,0 +1,7 @@
+streamlit>=1.50
+pandas>=2.1
+pyarrow>=15
+db-dtypes>=1.2
+pyyaml>=6
+google-cloud-bigquery>=3.25
+google-auth>=2.30

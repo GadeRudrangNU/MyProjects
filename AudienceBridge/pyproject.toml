@@ -1,0 +1,17 @@
+[project]
+name = "audiencebridge"
+version = "0.1.0"
+description = "First-party data activation and measurement for Google Ads"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["integration: needs live BigQuery credentials"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

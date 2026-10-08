@@ -1,0 +1,66 @@
+client: gmerch_store
+display_name: Google Merchandise Store (simulated)
+
+data:
+  start_date: "2020-11-01"
+  end_date: "2021-01-31"
+
+as_of_date: "2020-12-31"
+future_end_date: "2021-01-31"
+
+min_audience_size: 100
+
+measurement:
+  holdout_pct: 10
+  holdout_salt: salt-v1
+  alpha: 0.05
+
+propensity:
+  enabled: true
+  backend: bqml
+  eval_pct: 20
+
+crm:
+  seed: 42
+  purchaser_match_rate: 0.90
+  other_match_rate: 0.30
+  consent_ad_user_data_rate: 0.88
+  consent_ad_personalization_rate: 0.85
+
+activation:
+  user_lists: {}
+  campaign_daily_budget_usd: 5
+
+segments:
+  - name: cart_abandoners_7d
+    objective: re-engage
+    rule: >
+      last_cart_date >= DATE_SUB(@as_of, INTERVAL 7 DAY)
+      AND (last_purchase_date IS NULL OR last_purchase_date < last_cart_date)
+    membership_days: 30
+
+  - name: high_value_buyers
+    objective: premium_offers
+    rule: revenue_usd >= @p90_revenue_usd
+    membership_days: 180
+
+  - name: lapsed_buyers_30d
+    objective: win_back
+    rule: last_purchase_date < DATE_SUB(@as_of, INTERVAL 30 DAY)
+    membership_days: 90
+
+  - name: apparel_browsers
+    objective: category_prospecting
+    rule: apparel_views >= 3 AND purchases = 0
+    membership_days: 30
+
+  - name: high_propensity
+    objective: likely_to_buy
+    rule: propensity_score >= @p90_propensity_score
+    membership_days: 30
+    eval_only: true
+
+  - name: recent_purchasers_exclusion
+    objective: exclude
+    rule: last_purchase_date >= DATE_SUB(@as_of, INTERVAL 14 DAY)
+    membership_days: 14
