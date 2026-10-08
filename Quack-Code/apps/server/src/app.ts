@@ -30,6 +30,7 @@ export async function buildApp(deps: { config: Config; db: Db; pool: { query: (q
     logger: config.NODE_ENV === 'test' ? false : { level: config.LOG_LEVEL },
     genReqId: (req) => (req.headers['x-request-id'] as string | undefined) ?? randomUUID(),
     trustProxy: true,
+    bodyLimit: 2_500_000, // room for a 500k-character import in multi-byte text
   }).withTypeProvider<ZodTypeProvider>();
 
   app.setValidatorCompiler(validatorCompiler);

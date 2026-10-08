@@ -1,5 +1,6 @@
-import { useMemo, useRef, useState, type KeyboardEvent } from 'react';
-import { filePathSchema, type FileNode } from '@quack/shared';
+import { Fragment, useMemo, useRef, useState, type KeyboardEvent } from 'react';
+import * as ContextMenu from '@radix-ui/react-context-menu';
+import { MAX_DOC_CHARS, filePathSchema, type FileNode } from '@quack/shared';
 import { Button, ErrorNote, Field, Modal } from './ui';
 
 interface TreeNode {
@@ -52,11 +53,12 @@ interface Props {
   canWrite: boolean;
   onOpen: (id: string) => void;
   onCreate: (path: string, kind: 'file' | 'folder') => Promise<unknown>;
+  onUpload: (path: string, content: string) => Promise<unknown>;
   onMove: (id: string, path: string) => Promise<unknown>;
   onDelete: (id: string) => Promise<unknown>;
 }
 
-export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onMove, onDelete }: Props) {
+export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onUpload, onMove, onDelete }: Props) {
   const tree = useMemo(() => buildTree(files), [files]);
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
   const [focusPath, setFocusPath] = useState<string | null>(null);
@@ -65,6 +67,8 @@ export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onMove, 
   const [error, setError] = useState<unknown>(null);
   const [busy, setBusy] = useState(false);
   const itemRefs = useRef(new Map<string, HTMLElement>());
+  const fileInput = useRef<HTMLInputElement>(null);
+  const [notice, setNotice] = useState<{ ok: boolean; lines: string[] } | null>(null);
 
   const rows = useMemo(() => flatten(tree, expanded), [tree, expanded]);
   const tabStop = rows.find((r) => r.node.file.path === focusPath) ?? rows.find((r) => r.node.file.id === activeId) ?? rows[0];
@@ -89,10 +93,55 @@ export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onMove, 
     setValue(d?.type === 'create' ? d.initial : d?.type === 'rename' ? d.file.path : '');
     setDialog(d);
   };
-  const startCreate = (kind: 'file' | 'folder') => {
-    const sel = rows.find((r) => r.node.file.path === focusPath)?.node.file;
-    const base = !sel ? '' : sel.kind === 'folder' ? `${sel.path}/` : sel.path.includes('/') ? `${sel.path.slice(0, sel.path.lastIndexOf('/'))}/` : '';
-    openDialog({ type: 'create', kind, initial: base });
+  // The item the toolbar acts on: the one last focused or clicked, else the open file.
+  const selected = rows.find((r) => r.node.file.path === focusPath)?.node.file ?? files.find((f) => f.id === activeId) ?? null;
+  /** Folder prefix that new or uploaded files go into: the selected folder, or the selected file's folder. */
+  const targetPrefix = () => {
+    if (!selected) return '';
+    if (selected.kind === 'folder') return `${selected.path}/`;
+    return selected.path.includes('/') ? `${selected.path.slice(0, selected.path.lastIndexOf('/'))}/` : '';
+  };
+  const startCreate = (kind: 'file' | 'folder') => openDialog({ type: 'create', kind, initial: targetPrefix() });
+
+  const importFiles = async (list: FileList | null) => {
+    if (!list || list.length === 0) return;
+    const prefix = targetPrefix();
+    const problems: string[] = [];
+    let imported = 0;
+    for (const file of Array.from(list)) {
+      const path = prefix + file.name;
+      if (!filePathSchema.safeParse(path).success) {
+        problems.push(`${file.name}: the name may only use letters, numbers, spaces and . _ -`);
+        continue;
+      }
+      if (file.size > MAX_DOC_CHARS * 4) {
+        problems.push(`${file.name}: too large (the limit is ${MAX_DOC_CHARS.toLocaleString()} characters)`);
+        continue;
+      }
+      let text: string;
+      try {
+        text = new TextDecoder('utf-8', { fatal: true }).decode(await file.arrayBuffer());
+      } catch {
+        problems.push(`${file.name}: not a text file`);
+        continue;
+      }
+      if (text.length > MAX_DOC_CHARS || text.includes(String.fromCharCode(0))) {
+        problems.push(`${file.name}: ${text.length > MAX_DOC_CHARS ? 'too large' : 'not a text file'}`);
+        continue;
+      }
+      try {
+        await onUpload(path, text);
+        imported++;
+      } catch (err) {
+        problems.push(`${file.name}: ${err instanceof Error ? err.message : 'upload failed'}`);
+      }
+    }
+    if (prefix) toggle(prefix.slice(0, -1), true);
+    if (fileInput.current) fileInput.current.value = '';
+    setNotice({
+      ok: problems.length === 0,
+      lines: [imported ? `Imported ${imported} file${imported === 1 ? '' : 's'}.` : 'Nothing was imported.', ...problems],
+    });
   };
 
   const onKeyDown = (e: KeyboardEvent<HTMLUListElement>) => {
@@ -155,6 +204,50 @@ export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onMove, 
           </div>
         )}
       </div>
+      {canWrite && (
+        <div className="flex flex-wrap gap-1 border-b border-border px-2 py-1.5" role="toolbar" aria-label="File actions">
+          <input
+            ref={fileInput}
+            type="file"
+            multiple
+            hidden
+            tabIndex={-1}
+            aria-label="Choose files to import"
+            onChange={(e) => void importFiles(e.target.files)}
+          />
+          <Button variant="ghost" className="!px-2 !py-1 text-xs" onClick={() => fileInput.current?.click()} title="Import existing files from your computer">
+            ⬆ Upload
+          </Button>
+          <Button
+            variant="ghost"
+            className="!px-2 !py-1 text-xs"
+            disabled={!selected}
+            onClick={() => selected && openDialog({ type: 'rename', file: selected })}
+            title="Rename or move the selected item (F2)"
+          >
+            Rename
+          </Button>
+          <Button
+            variant="ghost"
+            className="!px-2 !py-1 text-xs"
+            disabled={!selected}
+            onClick={() => selected && openDialog({ type: 'delete', file: selected })}
+            title="Delete the selected item (Delete)"
+          >
+            Delete
+          </Button>
+        </div>
+      )}
+      {notice && (
+        <div role="status" className={`flex items-start justify-between gap-2 border-b border-border px-3 py-2 text-xs ${notice.ok ? 'text-ok' : 'text-danger'}`}>
+          <ul className="space-y-0.5">
+            {notice.lines.map((l) => (
+              <li key={l}>{l}</li>
+            ))}
+          </ul>
+          <button onClick={() => setNotice(null)} aria-label="Dismiss message" className="shrink-0 px-1">×</button>
+        </div>
+      )}
       {rows.length === 0 ? (
         <p className="p-3 text-sm text-muted">{canWrite ? 'No files yet. Create one to start coding.' : 'This project has no files yet.'}</p>
       ) : (
@@ -163,7 +256,7 @@ export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onMove, 
             const f = row.node.file;
             const isFolder = f.kind === 'folder';
             const open = expanded.has(f.path);
-            return (
+            const item = (
               <li
                 key={f.id}
                 role="treeitem"
@@ -184,6 +277,28 @@ export function FileTree({ files, activeId, canWrite, onOpen, onCreate, onMove, 
                 <span className="truncate">{row.node.name}</span>
                 <span className="sr-only">{isFolder ? 'folder' : 'file'}</span>
               </li>
+            );
+            if (!canWrite) return <Fragment key={f.id}>{item}</Fragment>;
+            const menuItem = 'cursor-pointer rounded px-2 py-1.5 outline-none data-[highlighted]:bg-surface-2';
+            return (
+              <ContextMenu.Root key={f.id} onOpenChange={(o) => o && setFocusPath(f.path)}>
+                <ContextMenu.Trigger asChild>{item}</ContextMenu.Trigger>
+                <ContextMenu.Portal>
+                  <ContextMenu.Content className="z-50 min-w-40 rounded-md border border-border bg-surface p-1 text-sm shadow-lg">
+                    {!isFolder && (
+                      <ContextMenu.Item className={menuItem} onSelect={() => onOpen(f.id)}>
+                        Open
+                      </ContextMenu.Item>
+                    )}
+                    <ContextMenu.Item className={menuItem} onSelect={() => openDialog({ type: 'rename', file: f })}>
+                      Rename or move…
+                    </ContextMenu.Item>
+                    <ContextMenu.Item className={`${menuItem} text-danger`} onSelect={() => openDialog({ type: 'delete', file: f })}>
+                      Delete…
+                    </ContextMenu.Item>
+                  </ContextMenu.Content>
+                </ContextMenu.Portal>
+              </ContextMenu.Root>
             );
           })}
         </ul>

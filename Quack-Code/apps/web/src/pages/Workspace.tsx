@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { can } from '@quack/shared';
 import { api } from '../lib/api';
 import {
-  useCreateInvite,
   useCreateProject,
   useMe,
   useMembers,
@@ -12,6 +11,7 @@ import {
   useUpdateMember,
   useWorkspace,
 } from '../lib/queries';
+import { InviteDialog } from '../components/InviteDialog';
 import { Button, Empty, ErrorNote, Field, Modal, Spinner } from '../components/ui';
 
 export function WorkspacePage() {
@@ -23,15 +23,11 @@ export function WorkspacePage() {
   const createProject = useCreateProject(workspaceId);
   const updateMember = useUpdateMember(workspaceId);
   const removeMember = useRemoveMember(workspaceId);
-  const createInvite = useCreateInvite(workspaceId);
   const nav = useNavigate();
 
   const [projectOpen, setProjectOpen] = useState(false);
   const [projectName, setProjectName] = useState('');
   const [inviteOpen, setInviteOpen] = useState(false);
-  const [inviteRole, setInviteRole] = useState<'editor' | 'viewer'>('editor');
-  const [inviteLink, setInviteLink] = useState<string | null>(null);
-  const [copied, setCopied] = useState(false);
 
   if (ws.isPending) return <div className="p-6"><Spinner /></div>;
   if (ws.error) return <div className="mx-auto max-w-3xl p-6"><ErrorNote error={ws.error} /></div>;
@@ -44,13 +40,6 @@ export function WorkspacePage() {
     setProjectOpen(false);
     setProjectName('');
     nav(`/p/${p.id}`);
-  };
-
-  const makeInvite = async (e: FormEvent) => {
-    e.preventDefault();
-    const inv = await createInvite.mutateAsync({ role: inviteRole, expiresInHours: 72, maxUses: 10 });
-    setInviteLink(`${location.origin}/invite/${inv.token}`);
-    setCopied(false);
   };
 
   const deleteWorkspace = async () => {
@@ -98,7 +87,7 @@ export function WorkspacePage() {
         <div className="flex items-center justify-between">
           <h2 id="members-h" className="text-lg font-semibold">Members</h2>
           {can(role, 'invite:create') && (
-            <Button onClick={() => { setInviteLink(null); setInviteOpen(true); }}>Invite people</Button>
+            <Button onClick={() => setInviteOpen(true)}>Invite people</Button>
           )}
         </div>
         {members.isPending && <Spinner />}
@@ -150,50 +139,7 @@ export function WorkspacePage() {
         </form>
       </Modal>
 
-      <Modal
-        open={inviteOpen}
-        onOpenChange={setInviteOpen}
-        title="Invite people"
-        description="The link expires in 3 days and works for up to 10 people. Anyone with it can join, so share it carefully."
-      >
-        {inviteLink ? (
-          <div className="space-y-3">
-            <Field label="Invite link" readOnly value={inviteLink} onFocus={(e) => e.currentTarget.select()} />
-            <div className="flex justify-end gap-2">
-              <Button
-                variant="primary"
-                onClick={async () => {
-                  await navigator.clipboard.writeText(inviteLink);
-                  setCopied(true);
-                }}
-              >
-                {copied ? 'Copied' : 'Copy link'}
-              </Button>
-            </div>
-            <p role="status" className="sr-only">{copied ? 'Invite link copied' : ''}</p>
-          </div>
-        ) : (
-          <form onSubmit={makeInvite} className="space-y-4">
-            <div className="space-y-1">
-              <label htmlFor="invite-role" className="block text-sm font-medium">Role</label>
-              <select
-                id="invite-role"
-                value={inviteRole}
-                onChange={(e) => setInviteRole(e.target.value as 'editor' | 'viewer')}
-                className="w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-              >
-                <option value="editor">Editor: can edit files</option>
-                <option value="viewer">Viewer: read, comment and run only</option>
-              </select>
-            </div>
-            {createInvite.error && <ErrorNote error={createInvite.error} />}
-            <div className="flex justify-end gap-2">
-              <Button type="button" onClick={() => setInviteOpen(false)}>Cancel</Button>
-              <Button type="submit" variant="primary" disabled={createInvite.isPending}>Create link</Button>
-            </div>
-          </form>
-        )}
-      </Modal>
+      <InviteDialog workspaceId={workspaceId} open={inviteOpen} onOpenChange={setInviteOpen} />
     </div>
   );
 }

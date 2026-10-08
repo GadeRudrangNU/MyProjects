@@ -92,7 +92,7 @@ export function useFileMutations(projectId: string) {
   const refresh = () => qc.invalidateQueries({ queryKey: keys.files(projectId) });
   return {
     create: useMutation({
-      mutationFn: (v: { path: string; kind: 'file' | 'folder' }) => api<FileNode>('POST', `/projects/${projectId}/files`, v),
+      mutationFn: (v: { path: string; kind: 'file' | 'folder'; content?: string }) => api<FileNode>('POST', `/projects/${projectId}/files`, v),
       onSuccess: refresh,
     }),
     move: useMutation({

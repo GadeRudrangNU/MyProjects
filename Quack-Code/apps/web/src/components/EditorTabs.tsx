@@ -1,4 +1,4 @@
-import type { KeyboardEvent } from 'react';
+import type { KeyboardEvent, ReactNode } from 'react';
 import type { FileNode } from '@quack/shared';
 
 interface Props {
@@ -7,9 +7,11 @@ interface Props {
   active: string | null;
   onActivate: (id: string) => void;
   onClose: (id: string) => void;
+  /** Right-aligned controls in the tab bar, e.g. Invite. */
+  actions?: ReactNode;
 }
 
-export function EditorTabs({ files, open, active, onActivate, onClose }: Props) {
+export function EditorTabs({ files, open, active, onActivate, onClose, actions }: Props) {
   const byId = new Map(files.map((f) => [f.id, f]));
   const tabs = open.map((id) => byId.get(id)).filter((f): f is FileNode => !!f);
 
@@ -36,9 +38,12 @@ export function EditorTabs({ files, open, active, onActivate, onClose }: Props) 
     e.preventDefault();
   };
 
-  if (tabs.length === 0) return <div className="h-9 border-b border-border bg-surface-2" />;
   return (
-    <div role="tablist" aria-label="Open files" onKeyDown={onKeyDown} className="flex h-9 shrink-0 overflow-x-auto border-b border-border bg-surface-2">
+    <div className="flex h-9 shrink-0 items-stretch border-b border-border bg-surface-2">
+      {tabs.length === 0 ? (
+        <div className="flex-1" />
+      ) : (
+        <div role="tablist" aria-label="Open files" onKeyDown={onKeyDown} className="flex min-w-0 flex-1 overflow-x-auto">
       {tabs.map((t) => {
         const selected = t.id === active;
         return (
@@ -67,6 +72,9 @@ export function EditorTabs({ files, open, active, onActivate, onClose }: Props) 
           </button>
         );
       })}
+        </div>
+      )}
+      {actions && <div className="flex shrink-0 items-center gap-1 border-l border-border px-2">{actions}</div>}
     </div>
   );
 }

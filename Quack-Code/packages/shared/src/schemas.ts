@@ -99,7 +99,18 @@ export const fileSchema = z.object({
   updatedAt: z.string(),
 });
 export type FileNode = z.infer<typeof fileSchema>;
-export const createFileSchema = z.object({ path: filePathSchema, kind: fileKindSchema });
+export const createFileSchema = z
+  .object({
+    path: filePathSchema,
+    kind: fileKindSchema,
+    /** One-shot import of existing text (e.g. an uploaded file). Later edits flow only through Yjs. */
+    content: z.string().max(MAX_DOC_CHARS).optional(),
+  })
+  .refine((v) => v.content === undefined || v.kind === 'file', { message: 'Folders cannot have content', path: ['content'] })
+  .refine((v) => v.content === undefined || !v.content.includes(String.fromCharCode(0)), {
+    message: 'Binary files cannot be imported',
+    path: ['content'],
+  });
 export const moveFileSchema = z.object({ path: filePathSchema });
 
 export const wsTicketSchema = z.object({ ticket: z.string(), role: roleSchema });

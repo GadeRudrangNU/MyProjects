@@ -1,9 +1,10 @@
-import { lazy, Suspense, useEffect, useMemo } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { can } from '@quack/shared';
 import { EditorTabs } from '../components/EditorTabs';
+import { InviteDialog } from '../components/InviteDialog';
 import { FileTree } from '../components/FileTree';
-import { Empty, ErrorNote, Spinner } from '../components/ui';
+import { Button, Empty, ErrorNote, Spinner } from '../components/ui';
 import { useFileMutations, useFiles, useMe, useProject, useWorkspace } from '../lib/queries';
 import { selectTabs, useTabs } from '../store/tabs';
 
@@ -19,6 +20,7 @@ export function ProjectPage() {
   const { create, move, remove } = useFileMutations(projectId);
   const tabs = useTabs(selectTabs(projectId));
   const { openFile, closeFile, activate, prune } = useTabs.getState();
+  const [inviteOpen, setInviteOpen] = useState(false);
 
   // Collaborators add and delete files too, so poll lightly and keep tabs consistent with the tree.
   useEffect(() => {
@@ -58,6 +60,7 @@ export function ProjectPage() {
               const f = await create.mutateAsync({ path, kind });
               if (kind === 'file') openFile(projectId, f.id);
             }}
+            onUpload={(path, content) => create.mutateAsync({ path, kind: 'file', content })}
             onMove={(id, path) => move.mutateAsync({ id, path })}
             onDelete={(id) => remove.mutateAsync(id)}
           />
@@ -71,6 +74,13 @@ export function ProjectPage() {
           active={tabs.active}
           onActivate={(id) => activate(projectId, id)}
           onClose={(id) => closeFile(projectId, id)}
+          actions={
+            can(workspace.data?.role, 'invite:create') && (
+              <Button variant="ghost" className="!py-1 text-xs" onClick={() => setInviteOpen(true)} title="Invite people to this workspace">
+                + Invite
+              </Button>
+            )
+          }
         />
         <div id="editor-panel" role="tabpanel" aria-labelledby={activeFile ? `tab-${activeFile.id}` : undefined} className="min-h-0 flex-1">
           {activeFile ? (
@@ -86,6 +96,7 @@ export function ProjectPage() {
           )}
         </div>
       </section>
+      <InviteDialog workspaceId={project.data.workspaceId} open={inviteOpen} onOpenChange={setInviteOpen} />
     </div>
   );
 }

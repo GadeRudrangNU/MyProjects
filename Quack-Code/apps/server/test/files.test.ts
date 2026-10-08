@@ -77,3 +77,23 @@ describe('file tree', () => {
     expect((await viewer.call('DELETE', `/files/${items[0]!.id}`)).statusCode).toBe(403);
   });
 });
+
+describe('importing existing files', () => {
+  it('creates a file with the given content', async () => {
+    const res = await editor.call('POST', `/projects/${projectId}/files`, { path: 'imported.js', kind: 'file', content: 'console.log(1);' });
+    expect(res.statusCode).toBe(201);
+    expect(await paths(editor)).toContain('imported.js');
+  });
+  it('rejects content on folders, binary content and oversized content', async () => {
+    const folder = await editor.call('POST', `/projects/${projectId}/files`, { path: 'dir-with-content', kind: 'folder', content: 'x' });
+    expect(folder.statusCode).toBe(400);
+    const binary = await editor.call('POST', `/projects/${projectId}/files`, { path: 'bin.dat', kind: 'file', content: 'a' + String.fromCharCode(0) + 'b' });
+    expect(binary.statusCode).toBe(400);
+    const huge = await editor.call('POST', `/projects/${projectId}/files`, { path: 'huge.txt', kind: 'file', content: 'x'.repeat(500_001) });
+    expect(huge.statusCode).toBe(400);
+  });
+  it('does not let viewers import', async () => {
+    const res = await viewer.call('POST', `/projects/${projectId}/files`, { path: 'v.js', kind: 'file', content: 'x' });
+    expect(res.statusCode).toBe(403);
+  });
+});

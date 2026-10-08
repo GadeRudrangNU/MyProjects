@@ -241,4 +241,13 @@ describe('collaborative editing', () => {
       t.app.docs.get = original;
     }
   });
+
+  it('opens an imported file with its content already in the shared document', async () => {
+    const wsId = (await owner.call('POST', '/workspaces', { name: 'Import' })).json().id;
+    const pid = (await owner.call('POST', `/workspaces/${wsId}/projects`, { name: 'P' })).json().id;
+    const content = 'const imported = true;' + String.fromCharCode(10) + 'line two';
+    const f = (await owner.call('POST', `/projects/${pid}/files`, { path: 'in.js', kind: 'file', content })).json();
+    const c = await connect(owner, f.id);
+    expect(c.text.toString()).toBe(content);
+  });
 });

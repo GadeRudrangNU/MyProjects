@@ -136,7 +136,7 @@ export async function projectRoutes(app: FastifyInstance) {
       try {
         const [f] = await db
           .insert(files)
-          .values({ projectId: p.id, path: req.body.path, kind: req.body.kind })
+          .values({ projectId: p.id, path: req.body.path, kind: req.body.kind, plainText: req.body.content ?? '' })
           .returning();
         return reply.status(201).send(fileDto(f!));
       } catch (e) {

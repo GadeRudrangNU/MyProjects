@@ -13,11 +13,11 @@ Everything runs on free tiers or locally. No credit card is needed anywhere.
 | Accounts | GitHub OAuth (state-checked), httpOnly session cookies, a dev-login for local work |
 | Workspaces | Create, rename, delete. Owner / Editor / Viewer roles, enforced on the server for every REST call and WebSocket |
 | Invites | Links with a role, an expiry and a usage limit. Only a hash of the token is stored; acceptance is atomic |
-| Projects & files | Multi-file projects, folders, rename / move / delete (folders carry their contents), tabs |
+| Projects & files | Multi-file projects, folders, tabs. Create, upload existing text files, rename / move and delete from a toolbar or a right-click menu (folders carry their contents). Invite teammates from the editor window |
 | Real-time editing | Yjs CRDT + CodeMirror 6, live named cursors, presence avatars, per-user undo that never reverts a collaborator |
 | Offline | Edits are kept in IndexedDB and merge automatically on reconnect; the status bar shows connected / reconnecting / offline |
 | Running code | JavaScript in a Web Worker, Python via Pyodide, inside a sandboxed iframe with a timeout and output limits |
-| Quality | 54 unit and API tests (API tests run against real Postgres), 5 Playwright end-to-end tests (two-user collaboration, offline merge, sandbox, axe accessibility), CI |
+| Quality | 58 unit and API tests (API tests run against real Postgres), 7 Playwright end-to-end tests (two-user collaboration, offline merge, file management, sandbox, axe accessibility), CI |
 
 **Planned, not built yet:** line comments, version history with diff and restore, ZIP export as a background job, project search, activity feed, notifications, feature flags, Google sign-in. The design for these is in the project scope; the data model has room for them.
 
