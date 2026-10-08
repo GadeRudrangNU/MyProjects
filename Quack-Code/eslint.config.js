@@ -18,8 +18,8 @@ export default tseslint.config(
     },
   },
   {
-    files: ['apps/web/scripts/*.mjs'],
-    languageOptions: { globals: { console: 'readonly' } },
+    files: ['apps/web/scripts/*.mjs', 'apps/web/e2e/*.mjs'],
+    languageOptions: { globals: { console: 'readonly', process: 'readonly' } },
   },
   {
     rules: {

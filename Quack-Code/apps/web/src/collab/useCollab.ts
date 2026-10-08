@@ -85,11 +85,12 @@ export function useCollab(fileId: string, me: User): Collab | null {
     };
 
     const syncStatus = () => {
-      if (provider.wsconnected && provider.synced) {
+      // The browser knowing it is offline beats a socket that has not noticed yet.
+      if (!navigator.onLine) setStatus('offline');
+      else if (provider.wsconnected && provider.synced) {
         everConnected = true;
         setStatus('connected');
-      } else if (!navigator.onLine) setStatus('offline');
-      else setStatus(everConnected ? 'reconnecting' : 'connecting');
+      } else setStatus(everConnected ? 'reconnecting' : 'connecting');
     };
 
     provider.on('status', syncStatus);
@@ -109,7 +110,11 @@ export function useCollab(fileId: string, me: User): Collab | null {
       backoff = 500;
       if (!provider.wsconnected) void connect();
     };
-    const onOffline = () => syncStatus();
+    const onOffline = () => {
+      syncStatus();
+      // A dead connection can look alive for minutes; closing it starts the reconnect loop right away.
+      provider.ws?.close();
+    };
     window.addEventListener('online', onOnline);
     window.addEventListener('offline', onOffline);
 

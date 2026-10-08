@@ -34,19 +34,19 @@ export const useWorkspaces = () =>
   useQuery({ queryKey: keys.workspaces, queryFn: () => api<Page<Workspace>>('GET', '/workspaces?limit=100') });
 
 export const useWorkspace = (id: string) =>
-  useQuery({ queryKey: keys.workspace(id), queryFn: () => api<Workspace>('GET', `/workspaces/${id}`) });
+  useQuery({ queryKey: keys.workspace(id), queryFn: () => api<Workspace>('GET', `/workspaces/${id}`), enabled: !!id });
 
 export const useMembers = (id: string) =>
-  useQuery({ queryKey: keys.members(id), queryFn: () => api<{ items: Member[] }>('GET', `/workspaces/${id}/members`) });
+  useQuery({ queryKey: keys.members(id), queryFn: () => api<{ items: Member[] }>('GET', `/workspaces/${id}/members`), enabled: !!id });
 
 export const useProjects = (wsId: string) =>
-  useQuery({ queryKey: keys.projects(wsId), queryFn: () => api<{ items: Project[] }>('GET', `/workspaces/${wsId}/projects`) });
+  useQuery({ queryKey: keys.projects(wsId), queryFn: () => api<{ items: Project[] }>('GET', `/workspaces/${wsId}/projects`), enabled: !!wsId });
 
 export const useProject = (id: string) =>
-  useQuery({ queryKey: keys.project(id), queryFn: () => api<Project>('GET', `/projects/${id}`) });
+  useQuery({ queryKey: keys.project(id), queryFn: () => api<Project>('GET', `/projects/${id}`), enabled: !!id });
 
 export const useFiles = (projectId: string) =>
-  useQuery({ queryKey: keys.files(projectId), queryFn: () => api<{ items: FileNode[] }>('GET', `/projects/${projectId}/files`) });
+  useQuery({ queryKey: keys.files(projectId), queryFn: () => api<{ items: FileNode[] }>('GET', `/projects/${projectId}/files`), enabled: !!projectId });
 
 export function useCreateWorkspace() {
   const qc = useQueryClient();

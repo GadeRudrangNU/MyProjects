@@ -1,54 +1,109 @@
-# Realtime Collaborative Code Editor
+# 🦆 Quack-Code
 
-## Problem Statement
-In a rapidly evolving digital workspace, remote collaboration is essential. Developers often need to work together on code in real-time, whether for pair programming, technical interviews, or brainstorming sessions. Existing solutions may lack seamless synchronization, efficient communication, or real-time editing capabilities.
+A real-time collaborative coding workspace. Sign in, create a workspace, invite teammates with a role, and edit code together live. Run JavaScript and Python right in the browser, in an isolated sandbox.
 
-This project aims to solve this challenge by developing a **real-time collaborative code editor**, enabling multiple users to edit code simultaneously with synchronized updates and built-in communication features.
+Everything runs on free tiers or locally. No credit card is needed anywhere.
 
-![Live Collaboration](assets/Collab.png)
-## Real-Time Collaborative User Identification
+![Two people editing the same file, with named cursors](docs/screenshots/collaboration.png)
 
-Our real-time collaborative editor is designed to offer an experience similar to Google Docs. When multiple users join a session, each participant’s label—with their username—is clearly visible to all collaborators. The current user's label is highlighted with a distinctive border (using a color such as `#bdbdff`), making it easy for everyone to quickly identify their own presence in the session.
+## What works today
 
-As users join or leave, the connected users list updates instantly. This ensures that everyone is aware of who is actively editing the document at any given moment, enhancing collaboration and streamlining communication.
+| Area | Status |
+| --- | --- |
+| Accounts | GitHub OAuth (state-checked), httpOnly session cookies, a dev-login for local work |
+| Workspaces | Create, rename, delete. Owner / Editor / Viewer roles, enforced on the server for every REST call and WebSocket |
+| Invites | Links with a role, an expiry and a usage limit. Only a hash of the token is stored; acceptance is atomic |
+| Projects & files | Multi-file projects, folders, rename / move / delete (folders carry their contents), tabs |
+| Real-time editing | Yjs CRDT + CodeMirror 6, live named cursors, presence avatars, per-user undo that never reverts a collaborator |
+| Offline | Edits are kept in IndexedDB and merge automatically on reconnect; the status bar shows connected / reconnecting / offline |
+| Running code | JavaScript in a Web Worker, Python via Pyodide, inside a sandboxed iframe with a timeout and output limits |
+| Quality | 54 unit and API tests (API tests run against real Postgres), 5 Playwright end-to-end tests (two-user collaboration, offline merge, sandbox, axe accessibility), CI |
 
-Below is an example that demonstrates how multiple user labels are visible to all participants:
+**Planned, not built yet:** line comments, version history with diff and restore, ZIP export as a background job, project search, activity feed, notifications, feature flags, Google sign-in. The design for these is in the project scope; the data model has room for them.
 
-![Multiple User Handling](assets/MultiUser.png)
+## Screenshots
 
----
+| Roles: viewers are read-only (enforced server-side) | Offline: edits are saved locally and merge later |
+| --- | --- |
+| ![Viewer view](docs/screenshots/viewer-readonly.png) | ![Offline state](docs/screenshots/offline.png) |
 
-## Aims and Objectives
-The objective of this project is to build an intuitive and efficient real-time collaborative code editor with the following key features:
+| Run JavaScript | Run Python (Pyodide) |
+| --- | --- |
+| ![JavaScript output](docs/screenshots/run-javascript.png) | ![Python output](docs/screenshots/run-python.png) |
 
-1. **Real-time Editing**: Multiple users can edit code simultaneously with live updates.
-2. **Syntax Highlighting**: Support for multiple programming languages for better readability.
-3. **Built-in Chat System**: Users can communicate directly within the editor.
-4. **Session Persistence**: Users can leave and rejoin sessions without losing progress.
-5. **Secure Authentication**: Ensuring only authorized users can access private sessions.
-6. **Dark & Light Mode**: Customizable themes to enhance user experience.
-7. **Scalability**: Ability to support multiple concurrent users efficiently.
+| Workspace: members, roles, invites | Sign in |
+| --- | --- |
+| ![Workspace](docs/screenshots/workspace.png) | ![Login](docs/screenshots/login.png) |
 
-![Login Interface](assets/Login.png)
+## Architecture
 
----
+```mermaid
+flowchart LR
+  subgraph Browser
+    UI[React app<br/>TanStack Query · Zustand]
+    ED[CodeMirror 6 + Yjs<br/>y-indexeddb offline store]
+    SB[Sandboxed iframe<br/>Web Worker · Pyodide]
+    UI --- ED
+    UI -. postMessage .- SB
+  end
+  subgraph Node["Single Node.js service (Fastify)"]
+    API[REST API<br/>auth · roles · validation]
+    RT[Realtime<br/>Yjs sync · presence · persistence]
+  end
+  DB[(PostgreSQL)]
+  UI -- "HTTPS /api/v1" --> API
+  ED -- "WebSocket (signed ticket)" --> RT
+  API --> DB
+  RT -- "debounced saves" --> DB
+```
 
-## Solution Approach
-This project follows a **modular development approach** using modern web technologies. The following methodologies and tools are implemented:
+- **One deployable service, modules kept separate.** Free hosts do not offer background workers, so the API and the real-time layer share a process. They are separate modules, so splitting them later only changes deployment.
+- **The server keeps no essential state in memory.** Documents are saved to Postgres on a debounce and when the last client leaves, so a restart loses nothing.
+- **Code never runs on the server.** Execution is entirely in the browser.
+- **File contents never travel over REST.** They flow only through Yjs.
 
-### **Technology Stack**
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB 
-- **Real-time Communication**: WebSockets (Socket.io)
+### How the sandbox works
 
-### **Implementation Details**
-- **Real-time Editing**: WebSocket-based synchronization ensures live updates across all connected users.
-- **User Authentication**: Secure login and session management prevent unauthorized access.
-- **Code Execution**: Embedded code execution allows users to test scripts within the editor.
-- **Scalability Considerations**: Optimized database queries and efficient WebSocket handling improve performance.
+Each language runs in `<iframe sandbox="allow-scripts">` (no `allow-same-origin`), so it has an opaque origin and no access to the app's cookies, storage or DOM. The code runs in a Web Worker inside it; the app and sandbox talk only through `postMessage`. A timeout terminates the worker, output is capped, and the JavaScript sandbox has a CSP that blocks all network access. The Python sandbox may reach only the pinned Pyodide CDN. The sandbox pages are static files (generated by `apps/web/scripts/build-sandbox.mjs`) so they carry their own CSP, separate from the app's.
 
----
+## Run it locally
 
+You need Node.js 20 or newer. **No Docker and no database install**: local development uses a real PostgreSQL started from the `embedded-postgres` package.
 
-This project provides a streamlined and interactive coding experience, making real-time collaboration effortless and efficient.
+```bash
+npm install
+npm run dev          # API on http://localhost:4000 (first start takes ~20s to create the database)
+npm run dev:web      # app on http://localhost:5173, in a second terminal
+```
+
+Open http://localhost:5173 and use **Dev sign in** (shown only in development). To sign in with GitHub instead, create a free OAuth app at github.com/settings/developers with the callback `http://localhost:4000/api/v1/auth/github/callback`, then copy `apps/server/.env.example` to `apps/server/.env` and fill in the client id and secret.
+
+## Tests
+
+```bash
+npm run lint
+npm run typecheck
+npm test                                   # unit + API integration tests (real Postgres, no setup)
+npx playwright install chromium            # once
+npm run test:e2e -w @quack/web             # end-to-end: two browsers, offline, sandbox, accessibility
+npm run screenshots -w @quack/web          # regenerates docs/screenshots
+```
+
+## Repository layout
+
+```
+apps/server     Fastify API, WebSocket sync, Drizzle schema + migrations, integration tests
+apps/web        React app, sandbox runtime, Playwright tests
+packages/shared Zod schemas, roles and permission rules used by both sides
+docs/decisions  Short write-ups of the main design decisions
+```
+
+## Decisions and limits
+
+Design decisions are in [`docs/decisions`](docs/decisions). Known limitations:
+
+- **Not deployed yet.** The code is ready for Netlify + Render + Neon (all free), but nothing is hosted. A free Render service sleeps when idle; the app shows a "waking up the server" screen for that.
+- **Single instance.** Live documents and presence are held in one process's memory (persisted to Postgres). Running two instances needs a pub/sub layer such as Redis.
+- **Soft document size cap.** Documents over 500,000 characters stop accepting further edits, but the edit that crosses the line is still accepted.
+- **JavaScript runs one file at a time.** There is no module import across project files yet.
+- **Pyodide loads from jsDelivr** on first Python run (about 8 seconds), so Python needs internet access.

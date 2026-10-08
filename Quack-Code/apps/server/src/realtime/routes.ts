@@ -77,6 +77,15 @@ export async function realtimeRoutes(app: FastifyInstance) {
     },
     async (socket, req) => {
       const { userId, userName, fileId, role } = req.wsCtx!;
+      // The client speaks first. Listeners must exist before the first await, otherwise its opening
+      // sync request is dropped while the document loads and it waits for a reply that never comes.
+      const early: Array<[Buffer, boolean]> = [];
+      let onMessage: ((data: Buffer, isBinary: boolean) => void) | null = null;
+      let onClose: (() => void) | null = null;
+      let closedEarly = false;
+      socket.on('message', (data: Buffer, isBinary: boolean) => (onMessage ? onMessage(data, isBinary) : early.push([data, isBinary])));
+      socket.on('close', () => (onClose ? onClose() : (closedEarly = true)));
+
       const live = await app.docs.get(fileId);
       const conn: Connection = {
         userId,
@@ -89,6 +98,10 @@ export async function realtimeRoutes(app: FastifyInstance) {
         close: (code, reason) => socket.close(code, reason),
       };
       const log = req.log.child({ fileId, userId, role });
+      if (closedEarly) {
+        void live.remove(conn); // nobody else may be holding the document open: let it unload
+        return;
+      }
       log.info('ws connected');
       live.add(conn);
 
@@ -130,7 +143,7 @@ export async function realtimeRoutes(app: FastifyInstance) {
         }
       }
 
-      socket.on('message', (data: Buffer, isBinary: boolean) => {
+      onMessage = (data, isBinary) => {
         if (!isBinary) return;
         try {
           const dec = decoding.createDecoder(new Uint8Array(data));
@@ -162,14 +175,15 @@ export async function realtimeRoutes(app: FastifyInstance) {
           log.warn({ err }, 'bad websocket message');
           socket.close(1003, 'bad message');
         }
-      });
+      };
+      for (const [data, isBinary] of early.splice(0)) onMessage(data, isBinary);
 
-      socket.on('close', () => {
+      onClose = () => {
         live.doc.off('update', onDocUpdate);
         live.awareness.off('update', onAwareness);
         log.info('ws disconnected');
         void live.remove(conn);
-      });
+      };
     },
   );
 }

@@ -26,6 +26,12 @@ export function EditorTabs({ files, open, active, onActivate, onClose }: Props) 
     else if (e.key === 'ArrowLeft') go(i - 1);
     else if (e.key === 'Home') go(0);
     else if (e.key === 'End') go(tabs.length - 1);
+    else if (e.key === 'Delete' && active) {
+      // Keyboard equivalent of the × affordance: the tab list may only contain tabs.
+      const next = tabs[Math.min(i, tabs.length - 2)];
+      onClose(active);
+      if (next && next.id !== active) requestAnimationFrame(() => document.getElementById(`tab-${next.id}`)?.focus());
+    }
     else return;
     e.preventDefault();
   };
@@ -36,27 +42,29 @@ export function EditorTabs({ files, open, active, onActivate, onClose }: Props) 
       {tabs.map((t) => {
         const selected = t.id === active;
         return (
-          <div key={t.id} className={`flex shrink-0 items-center border-r border-border ${selected ? 'bg-surface font-semibold' : ''}`}>
-            <button
-              id={`tab-${t.id}`}
-              role="tab"
-              aria-selected={selected}
-              aria-controls="editor-panel"
-              tabIndex={selected ? 0 : -1}
-              title={t.path}
-              onClick={() => onActivate(t.id)}
-              className="px-3 py-1.5 text-sm"
-            >
-              {t.path.split('/').pop()}
-            </button>
-            <button
-              onClick={() => onClose(t.id)}
-              aria-label={`Close ${t.path}`}
-              className="mr-1 rounded px-1.5 text-muted hover:bg-border"
+          <button
+            key={t.id}
+            id={`tab-${t.id}`}
+            role="tab"
+            aria-selected={selected}
+            aria-controls="editor-panel"
+            tabIndex={selected ? 0 : -1}
+            title={`${t.path} (Delete closes)`}
+            onClick={() => onActivate(t.id)}
+            className={`flex shrink-0 items-center gap-2 border-r border-border px-3 py-1.5 text-sm ${selected ? 'bg-surface font-semibold' : ''}`}
+          >
+            {t.path.split('/').pop()}
+            <span
+              aria-hidden
+              onClick={(e) => {
+                e.stopPropagation();
+                onClose(t.id);
+              }}
+              className="rounded px-1 text-muted hover:bg-border"
             >
               ×
-            </button>
-          </div>
+            </span>
+          </button>
         );
       })}
     </div>

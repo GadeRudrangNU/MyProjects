@@ -161,6 +161,10 @@ export class DocManager {
     await Promise.all([...this.docs.values()].map(async (p) => (await p).flush()));
   }
 
+  isOpen(fileId: string) {
+    return this.docs.has(fileId);
+  }
+
   get openDocs() {
     return this.docs.size;
   }

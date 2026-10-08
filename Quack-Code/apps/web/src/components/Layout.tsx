@@ -14,6 +14,7 @@ const SHORTCUTS: [string, string][] = [
   ['↑ ↓', 'Move through the file tree and tabs'],
   ['→ / ←', 'Expand / collapse a folder'],
   ['Enter', 'Open the focused file'],
+  ['Delete (on a tab)', 'Close the tab'],
   ['F2', 'Rename the focused file or folder'],
   ['Delete', 'Delete the focused file or folder'],
 ];

@@ -11,3 +11,5 @@ coverage
 playwright-report
 test-results
 apps/web/public/sandbox
+.pgdata-e2e
+apps/web/e2e-results

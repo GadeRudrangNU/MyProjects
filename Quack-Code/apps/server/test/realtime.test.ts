@@ -2,6 +2,9 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import WebSocket from 'ws';
 import * as Y from 'yjs';
 import { WebsocketProvider } from 'y-websocket';
+import * as encoding from 'lib0/encoding';
+import * as decoding from 'lib0/decoding';
+import * as syncProtocol from 'y-protocols/sync';
 import { eq } from 'drizzle-orm';
 import { schema } from '../src/db/client.js';
 import { createTestApp, type TestApp, type TestUser } from './helpers.js';
@@ -181,5 +184,61 @@ describe('collaborative editing', () => {
     const seen = [...b.provider.awareness.getStates().values()].find((s) => s.user?.color === '#00ff00');
     expect(seen?.user.name).toBe('olivia');
     expect(seen?.user.id).toBe(owner.user.id);
+  });
+
+  it('answers a sync request that arrives while the document is still loading', async () => {
+    const wsId = (await owner.call('POST', '/workspaces', { name: 'Race' })).json().id;
+    const pid = (await owner.call('POST', `/workspaces/${wsId}/projects`, { name: 'P' })).json().id;
+    const f = (await owner.call('POST', `/projects/${pid}/files`, { path: 'r.js', kind: 'file' })).json();
+    const ticket = (await owner.call('POST', `/files/${f.id}/ws-ticket`)).json().ticket as string;
+
+    // Make loading slow so the client's first message lands before the server is ready for it.
+    const original = t.app.docs.get.bind(t.app.docs);
+    t.app.docs.get = async (id: string) => {
+      await new Promise((r) => setTimeout(r, 400));
+      return original(id);
+    };
+    try {
+      const gotStep2 = await new Promise<boolean>((resolve) => {
+        const ws = new WebSocket(`${base}/api/v1/ws/files/${f.id}?ticket=${ticket}`);
+        ws.on('open', () => {
+          const enc = encoding.createEncoder();
+          encoding.writeVarUint(enc, 0);
+          syncProtocol.writeSyncStep1(enc, new Y.Doc());
+          ws.send(encoding.toUint8Array(enc));
+        });
+        ws.on('message', (data: Buffer) => {
+          const dec = decoding.createDecoder(new Uint8Array(data));
+          if (decoding.readVarUint(dec) === 0 && decoding.readVarUint(dec) === syncProtocol.messageYjsSyncStep2) {
+            ws.close();
+            resolve(true);
+          }
+        });
+        setTimeout(() => resolve(false), 4000);
+      });
+      expect(gotStep2).toBe(true);
+    } finally {
+      t.app.docs.get = original;
+    }
+  });
+
+  it('unloads a document when its only client leaves before it finished loading', async () => {
+    const wsId = (await owner.call('POST', '/workspaces', { name: 'Early' })).json().id;
+    const pid = (await owner.call('POST', `/workspaces/${wsId}/projects`, { name: 'P' })).json().id;
+    const f = (await owner.call('POST', `/projects/${pid}/files`, { path: 'e.js', kind: 'file' })).json();
+    const ticket = (await owner.call('POST', `/files/${f.id}/ws-ticket`)).json().ticket as string;
+    const original = t.app.docs.get.bind(t.app.docs);
+    t.app.docs.get = async (id: string) => {
+      await new Promise((r) => setTimeout(r, 300));
+      return original(id);
+    };
+    try {
+      const ws = new WebSocket(`${base}/api/v1/ws/files/${f.id}?ticket=${ticket}`);
+      await new Promise((r) => ws.on('open', r));
+      ws.terminate();
+      await until(() => !t.app.docs.isOpen(f.id), 5000);
+    } finally {
+      t.app.docs.get = original;
+    }
   });
 });

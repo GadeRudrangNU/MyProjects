@@ -9,6 +9,8 @@ const envSchema = z.object({
   GITHUB_CLIENT_ID: z.string().optional(),
   GITHUB_CLIENT_SECRET: z.string().optional(),
   DEV_LOGIN: z.enum(['true', 'false']).default('true'),
+  EMBEDDED_PG_DIR: z.string().default('.pgdata'),
+  EMBEDDED_PG_PORT: z.coerce.number().default(54320),
   TICKET_SECRET: z.string().optional(),
   SESSION_DAYS: z.coerce.number().default(14),
   LOG_LEVEL: z.string().default('info'),

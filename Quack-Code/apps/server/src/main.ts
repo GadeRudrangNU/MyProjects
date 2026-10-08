@@ -12,7 +12,11 @@ let embedded: EmbeddedDb | undefined;
 let databaseUrl = config.DATABASE_URL;
 if (!databaseUrl) {
   if (config.isProd) throw new Error('DATABASE_URL is required in production');
-  embedded = await startEmbeddedPostgres({ dir: path.resolve('.pgdata'), port: 54320, persistent: true });
+  embedded = await startEmbeddedPostgres({
+    dir: path.resolve(config.EMBEDDED_PG_DIR),
+    port: config.EMBEDDED_PG_PORT,
+    persistent: true,
+  });
   databaseUrl = embedded.url;
 }
 
