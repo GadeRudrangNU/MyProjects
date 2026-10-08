@@ -10,3 +10,4 @@ build
 coverage
 playwright-report
 test-results
+apps/web/public/sandbox

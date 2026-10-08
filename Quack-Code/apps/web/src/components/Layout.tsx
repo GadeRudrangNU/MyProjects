@@ -9,6 +9,7 @@ const SHORTCUTS: [string, string][] = [
   ['?', 'Show this help'],
   ['Ctrl/⌘ + Z', 'Undo your own edits (never a collaborator’s)'],
   ['Ctrl/⌘ + Shift + Z', 'Redo'],
+  ['Ctrl/⌘ + Enter', 'Run the open JavaScript or Python file'],
   ['Esc, then Tab', 'Leave the editor (Tab otherwise indents)'],
   ['↑ ↓', 'Move through the file tree and tabs'],
   ['→ / ←', 'Expand / collapse a folder'],

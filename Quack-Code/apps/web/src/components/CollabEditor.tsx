@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { Compartment, EditorState, type Extension } from '@codemirror/state';
 import {
   EditorView,
@@ -26,6 +26,9 @@ import { yCollab, yUndoManagerKeymap } from 'y-codemirror.next';
 import type { User } from '@quack/shared';
 import { useCollab } from '../collab/useCollab';
 import { StatusBar } from './StatusBar';
+import { ConsolePanel } from './ConsolePanel';
+import { languageOf } from '../sandbox/runner';
+import { useCodeRunner } from '../sandbox/useCodeRunner';
 
 async function languageFor(path: string): Promise<Extension> {
   const ext = path.split('.').pop()?.toLowerCase();
@@ -80,6 +83,13 @@ function focusEscape(): Extension {
 
 export function CollabEditor({ fileId, path, me }: { fileId: string; path: string; me: User }) {
   const collab = useCollab(fileId, me);
+  const language = languageOf(path);
+  const runner = useCodeRunner(language);
+  const runCode = useCallback(() => {
+    if (collab) void runner.run(collab.ytext.toString());
+  }, [collab, runner.run]);
+  const runRef = useRef(runCode);
+  runRef.current = runCode;
   const host = useRef<HTMLDivElement>(null);
   const viewRef = useRef<EditorView | null>(null);
   const lang = useRef(new Compartment());
@@ -110,6 +120,7 @@ export function CollabEditor({ fileId, path, me }: { fileId: string; path: strin
           syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
           focusEscape(),
           keymap.of([
+            { key: 'Mod-Enter', run: () => (runRef.current(), true) },
             ...closeBracketsKeymap,
             ...yUndoManagerKeymap, // per-user undo/redo: never reverts a collaborator's change
             ...searchKeymap,
@@ -157,6 +168,7 @@ export function CollabEditor({ fileId, path, me }: { fileId: string; path: strin
     <div className="flex h-full min-h-0 flex-col">
       <StatusBar collab={collab} readOnly={isReadOnly} path={path} />
       <div ref={host} className="min-h-0 flex-1 overflow-hidden" />
+      <ConsolePanel language={language} state={runner.state} onRun={runCode} onStop={runner.stop} onClear={runner.clear} />
     </div>
   );
 }

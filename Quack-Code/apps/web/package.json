@@ -8,7 +8,9 @@
     "build": "tsc -p tsconfig.json && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "test": "vitest run --passWithNoTests",
+    "predev": "node scripts/build-sandbox.mjs",
+    "prebuild": "node scripts/build-sandbox.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

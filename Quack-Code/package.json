@@ -15,7 +15,7 @@
     "build": "npm run build -w @quack/shared && npm run build -w @quack/server && npm run build -w @quack/web",
     "lint": "eslint .",
     "typecheck": "npm run typecheck -w @quack/shared && npm run typecheck -w @quack/server && npm run typecheck -w @quack/web",
-    "test": "npm run test -w @quack/shared && npm run test -w @quack/server",
+    "test": "npm run test -w @quack/shared && npm run test -w @quack/server && npm run test -w @quack/web",
     "dev:web": "npm run dev -w @quack/web"
   },
   "devDependencies": {

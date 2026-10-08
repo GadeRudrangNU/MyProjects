@@ -95,8 +95,9 @@ export function useCollab(fileId: string, me: User): Collab | null {
     provider.on('status', syncStatus);
     provider.on('sync', syncStatus);
     provider.on('connection-close', () => {
-      // Stop y-websocket's own retry loop; ours fetches a fresh ticket first.
-      provider.disconnect();
+      // Turn y-websocket's own scheduled retry into a no-op; ours fetches a fresh ticket first.
+      // (Not provider.disconnect(): it closes the socket again, re-emitting this event forever.)
+      provider.shouldConnect = false;
       syncStatus();
       clearTimeout(retry);
       retry = setTimeout(connect, backoff);
