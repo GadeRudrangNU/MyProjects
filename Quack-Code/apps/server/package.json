@@ -23,14 +23,20 @@
     "fastify": "^5.0.0",
     "fastify-plugin": "^6.0.0",
     "fastify-type-provider-zod": "^4.0.2",
+    "lib0": "^0.2.119",
     "pg": "^8.13.0",
+    "y-protocols": "^1.0.7",
+    "yjs": "^13.6.33",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "@types/pg": "^8.11.0",
+    "@types/ws": "^8.18.2",
     "drizzle-kit": "^0.31.11",
     "embedded-postgres": "^18.0.0-beta.1",
-    "tsx": "^4.19.0"
+    "tsx": "^4.19.0",
+    "ws": "^8.22.0",
+    "y-websocket": "^3.1.0"
   }
 }

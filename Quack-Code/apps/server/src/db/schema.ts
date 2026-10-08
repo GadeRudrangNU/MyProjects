@@ -1,4 +1,5 @@
-import { index, integer, pgTable, primaryKey, text, timestamp, uniqueIndex, uuid } from 'drizzle-orm/pg-core';
+import { sql } from 'drizzle-orm';
+import { customType, index, integer, pgTable, primaryKey, text, timestamp, uniqueIndex, uuid } from 'drizzle-orm/pg-core';
 
 export const users = pgTable(
   'users',
@@ -55,4 +56,36 @@ export const invites = pgTable(
     createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
   },
   (t) => [uniqueIndex('invites_token_hash_idx').on(t.tokenHash)],
+);
+
+export const projects = pgTable(
+  'projects',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    workspaceId: uuid('workspace_id').notNull().references(() => workspaces.id, { onDelete: 'cascade' }),
+    name: text('name').notNull(),
+    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index('projects_workspace_idx').on(t.workspaceId)],
+);
+
+const bytea = customType<{ data: Buffer }>({ dataType: () => 'bytea' });
+const tsvector = customType<{ data: string }>({ dataType: () => 'tsvector' });
+
+export const files = pgTable(
+  'files',
+  {
+    id: uuid('id').primaryKey().defaultRandom(),
+    projectId: uuid('project_id').notNull().references(() => projects.id, { onDelete: 'cascade' }),
+    path: text('path').notNull(),
+    kind: text('kind', { enum: ['file', 'folder'] }).notNull(),
+    yjsState: bytea('yjs_state'),
+    plainText: text('plain_text').notNull().default(''),
+    searchVector: tsvector('search_vector').generatedAlwaysAs(sql`to_tsvector('simple', plain_text)`),
+    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [
+    uniqueIndex('files_project_path_idx').on(t.projectId, t.path),
+    index('files_search_idx').using('gin', t.searchVector),
+  ],
 );

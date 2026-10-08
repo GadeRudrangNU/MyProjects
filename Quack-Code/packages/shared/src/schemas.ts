@@ -68,3 +68,38 @@ export const paginationQuerySchema = z.object({
 export function page<T extends z.ZodTypeAny>(item: T) {
   return z.object({ items: z.array(item), nextCursor: z.string().nullable() });
 }
+
+export const MAX_FILES_PER_PROJECT = 200;
+export const MAX_DOC_CHARS = 500_000;
+
+const segment = /^[A-Za-z0-9._ -]{1,100}$/;
+/** Relative, '/'-separated, no empty/'.'/'..' segments. Validated identically on client and server. */
+export const filePathSchema = z
+  .string()
+  .min(1)
+  .max(300)
+  .refine((p) => p.split('/').every((s) => segment.test(s) && s !== '.' && s !== '..' && s.trim() === s), {
+    message: 'Invalid path',
+  });
+
+export const projectSchema = z.object({
+  id: idSchema,
+  workspaceId: idSchema,
+  name: z.string(),
+  createdAt: z.string(),
+});
+export type Project = z.infer<typeof projectSchema>;
+export const createProjectSchema = z.object({ name: z.string().trim().min(1).max(60) });
+
+export const fileKindSchema = z.enum(['file', 'folder']);
+export const fileSchema = z.object({
+  id: idSchema,
+  path: z.string(),
+  kind: fileKindSchema,
+  updatedAt: z.string(),
+});
+export type FileNode = z.infer<typeof fileSchema>;
+export const createFileSchema = z.object({ path: filePathSchema, kind: fileKindSchema });
+export const moveFileSchema = z.object({ path: filePathSchema });
+
+export const wsTicketSchema = z.object({ ticket: z.string(), role: roleSchema });

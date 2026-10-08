@@ -19,6 +19,10 @@ import { authRoutes } from './routes/auth.js';
 import { workspaceRoutes } from './routes/workspaces.js';
 import { memberRoutes } from './routes/members.js';
 import { inviteRoutes } from './routes/invites.js';
+import { projectRoutes } from './routes/projects.js';
+import websocket from '@fastify/websocket';
+import { DocManager } from './realtime/docs.js';
+import { realtimeRoutes } from './realtime/routes.js';
 
 export async function buildApp(deps: { config: Config; db: Db; pool: { query: (q: string) => Promise<unknown> } }) {
   const { config, db } = deps;
@@ -42,6 +46,13 @@ export async function buildApp(deps: { config: Config; db: Db; pool: { query: (q
   await app.register(cookie);
   await app.register(rateLimit, { max: 300, timeWindow: '1 minute' });
   await app.register(authPlugin);
+  await app.register(websocket, { options: { maxPayload: 1_048_576 } });
+
+  const docs = new DocManager(db, app.log);
+  app.decorate('docs', docs);
+  app.addHook('onClose', async () => {
+    await docs.flushAll();
+  });
 
   app.setErrorHandler((err, req, reply) => {
     if (hasZodFastifySchemaValidationErrors(err)) {
@@ -68,6 +79,8 @@ export async function buildApp(deps: { config: Config; db: Db; pool: { query: (q
       await api.register(workspaceRoutes);
       await api.register(memberRoutes);
       await api.register(inviteRoutes);
+      await api.register(projectRoutes);
+      await api.register(realtimeRoutes);
     },
     { prefix: '/api/v1' },
   );
