@@ -13,6 +13,7 @@ import {
 import { schema } from '../db/client.js';
 import { decodeCursor, encodeCursor } from '../pagination.js';
 import { notFound } from '../errors.js';
+import { workspaceFileIds } from '../realtime/files.js';
 
 const idParams = z.object({ id: idSchema });
 
@@ -96,7 +97,9 @@ export async function workspaceRoutes(app: FastifyInstance) {
 
   r.delete('/workspaces/:id', { schema: { params: idParams } }, async (req, reply) => {
     await app.requireRole(req, req.params.id, 'workspace:delete');
+    const fileIds = await workspaceFileIds(db, req.params.id);
     await db.delete(workspaces).where(eq(workspaces.id, req.params.id));
+    await app.docs.evict(fileIds);
     return reply.status(204).send();
   });
 }

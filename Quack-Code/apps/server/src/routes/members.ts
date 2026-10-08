@@ -4,6 +4,7 @@ import { and, eq } from 'drizzle-orm';
 import { z } from 'zod';
 import { idSchema, memberSchema, updateMemberSchema } from '@quack/shared';
 import { schema } from '../db/client.js';
+import { workspaceFileIds } from '../realtime/files.js';
 import { forbidden, notFound } from '../errors.js';
 
 const params = z.object({ id: idSchema, userId: idSchema });
@@ -45,6 +46,8 @@ export async function memberRoutes(app: FastifyInstance) {
         .update(memberships)
         .set({ role: req.body.role })
         .where(and(eq(memberships.workspaceId, req.params.id), eq(memberships.userId, req.params.userId)));
+      // Their sockets were authorised under the old role; force a reconnect under the new one.
+      await app.docs.disconnectUser(req.params.userId, await workspaceFileIds(db, req.params.id), 4001, 'role changed');
       const [u] = await db.select().from(users).where(eq(users.id, req.params.userId));
       return { user: { id: u!.id, name: u!.name, avatarUrl: u!.avatarUrl }, role: req.body.role };
     },
@@ -64,6 +67,7 @@ export async function memberRoutes(app: FastifyInstance) {
     await db
       .delete(memberships)
       .where(and(eq(memberships.workspaceId, req.params.id), eq(memberships.userId, req.params.userId)));
+    await app.docs.disconnectUser(req.params.userId, await workspaceFileIds(db, req.params.id), 4403, 'removed');
     return reply.status(204).send();
   });
 }

@@ -96,7 +96,7 @@ describe('collaborative editing', () => {
     const a = await connect(owner);
     const b = await connect(editor);
     a.provider.awareness.setLocalStateField('user', { name: 'Olivia', color: '#f00' });
-    await until(() => [...b.provider.awareness.getStates().values()].some((s) => s.user?.name === 'Olivia'));
+    await until(() => [...b.provider.awareness.getStates().values()].some((s) => s.user?.name === 'olivia'));
   });
 
   it('lets viewers read but silently drops their writes on the server', async () => {
@@ -145,5 +145,41 @@ describe('collaborative editing', () => {
     const a = await connect(owner, f.id);
     expect((await owner.call('DELETE', `/files/${f.id}`)).statusCode).toBe(204);
     await until(() => !a.provider.wsconnected);
+  });
+
+  it('forces a removed member off the file and refuses their reconnect', async () => {
+    const wsId = (await owner.call('POST', '/workspaces', { name: 'Kick' })).json().id;
+    const inv = (await owner.call('POST', `/workspaces/${wsId}/invites`, { role: 'editor' })).json();
+    const guest = await t.login('guest');
+    await guest.call('POST', `/invites/${inv.token}/accept`);
+    const pid = (await owner.call('POST', `/workspaces/${wsId}/projects`, { name: 'P' })).json().id;
+    const f = (await owner.call('POST', `/projects/${pid}/files`, { path: 'k.js', kind: 'file' })).json();
+    const g = await connect(guest, f.id);
+    expect((await owner.call('DELETE', `/workspaces/${wsId}/members/${guest.user.id}`)).statusCode).toBe(204);
+    await until(() => !g.provider.wsconnected);
+    expect((await guest.call('POST', `/files/${f.id}/ws-ticket`)).statusCode).toBe(404);
+  });
+
+  it('applies a role downgrade to live sockets on reconnect', async () => {
+    const wsId = (await owner.call('POST', '/workspaces', { name: 'Demote' })).json().id;
+    const inv = (await owner.call('POST', `/workspaces/${wsId}/invites`, { role: 'editor' })).json();
+    const guest = await t.login('demoted');
+    await guest.call('POST', `/invites/${inv.token}/accept`);
+    const pid = (await owner.call('POST', `/workspaces/${wsId}/projects`, { name: 'P' })).json().id;
+    const f = (await owner.call('POST', `/projects/${pid}/files`, { path: 'd.js', kind: 'file' })).json();
+    const g = await connect(guest, f.id);
+    await owner.call('PATCH', `/workspaces/${wsId}/members/${guest.user.id}`, { role: 'viewer' });
+    await until(() => !g.provider.wsconnected);
+    expect((await guest.call('POST', `/files/${f.id}/ws-ticket`)).json().role).toBe('viewer');
+  });
+
+  it('attributes presence to the authenticated user, not the name the client claims', async () => {
+    const a = await connect(owner);
+    const b = await connect(editor);
+    a.provider.awareness.setLocalStateField('user', { id: 'x', name: 'The CEO', color: '#00ff00' });
+    await until(() => [...b.provider.awareness.getStates().values()].some((s) => s.user?.color === '#00ff00'));
+    const seen = [...b.provider.awareness.getStates().values()].find((s) => s.user?.color === '#00ff00');
+    expect(seen?.user.name).toBe('olivia');
+    expect(seen?.user.id).toBe(owner.user.id);
   });
 });

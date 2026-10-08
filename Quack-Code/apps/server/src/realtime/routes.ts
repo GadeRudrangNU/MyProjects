@@ -11,6 +11,7 @@ import { schema } from '../db/client.js';
 import { HttpError, forbidden, notFound } from '../errors.js';
 import { issueTicket, verifyTicket } from './ticket.js';
 import { DocManager, type Connection } from './docs.js';
+import { sanitizeAwareness } from './awareness.js';
 
 const MSG_SYNC = 0;
 const MSG_AWARENESS = 1;
@@ -21,7 +22,7 @@ declare module 'fastify' {
     docs: DocManager;
   }
   interface FastifyRequest {
-    wsCtx?: { userId: string; fileId: string; role: Role };
+    wsCtx?: { userId: string; userName: string; fileId: string; role: Role };
   }
 }
 
@@ -70,14 +71,16 @@ export async function realtimeRoutes(app: FastifyInstance) {
         const access = await fileRole(userId, fileId);
         if (!access || access.kind !== 'file') throw notFound('File');
         if (!can(access.role, 'file:read')) throw forbidden();
-        req.wsCtx = { userId, fileId, role: access.role };
+        const [u] = await db.select({ name: schema.users.name }).from(schema.users).where(eq(schema.users.id, userId));
+        req.wsCtx = { userId, userName: u?.name ?? 'Unknown', fileId, role: access.role };
       },
     },
     async (socket, req) => {
-      const { userId, fileId, role } = req.wsCtx!;
+      const { userId, userName, fileId, role } = req.wsCtx!;
       const live = await app.docs.get(fileId);
       const conn: Connection = {
         userId,
+        userName,
         readOnly: !can(role, 'file:write'),
         awarenessIds: new Set(),
         send: (data) => {
@@ -147,7 +150,8 @@ export async function realtimeRoutes(app: FastifyInstance) {
             }
             if (encoding.length(reply) > 1) conn.send(encoding.toUint8Array(reply));
           } else if (type === MSG_AWARENESS) {
-            applyAwarenessUpdate(live.awareness, decoding.readVarUint8Array(dec), conn);
+            const clean = sanitizeAwareness(decoding.readVarUint8Array(dec), conn);
+            if (clean) applyAwarenessUpdate(live.awareness, clean, conn);
           } else if (type === MSG_QUERY_AWARENESS) {
             const enc = encoding.createEncoder();
             encoding.writeVarUint(enc, MSG_AWARENESS);

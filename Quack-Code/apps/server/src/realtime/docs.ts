@@ -14,6 +14,7 @@ export interface Connection {
   close(code: number, reason: string): void;
   readOnly: boolean;
   userId: string;
+  userName: string;
   /** Awareness client ids this socket has announced; removed when it disconnects. */
   awarenessIds: Set<number>;
 }
@@ -143,6 +144,16 @@ export class DocManager {
       for (const c of live.conns) c.close(4404, 'file deleted');
       live.awareness.destroy();
       live.doc.destroy();
+    }
+  }
+
+  /** Closes a user's sockets on the given files; clients reconnect and are re-authorised from scratch. */
+  async disconnectUser(userId: string, fileIds: string[], code: number, reason: string) {
+    for (const id of fileIds) {
+      const p = this.docs.get(id);
+      if (!p) continue;
+      const live = await p;
+      for (const c of live.conns) if (c.userId === userId) c.close(code, reason);
     }
   }
 
