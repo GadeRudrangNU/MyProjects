@@ -4,7 +4,7 @@ A real-time collaborative coding workspace. Sign in, create a workspace, invite 
 
 Everything runs on free tiers or locally. No credit card is needed anywhere.
 
-![Two people editing the same file, with named cursors](docs/screenshots/collaboration.png)
+![Live demo: two people editing one file, then running it](docs/demo.gif)
 
 ## What works today
 
@@ -22,6 +22,8 @@ Everything runs on free tiers or locally. No credit card is needed anywhere.
 **Planned, not built yet:** line comments, version history with diff and restore, ZIP export as a background job, project search, activity feed, notifications, feature flags, Google sign-in. The design for these is in the project scope; the data model has room for them.
 
 ## Screenshots
+
+![Two people editing the same file, with named cursors](docs/screenshots/collaboration.png)
 
 | Roles: viewers are read-only (enforced server-side) | Offline: edits are saved locally and merge later |
 | --- | --- |
@@ -87,6 +89,7 @@ npm test                                   # unit + API integration tests (real 
 npx playwright install chromium            # once
 npm run test:e2e -w @quack/web             # end-to-end: two browsers, offline, sandbox, accessibility
 npm run screenshots -w @quack/web          # regenerates docs/screenshots
+npm run demo-gif -w @quack/web             # regenerates docs/demo.gif
 ```
 
 ## Repository layout
