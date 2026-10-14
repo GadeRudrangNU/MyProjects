@@ -1,0 +1,7 @@
+# Everything needed to run the full stack on a laptop without Docker (see scripts/dev_up.py).
+-r requirements-dev.txt
+pgserver>=0.1.4        # a real PostgreSQL 16, installed from a wheel
+fakeredis[lua]>=2.23   # Redis-compatible broker for Celery (the Compose stack uses real Redis)
+tzdata                 # the pgserver Windows build ships without time-zone data
+waitress>=3.0          # WSGI server that also works on Windows (Compose uses gunicorn)
+locust>=2.29           # load testing

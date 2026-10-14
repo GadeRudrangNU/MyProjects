@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+backend/staticfiles/
+# Local development state (databases, logs, generated env files)
+backend/.devdata/
+backend/.dev-services.env
+backend/.dev-services.log
+backend/seed.txt
+# Node
+node_modules/
+dist/
+frontend/.env.local
+# Large public dataset, downloaded by ml/download_data.py
+ml/data/*.csv
+# Load-test output (the sustained-run summary is kept as a reference)
+loadtest/results/*
+!loadtest/results/sustained_stats.csv

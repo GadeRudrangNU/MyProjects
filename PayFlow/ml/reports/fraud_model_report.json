@@ -1,0 +1,78 @@
+{
+  "dataset": {
+    "name": "ULB credit card fraud detection",
+    "rows": 284807,
+    "frauds": 492,
+    "split": "chronological 70/15/15",
+    "train_rows": 199364,
+    "val_rows": 42721,
+    "test_rows": 42722,
+    "test_frauds": 52
+  },
+  "cost_assumptions": {
+    "block_legitimate_customer": 10.0,
+    "manual_review": 2.0,
+    "missed_fraud": "full transaction amount"
+  },
+  "regularisation_C": 0.01,
+  "held_out": {
+    "logistic_regression": {
+      "model": "logistic_regression",
+      "pr_auc": 0.6731370936851656,
+      "roc_auc": 0.9713233040687926,
+      "review_or_block": {
+        "threshold": 0.009981082890588721,
+        "tp": 41,
+        "fp": 84,
+        "fn": 11,
+        "tn": 42586,
+        "precision": 0.328,
+        "recall": 0.7884615384615384,
+        "false_positive_rate": 0.0019685962034216077
+      },
+      "block": {
+        "threshold": 0.48813503305649314,
+        "tp": 23,
+        "fp": 3,
+        "fn": 29,
+        "tn": 42667,
+        "precision": 0.8846153846153846,
+        "recall": 0.4423076923076923,
+        "false_positive_rate": 7.030700726505741e-05
+      },
+      "expected_cost": 2581.03,
+      "cost_saved_vs_approve_everything": 3587.850000000001
+    },
+    "isolation_forest": {
+      "model": "isolation_forest",
+      "pr_auc": 0.04745358256822264,
+      "roc_auc": 0.9349637648501018,
+      "review_or_block": {
+        "threshold": 0.5517970612899793,
+        "tp": 30,
+        "fp": 511,
+        "fn": 22,
+        "tn": 42159,
+        "precision": 0.05545286506469501,
+        "recall": 0.5769230769230769,
+        "false_positive_rate": 0.011975626904148114
+      },
+      "block": {
+        "threshold": 0.7464517080840316,
+        "tp": 0,
+        "fp": 1,
+        "fn": 52,
+        "tn": 42669,
+        "precision": 0.0,
+        "recall": 0.0,
+        "false_positive_rate": 2.3435669088352474e-05
+      },
+      "expected_cost": 4426.23,
+      "cost_saved_vs_approve_everything": 1742.6500000000015
+    },
+    "baselines": {
+      "approve_everything_cost": 6168.880000000001,
+      "block_everything_cost": 426700.0
+    }
+  }
+}
