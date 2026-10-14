@@ -1,0 +1,7 @@
+name: PayFlow CodeQL configuration
+paths:
+  - PayFlow
+paths-ignore:
+  - PayFlow/**/node_modules
+  - PayFlow/backend/.venv
+  - PayFlow/**/tests
