@@ -1,0 +1,566 @@
+{
+  "campaign_id": "operating-range",
+  "created_at": "2026-10-14T06:17:20.240694+00:00",
+  "config": {
+    "devices": 30,
+    "runs": 8,
+    "seed": 43,
+    "plan": "full_validation",
+    "clean_fraction": 0.3,
+    "severity_floor": 0.5
+  },
+  "totals": {
+    "results": 1840,
+    "evaluated": 1840,
+    "faults_injected": 168,
+    "FAIL": 349,
+    "PASS": 1489,
+    "FLAKY": 2
+  },
+  "overall": {
+    "tp": 349,
+    "fn": 23,
+    "fp": 0,
+    "tn": 1468,
+    "precision": 1.0,
+    "recall": 0.9381720430107527,
+    "f1": 0.9680998613037448,
+    "false_alarm_rate": 0.0
+  },
+  "rates": {
+    "flaky_rate": 0.0010869565217391304,
+    "error_rate": 0.0,
+    "fault_coverage": "9/9",
+    "device_level_detection": 0.9583333333333334
+  },
+  "targets": {
+    "recall": 0.95,
+    "precision": 0.95,
+    "false_alarm_rate": 0.02,
+    "flaky_rate": 0.01,
+    "error_rate": 0.005
+  },
+  "by_kind": {
+    "range_check": {
+      "tp": 29,
+      "fn": 8,
+      "fp": 0,
+      "tn": 203,
+      "precision": 1.0,
+      "recall": 0.7837837837837838,
+      "f1": 0.8787878787878788,
+      "false_alarm_rate": 0.0
+    },
+    "stability_check": {
+      "tp": 76,
+      "fn": 7,
+      "fp": 0,
+      "tn": 157,
+      "precision": 1.0,
+      "recall": 0.9156626506024096,
+      "f1": 0.9559748427672956,
+      "false_alarm_rate": 0.0
+    },
+    "spike_check": {
+      "tp": 45,
+      "fn": 8,
+      "fp": 0,
+      "tn": 187,
+      "precision": 1.0,
+      "recall": 0.8490566037735849,
+      "f1": 0.9183673469387755,
+      "false_alarm_rate": 0.0
+    },
+    "ack_latency": {
+      "tp": 38,
+      "fn": 0,
+      "fp": 0,
+      "tn": 202,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarm_rate": 0.0
+    },
+    "response_time": {
+      "tp": 46,
+      "fn": 0,
+      "fp": 0,
+      "tn": 114,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarm_rate": 0.0
+    },
+    "link_quality": {
+      "tp": 57,
+      "fn": 0,
+      "fp": 0,
+      "tn": 183,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarm_rate": 0.0
+    },
+    "heartbeat_recovery": {
+      "tp": 20,
+      "fn": 0,
+      "fp": 0,
+      "tn": 220,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarm_rate": 0.0
+    },
+    "firmware_check": {
+      "tp": 38,
+      "fn": 0,
+      "fp": 0,
+      "tn": 202,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_alarm_rate": 0.0
+    }
+  },
+  "by_fault_type": {
+    "drift": {
+      "injected": 17,
+      "tp": 28,
+      "fn": 23,
+      "recall": 0.5490196078431373
+    },
+    "stuck_value": {
+      "injected": 30,
+      "tp": 50,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "out_of_range_spike": {
+      "injected": 16,
+      "tp": 32,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "packet_drop": {
+      "injected": 16,
+      "tp": 16,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "crc_corruption": {
+      "injected": 21,
+      "tp": 21,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "latency_spike": {
+      "injected": 18,
+      "tp": 18,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "hang": {
+      "injected": 20,
+      "tp": 154,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "slow_response": {
+      "injected": 12,
+      "tp": 12,
+      "fn": 0,
+      "recall": 1.0
+    },
+    "wrong_firmware": {
+      "injected": 18,
+      "tp": 18,
+      "fn": 0,
+      "recall": 1.0
+    }
+  },
+  "severity_curve": {
+    "drift": [
+      {
+        "lo": 0.001,
+        "hi": 0.0108,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 0.0108,
+        "hi": 0.0206,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 0.0206,
+        "hi": 0.030400000000000003,
+        "n": 6,
+        "test_rate": 0.6666666666666666,
+        "monitor_rate": 1.0
+      },
+      {
+        "lo": 0.030400000000000003,
+        "hi": 0.0402,
+        "n": 6,
+        "test_rate": 0.16666666666666666,
+        "monitor_rate": 1.0
+      },
+      {
+        "lo": 0.0402,
+        "hi": 0.05,
+        "n": 5,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      }
+    ],
+    "stuck_value": [
+      {
+        "lo": 1,
+        "hi": 1,
+        "n": 30,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      }
+    ],
+    "out_of_range_spike": [
+      {
+        "lo": 0.02,
+        "hi": 0.076,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 0.076,
+        "hi": 0.13199999999999998,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 0.13199999999999998,
+        "hi": 0.18799999999999997,
+        "n": 3,
+        "test_rate": 1.0,
+        "monitor_rate": 0.3333333333333333
+      },
+      {
+        "lo": 0.18799999999999997,
+        "hi": 0.24399999999999997,
+        "n": 6,
+        "test_rate": 1.0,
+        "monitor_rate": 0.6666666666666666
+      },
+      {
+        "lo": 0.24399999999999997,
+        "hi": 0.3,
+        "n": 7,
+        "test_rate": 1.0,
+        "monitor_rate": 0.7142857142857143
+      }
+    ],
+    "packet_drop": [
+      {
+        "lo": 1.0,
+        "hi": 6.8,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 6.8,
+        "hi": 12.6,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 12.6,
+        "hi": 18.4,
+        "n": 5,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      },
+      {
+        "lo": 18.4,
+        "hi": 24.2,
+        "n": 10,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      },
+      {
+        "lo": 24.2,
+        "hi": 30.0,
+        "n": 1,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      }
+    ],
+    "crc_corruption": [
+      {
+        "lo": 1.0,
+        "hi": 6.8,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 6.8,
+        "hi": 12.6,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 12.6,
+        "hi": 18.4,
+        "n": 10,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      },
+      {
+        "lo": 18.4,
+        "hi": 24.2,
+        "n": 6,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      },
+      {
+        "lo": 24.2,
+        "hi": 30.0,
+        "n": 5,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      }
+    ],
+    "latency_spike": [
+      {
+        "lo": 30.0,
+        "hi": 84.0,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 84.0,
+        "hi": 138.0,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 138.0,
+        "hi": 192.0,
+        "n": 5,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      },
+      {
+        "lo": 192.0,
+        "hi": 246.0,
+        "n": 8,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      },
+      {
+        "lo": 246.0,
+        "hi": 300.0,
+        "n": 5,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      }
+    ],
+    "hang": [
+      {
+        "lo": 1,
+        "hi": 1,
+        "n": 20,
+        "test_rate": 1.0,
+        "monitor_rate": 1.0
+      }
+    ],
+    "slow_response": [
+      {
+        "lo": 1.2,
+        "hi": 2.16,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 2.16,
+        "hi": 3.12,
+        "n": 0,
+        "test_rate": null,
+        "monitor_rate": null
+      },
+      {
+        "lo": 3.12,
+        "hi": 4.08,
+        "n": 4,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      },
+      {
+        "lo": 4.08,
+        "hi": 5.04,
+        "n": 5,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      },
+      {
+        "lo": 5.04,
+        "hi": 6.0,
+        "n": 3,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      }
+    ],
+    "wrong_firmware": [
+      {
+        "lo": 1,
+        "hi": 1,
+        "n": 18,
+        "test_rate": 1.0,
+        "monitor_rate": null
+      }
+    ]
+  },
+  "monitor": {
+    "detection_rate": 0.95,
+    "false_alarm_rate": 0.0,
+    "clean_device_runs": 72,
+    "mttd_s": {
+      "n": 114,
+      "mean": 3.8886092315640366,
+      "median": 1.5040910243988037,
+      "p95": 17.44207501411438
+    },
+    "mttd_histogram": [
+      {
+        "lo": 0.0,
+        "hi": 8.096765899658203,
+        "count": 106
+      },
+      {
+        "lo": 8.096765899658203,
+        "hi": 16.193531799316407,
+        "count": 1
+      },
+      {
+        "lo": 16.193531799316407,
+        "hi": 24.290297698974612,
+        "count": 3
+      },
+      {
+        "lo": 24.290297698974612,
+        "hi": 32.387063598632814,
+        "count": 1
+      },
+      {
+        "lo": 32.387063598632814,
+        "hi": 40.483829498291016,
+        "count": 1
+      },
+      {
+        "lo": 40.483829498291016,
+        "hi": 48.580595397949224,
+        "count": 0
+      },
+      {
+        "lo": 48.580595397949224,
+        "hi": 56.677361297607426,
+        "count": 0
+      },
+      {
+        "lo": 56.677361297607426,
+        "hi": 64.77412719726563,
+        "count": 1
+      },
+      {
+        "lo": 64.77412719726563,
+        "hi": 72.87089309692384,
+        "count": 0
+      },
+      {
+        "lo": 72.87089309692384,
+        "hi": 80.96765899658203,
+        "count": 1
+      }
+    ],
+    "by_fault_type": {
+      "drift": {
+        "injected": 17,
+        "detected": 17,
+        "mttd": {
+          "n": 17,
+          "mean": 1.199133606518016,
+          "median": 1.261983871459961,
+          "p95": 1.7953259944915771
+        }
+      },
+      "stuck_value": {
+        "injected": 30,
+        "detected": 30,
+        "mttd": {
+          "n": 30,
+          "mean": 1.777031962076823,
+          "median": 1.7821884155273438,
+          "p95": 1.9138209819793701
+        }
+      },
+      "out_of_range_spike": {
+        "injected": 16,
+        "detected": 10,
+        "mttd": {
+          "n": 10,
+          "mean": 29.16288068294525,
+          "median": 20.442832469940186,
+          "p95": 80.96765899658203
+        }
+      },
+      "packet_drop": {
+        "injected": 16,
+        "detected": 16,
+        "mttd": {
+          "n": 16,
+          "mean": 1.4990428537130356,
+          "median": 1.1641789674758911,
+          "p95": 3.411625862121582
+        }
+      },
+      "crc_corruption": {
+        "injected": 21,
+        "detected": 21,
+        "mttd": {
+          "n": 21,
+          "mean": 1.539042245774042,
+          "median": 1.2755029201507568,
+          "p95": 3.14188289642334
+        }
+      },
+      "hang": {
+        "injected": 20,
+        "detected": 20,
+        "mttd": {
+          "n": 20,
+          "mean": 1.083592128753662,
+          "median": 1.0681829452514648,
+          "p95": 1.1841728687286377
+        }
+      }
+    }
+  },
+  "platform": {
+    "plan_seconds": {
+      "n": 8,
+      "mean": 94.90277150273323,
+      "median": 96.36908495426178,
+      "p95": 100.83662796020508
+    },
+    "devices_per_run": 30
+  }
+}

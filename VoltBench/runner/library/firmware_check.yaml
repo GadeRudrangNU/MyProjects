@@ -1,0 +1,10 @@
+name: firmware_check
+kind: firmware_check
+device_type: ANY
+version: 1
+description: The device reports the firmware version it is expected to run.
+steps:
+  - command: GET_VERSION
+    expect_ack_within_ms: 1000
+    record_version_as: version
+  - assert: "version == expected_firmware"

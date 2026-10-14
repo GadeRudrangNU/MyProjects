@@ -1,0 +1,26 @@
+name: response_time_bcm
+kind: response_time
+device_type: BCM
+version: 2
+description: Load current reaches 90 percent of its target after the output is switched on. The device is reset first so every attempt starts from the same state.
+limits:
+  max_rise_ms: 250
+steps:
+  - command: RESET
+    expect_ack_within_ms: 1000
+  - wait_online:
+      timeout_ms: 3000
+      record_as: boot_ms
+  - sleep_ms: 300
+  - command: SET_OUTPUT
+    args: { channel: 1, state: on }
+    expect_ack_within_ms: 500
+  - measure:
+      signal: load_current_a
+      until: "value >= 0.9 * 5.0"
+      timeout_ms: 600
+      record_as: rise_time_ms
+  - assert: "rise_time_ms <= max_rise_ms"
+  - command: SET_OUTPUT
+    args: { channel: 1, state: off }
+    expect_ack_within_ms: 500

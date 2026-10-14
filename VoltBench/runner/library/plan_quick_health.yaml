@@ -1,0 +1,5 @@
+name: quick_health
+tests:
+  - firmware_check
+  - ack_latency
+  - range_check

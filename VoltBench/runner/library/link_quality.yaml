@@ -1,0 +1,14 @@
+name: link_quality
+kind: link_quality
+device_type: ANY
+version: 1
+description: Frame loss and CRC error rate over a 10 second window.
+limits:
+  max_loss_pct: 1.0
+  max_crc_pct: 0.5
+steps:
+  - link:
+      duration_ms: 10000
+      record_loss_as: loss_pct
+      record_crc_as: crc_pct
+  - assert: "loss_pct < max_loss_pct and crc_pct < max_crc_pct"

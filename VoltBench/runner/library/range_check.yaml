@@ -1,0 +1,10 @@
+name: range_check
+kind: range_check
+device_type: ANY
+version: 1
+description: Mean of about 50 samples of every monitored signal stays inside its nominal range.
+steps:
+  - sample:
+      signals: monitored
+      duration_ms: 5000
+  - assert_each: "range_lo <= mean <= range_hi"

@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+httpx
+pydantic>=2
+pyyaml
+psycopg[binary]
+psycopg_pool
+numpy
+pandas
+pytest
+pytest-asyncio
+hypothesis
+matplotlib
+pillow
+psutil
+ruff
+websockets

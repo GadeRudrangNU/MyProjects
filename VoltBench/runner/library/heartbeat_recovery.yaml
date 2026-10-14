@@ -1,0 +1,14 @@
+name: heartbeat_recovery
+kind: heartbeat_recovery
+device_type: ANY
+version: 1
+description: After a RESET the device acknowledges, reboots and is streaming again within the limit.
+limits:
+  max_recovery_ms: 3000
+steps:
+  - command: RESET
+    expect_ack_within_ms: 1000
+  - wait_online:
+      timeout_ms: 3000
+      record_as: recovery_ms
+  - assert: "recovery_ms <= max_recovery_ms"

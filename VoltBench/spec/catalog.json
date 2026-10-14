@@ -1,0 +1,58 @@
+{
+  "types": {
+    "BMU": {
+      "code": 1,
+      "firmware": "2.4.1",
+      "primary": "cell_v_1",
+      "commands": ["READ_REG", "RESET", "GET_VERSION", "SELF_TEST"],
+      "signals": [
+        {"id": 1, "name": "cell_v_1", "unit": "V", "scale": 0.001, "nominal": 3.90, "sigma": 0.005, "range": [3.6, 4.2], "hard": [3.4, 4.4], "monitored": true},
+        {"id": 2, "name": "cell_v_2", "unit": "V", "scale": 0.001, "nominal": 3.90, "sigma": 0.005, "range": [3.6, 4.2], "hard": [3.4, 4.4], "monitored": true},
+        {"id": 3, "name": "cell_v_3", "unit": "V", "scale": 0.001, "nominal": 3.90, "sigma": 0.005, "range": [3.6, 4.2], "hard": [3.4, 4.4], "monitored": true},
+        {"id": 4, "name": "cell_v_4", "unit": "V", "scale": 0.001, "nominal": 3.90, "sigma": 0.005, "range": [3.6, 4.2], "hard": [3.4, 4.4], "monitored": true},
+        {"id": 5, "name": "pack_temp_c", "unit": "C", "scale": 0.01, "nominal": 28.0, "sigma": 0.10, "range": [15, 45], "hard": [5, 55], "monitored": true}
+      ]
+    },
+    "BCM": {
+      "code": 2,
+      "firmware": "3.1.0",
+      "primary": "supply_v",
+      "commands": ["SET_OUTPUT", "READ_REG", "RESET", "GET_VERSION"],
+      "signals": [
+        {"id": 1, "name": "supply_v", "unit": "V", "scale": 0.001, "nominal": 13.2, "sigma": 0.02, "range": [11.5, 14.8], "hard": [10.5, 15.8], "monitored": true},
+        {"id": 2, "name": "load_current_a", "unit": "A", "scale": 0.001, "nominal": 0.0, "sigma": 0.02, "range": [-0.3, 8.3], "hard": [-1.0, 9.0], "monitored": true},
+        {"id": 3, "name": "output_state", "unit": "", "scale": 1, "nominal": 0, "sigma": 0, "range": [0, 1], "hard": [0, 1], "monitored": false}
+      ]
+    },
+    "TCM": {
+      "code": 3,
+      "firmware": "1.8.2",
+      "primary": "supply_v",
+      "commands": ["SET_PUMP_RPM", "RESET", "GET_VERSION", "SELF_TEST"],
+      "signals": [
+        {"id": 1, "name": "coolant_temp_c", "unit": "C", "scale": 0.01, "nominal": 60.0, "sigma": 0.15, "range": [20, 90], "hard": [10, 100], "monitored": true},
+        {"id": 2, "name": "pump_rpm", "unit": "rpm", "scale": 1, "nominal": 1500, "sigma": 6, "range": [0, 4000], "hard": [-100, 4300], "monitored": true},
+        {"id": 3, "name": "supply_v", "unit": "V", "scale": 0.001, "nominal": 13.2, "sigma": 0.02, "range": [11.5, 14.8], "hard": [10.5, 15.8], "monitored": true}
+      ]
+    }
+  },
+  "commands": {
+    "READ_REG": 1,
+    "RESET": 2,
+    "GET_VERSION": 3,
+    "SELF_TEST": 4,
+    "SET_OUTPUT": 5,
+    "SET_PUMP_RPM": 6
+  },
+  "faults": {
+    "drift": {"unit": "V/s", "min": 0.001, "max": 0.05, "applies": ["BMU", "BCM", "TCM"]},
+    "stuck_value": {"unit": "", "min": 1, "max": 1, "applies": ["BMU", "BCM", "TCM"]},
+    "out_of_range_spike": {"unit": "probability", "min": 0.02, "max": 0.3, "applies": ["BMU", "BCM", "TCM"]},
+    "packet_drop": {"unit": "%", "min": 1, "max": 30, "applies": ["BMU", "BCM", "TCM"]},
+    "crc_corruption": {"unit": "%", "min": 1, "max": 30, "applies": ["BMU", "BCM", "TCM"]},
+    "latency_spike": {"unit": "ms", "min": 30, "max": 300, "applies": ["BMU", "BCM", "TCM"]},
+    "hang": {"unit": "", "min": 1, "max": 1, "applies": ["BMU", "BCM", "TCM"]},
+    "slow_response": {"unit": "x tau", "min": 1.2, "max": 6, "applies": ["BCM", "TCM"]},
+    "wrong_firmware": {"unit": "", "min": 1, "max": 1, "applies": ["BMU", "BCM", "TCM"]}
+  }
+}

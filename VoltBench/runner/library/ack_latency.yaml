@@ -1,0 +1,13 @@
+name: ack_latency
+kind: ack_latency
+device_type: ANY
+version: 1
+description: 95th percentile of 20 command acknowledgements is under the limit.
+limits:
+  max_ack_p95_ms: 100
+steps:
+  - command: GET_VERSION
+    repeat: 20
+    expect_ack_within_ms: 1000
+    record_latency_as: ack_p95_ms
+  - assert: "ack_p95_ms < max_ack_p95_ms"

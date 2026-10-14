@@ -1,0 +1,13 @@
+name: stability_check
+kind: stability_check
+device_type: ANY
+version: 1
+description: Standard deviation stays within a band around the expected noise level. A frozen signal has none, a noisy one has too much.
+limits:
+  min_std_ratio: 0.2
+  max_std_ratio: 3.0
+steps:
+  - sample:
+      signals: monitored
+      duration_ms: 5000
+  - assert_each: "std >= min_std_ratio * sigma and std <= max_std_ratio * sigma"

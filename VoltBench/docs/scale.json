@@ -1,0 +1,104 @@
+[
+  {
+    "devices": 10,
+    "online": 10,
+    "frames_per_s": 110.1376991650294,
+    "expected_frames_per_s": 110,
+    "gateway_cpu_pct": 0.25,
+    "gateway_mem_mb": 25.268224,
+    "simulator_cpu_pct": 0.14375000000000002,
+    "browser_latency_ms": {
+      "p50": 40.206298828125,
+      "p95": 75.324462890625,
+      "p99": 85.03466796875
+    },
+    "command_ack_p95_ms": 13.836,
+    "mongo_batch_p95_s": 0.025,
+    "frames_lost": 0.0
+  },
+  {
+    "devices": 50,
+    "online": 50,
+    "frames_per_s": 549.6955581566374,
+    "expected_frames_per_s": 550,
+    "gateway_cpu_pct": 0.4875,
+    "gateway_mem_mb": 28.89728,
+    "simulator_cpu_pct": 0.43125,
+    "browser_latency_ms": {
+      "p50": 59.15869140625,
+      "p95": 82.910888671875,
+      "p99": 88.876953125
+    },
+    "command_ack_p95_ms": 13.997,
+    "mongo_batch_p95_s": 0.05,
+    "frames_lost": 0.0
+  },
+  {
+    "devices": 100,
+    "online": 100,
+    "frames_per_s": 1101.0543553181606,
+    "expected_frames_per_s": 1100,
+    "gateway_cpu_pct": 0.80625,
+    "gateway_mem_mb": 33.067008,
+    "simulator_cpu_pct": 0.73125,
+    "browser_latency_ms": {
+      "p50": 41.01025390625,
+      "p95": 72.267578125,
+      "p99": 80.634521484375
+    },
+    "command_ack_p95_ms": 14.101,
+    "mongo_batch_p95_s": 0.1,
+    "frames_lost": 0.0
+  },
+  {
+    "devices": 250,
+    "online": 250,
+    "frames_per_s": 2760.504102155713,
+    "expected_frames_per_s": 2750,
+    "gateway_cpu_pct": 1.45625,
+    "gateway_mem_mb": 42.979328,
+    "simulator_cpu_pct": 2.16875,
+    "browser_latency_ms": {
+      "p50": 46.383056640625,
+      "p95": 63.965087890625,
+      "p99": 69.417236328125
+    },
+    "command_ack_p95_ms": 28.216,
+    "mongo_batch_p95_s": 0.1,
+    "frames_lost": 0.0
+  },
+  {
+    "devices": 500,
+    "online": 500,
+    "frames_per_s": 5507.521613242046,
+    "expected_frames_per_s": 5500,
+    "gateway_cpu_pct": 2.225,
+    "gateway_mem_mb": 60.14976,
+    "simulator_cpu_pct": 3.99375,
+    "browser_latency_ms": {
+      "p50": 58.42724609375,
+      "p95": 90.3037109375,
+      "p99": 97.1435546875
+    },
+    "command_ack_p95_ms": 59.502,
+    "mongo_batch_p95_s": 0.1,
+    "frames_lost": 0.0
+  },
+  {
+    "devices": 1000,
+    "online": 1000,
+    "frames_per_s": 10488.031842155882,
+    "expected_frames_per_s": 11000,
+    "gateway_cpu_pct": 3.01875,
+    "gateway_mem_mb": 90.550272,
+    "simulator_cpu_pct": 6.03125,
+    "browser_latency_ms": {
+      "p50": 132.16455078125,
+      "p95": 158.190185546875,
+      "p99": 168.19384765625
+    },
+    "command_ack_p95_ms": 705.244,
+    "mongo_batch_p95_s": 0.1,
+    "frames_lost": 0.0
+  }
+]

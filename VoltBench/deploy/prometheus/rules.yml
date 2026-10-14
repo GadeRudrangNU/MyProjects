@@ -1,0 +1,10 @@
+groups:
+  - name: voltbench
+    rules:
+      - alert: GatewayCommandLatencyHigh
+        expr: histogram_quantile(0.95, sum(rate(command_latency_seconds_bucket[1m])) by (le)) > 0.2
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: Gateway p95 command latency is above 200 ms

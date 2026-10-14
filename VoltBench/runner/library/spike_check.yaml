@@ -1,0 +1,10 @@
+name: spike_check
+kind: spike_check
+device_type: ANY
+version: 1
+description: No sample leaves the hard limits during a 5 second window.
+steps:
+  - sample:
+      signals: monitored
+      duration_ms: 5000
+  - assert_each: "out_of_limits == 0"

@@ -1,0 +1,26 @@
+name: response_time_tcm
+kind: response_time
+device_type: TCM
+version: 2
+description: Pump speed covers 90 percent of a step from 1500 to 3000 rpm. The device is reset first so every attempt starts from the same state.
+limits:
+  max_rise_ms: 900
+steps:
+  - command: RESET
+    expect_ack_within_ms: 1000
+  - wait_online:
+      timeout_ms: 3000
+      record_as: boot_ms
+  - sleep_ms: 300
+  - command: SET_PUMP_RPM
+    args: { rpm: 3000 }
+    expect_ack_within_ms: 500
+  - measure:
+      signal: pump_rpm
+      until: "value >= 1500 + 0.9 * 1500"
+      timeout_ms: 1800
+      record_as: rise_time_ms
+  - assert: "rise_time_ms <= max_rise_ms"
+  - command: SET_PUMP_RPM
+    args: { rpm: 1500 }
+    expect_ack_within_ms: 500

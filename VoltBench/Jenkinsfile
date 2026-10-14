@@ -1,0 +1,58 @@
+pipeline {
+    agent any
+    options { timestamps() }
+    environment {
+        PYTHON = '.venv/Scripts/python'
+    }
+    stages {
+        stage('Setup') {
+            steps {
+                sh 'python -m venv .venv'
+                sh '$PYTHON -m pip install -q -r requirements.txt'
+                dir('web') { sh 'npm ci' }
+            }
+        }
+        stage('Lint') {
+            parallel {
+                stage('Go') { steps { dir('gateway') { sh 'gofmt -l . | tee /dev/stderr | (! read) && go vet ./...' } } }
+                stage('Python') { steps { sh '$PYTHON -m ruff check .' } }
+                stage('Web') { steps { dir('web') { sh 'npm run lint' } } }
+            }
+        }
+        stage('Unit tests') {
+            parallel {
+                stage('Go') { steps { dir('gateway') { sh 'go test -cover ./...' } } }
+                stage('Python') { steps { sh '$PYTHON -m pytest -q' } }
+                stage('Web') { steps { dir('web') { sh 'npm test' } } }
+            }
+        }
+        stage('Build') {
+            steps {
+                dir('gateway') { sh 'go build -o bin/gateway.exe .' }
+                dir('web') { sh 'npm run build' }
+            }
+        }
+        stage('Start platform') {
+            steps {
+                sh '$PYTHON scripts/stack.py --devices 30 --baseline-seconds 30 --web --fresh > data/stack.out 2>&1 &'
+                sh '$PYTHON scripts/wait_ready.py'
+            }
+        }
+        stage('Integration') {
+            steps { sh '$PYTHON -m pytest integration -q' }
+        }
+        stage('End to end') {
+            steps { dir('web') { sh 'npx playwright test' } }
+        }
+        stage('Evaluation gate') {
+            steps {
+                sh '$PYTHON -m evaluator --campaign ci-${BUILD_NUMBER} --devices 15 --runs 3 --seed 42 --warmup 20 --lead-in 8 --severity-floor 0.5 --gate'
+            }
+        }
+    }
+    post {
+        always {
+            archiveArtifacts artifacts: 'out/**, web/test-results/**, data/logs/**', allowEmptyArchive: true
+        }
+    }
+}

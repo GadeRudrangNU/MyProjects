@@ -1,0 +1,11 @@
+name: full_validation
+tests:
+  - range_check
+  - stability_check
+  - spike_check
+  - ack_latency
+  - link_quality
+  - firmware_check
+  - response_time_bcm
+  - response_time_tcm
+  - heartbeat_recovery
