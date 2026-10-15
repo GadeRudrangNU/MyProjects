@@ -1,0 +1,33 @@
+server:
+  port: 0
+
+spring:
+  main:
+    banner-mode: off
+
+logging:
+  structured:
+    format:
+      console: ""
+  level:
+    root: WARN
+    com.trustpass: INFO
+
+trustpass:
+  db:
+    embedded: true
+    port: 0
+  rate-limit:
+    enabled: false
+  payment:
+    decline-rate: 0
+    outage-rate: 0
+    min-latency-ms: 1
+    max-latency-ms: 5
+    timeout-ms: 2000
+  storage:
+    path: target/test-uploads
+  seed:
+    enabled: false
+  security:
+    issuer: http://localhost:9000
