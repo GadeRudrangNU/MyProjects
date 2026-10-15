@@ -73,9 +73,9 @@ test('a member enrolls, secures the account, subscribes, books, gets verified an
 
   await test.step('book a slot', async () => {
     await page.getByRole('link', { name: 'Book', exact: true }).click()
-    const slot = page.getByTestId('slot').last()
+    const slot = page.getByTestId('slot').filter({ has: page.getByRole('button', { name: 'Book', exact: true }) }).first()
     await expect(slot).toBeVisible()
-    await slot.getByRole('button', { name: 'Book' }).click()
+    await slot.getByRole('button', { name: 'Book', exact: true }).click()
     await expect(page.getByText('You are booked.')).toBeVisible()
     await expectNoSeriousA11yIssues(page, 'booking')
     await page.getByRole('link', { name: 'My bookings' }).click()
