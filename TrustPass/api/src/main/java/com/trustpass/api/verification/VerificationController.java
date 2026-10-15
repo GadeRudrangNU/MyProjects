@@ -21,11 +21,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -43,14 +43,10 @@ class VerificationController {
 
     @PostMapping(value = "/verifications", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
-    MemberView submitVerification(@RequestPart("document") MultipartFile document,
-                      @RequestParam DocumentType docType,
-                      @RequestParam @NotBlank @Size(max = 160) String fullName,
-                      @RequestParam LocalDate dateOfBirth,
-                      @RequestParam @Pattern(regexp = "[A-Za-z0-9-]{4,40}") String idNumber,
-                      @RequestParam LocalDate idExpiry) {
+    MemberView submitVerification(@Valid @ModelAttribute VerificationForm form) {
         Verification v = service.submit(CurrentUser.require().id(),
-                new VerificationService.Submission(docType, fullName, dateOfBirth, idNumber, idExpiry), document);
+                new VerificationService.Submission(form.docType(), form.fullName(), form.dateOfBirth(), form.idNumber(),
+                        form.idExpiry()), form.document());
         return MemberView.of(v);
     }
 
@@ -98,6 +94,14 @@ class VerificationController {
         return new ReviewItem(v.getId(), v.getStatus(), owner.getId(), owner.getEmail(), owner.getName(), v.getFullName(),
                 v.dob(), Masking.keepLast(v.getIdNumber(), 4), v.getDocType(), v.getIdExpiry(), v.getFlags(),
                 v.getRejectReason(), v.getContentType(), v.getCreatedAt());
+    }
+
+    record VerificationForm(@NotNull MultipartFile document,
+                            @NotNull DocumentType docType,
+                            @NotBlank @Size(max = 160) String fullName,
+                            @NotNull LocalDate dateOfBirth,
+                            @NotBlank @Pattern(regexp = "[A-Za-z0-9-]{4,40}") String idNumber,
+                            @NotNull LocalDate idExpiry) {
     }
 
     enum Outcome {

@@ -81,7 +81,7 @@ class SecurityPrimitivesTest extends IntegrationTest {
                 new TrustPassProperties.RateLimit(true, 100, 2, 100),
                 new TrustPassProperties.Payment(0, 0, 1, 5, 100),
                 new TrustPassProperties.Storage("uploads", 1024), new TrustPassProperties.Cors(List.of()),
-                new TrustPassProperties.Seed(false), "http://localhost:5173");
+                new TrustPassProperties.Seed(false, false), "http://localhost:5173");
         RateLimiter limiter = new RateLimiter(dataSource, strict);
         String email = "limited-" + UUID.randomUUID();
         limiter.check("login:email:" + email, strict.rateLimit().loginPerEmailPerMinute(), Duration.ofMinutes(1));

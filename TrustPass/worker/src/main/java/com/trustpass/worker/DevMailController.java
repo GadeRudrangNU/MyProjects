@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/dev/mail")
 @ConditionalOnProperty(name = "trustpass.mail.embedded", havingValue = "true", matchIfMissing = true)
-@CrossOrigin(origins = {"http://localhost:5173"})
+@CrossOrigin(origins = "${trustpass.frontend-url:http://localhost:5173}")
 class DevMailController {
 
     private final EmbeddedMailServer server;

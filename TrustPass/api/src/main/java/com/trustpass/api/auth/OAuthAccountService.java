@@ -2,7 +2,6 @@ package com.trustpass.api.auth;
 
 import com.trustpass.api.audit.AuditService;
 import com.trustpass.api.shared.ApiException;
-import com.trustpass.api.shared.Hashing;
 import com.trustpass.api.users.User;
 import com.trustpass.api.users.UserService;
 import java.util.Map;
@@ -91,9 +90,5 @@ class OAuthAccountService {
             user.setEmailVerified(true);
             users.save(user);
         }
-    }
-
-    static String fingerprint(String value) {
-        return Hashing.sha256Hex(value).substring(0, 12);
     }
 }

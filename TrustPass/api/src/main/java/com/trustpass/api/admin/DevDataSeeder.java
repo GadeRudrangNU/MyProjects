@@ -2,6 +2,7 @@ package com.trustpass.api.admin;
 
 import com.trustpass.api.auth.PasswordHasher;
 import com.trustpass.api.shared.Role;
+import com.trustpass.api.shared.TrustPassProperties;
 import com.trustpass.api.users.UserService;
 import java.time.Instant;
 import java.time.LocalDate;
@@ -26,11 +27,13 @@ class DevDataSeeder implements ApplicationRunner {
     private final UserService users;
     private final PasswordHasher hasher;
     private final JdbcClient jdbc;
+    private final boolean loadUsers;
 
-    DevDataSeeder(UserService users, PasswordHasher hasher, JdbcClient jdbc) {
+    DevDataSeeder(UserService users, PasswordHasher hasher, JdbcClient jdbc, TrustPassProperties props) {
         this.users = users;
         this.hasher = hasher;
         this.jdbc = jdbc;
+        this.loadUsers = props.seed().loadUsers();
     }
 
     @Override
@@ -40,6 +43,26 @@ class DevDataSeeder implements ApplicationRunner {
         seedUser("Sam Support", "support@trustpass.dev", Role.SUPPORT);
         seedUser("Mia Member", "member@trustpass.dev", Role.MEMBER);
         seedLocations();
+        if (loadUsers) {
+            seedLoadUsers();
+        }
+    }
+
+    private void seedLoadUsers() {
+        String hash = hasher.hash(PASSWORD);
+        for (int i = 1; i <= 40; i++) {
+            String email = "load" + i + "@trustpass.dev";
+            if (users.findByEmail(email).isPresent()) {
+                continue;
+            }
+            var user = users.create("Load User " + i, email, hash, true);
+            jdbc.sql("""
+                            insert into subscriptions (id, user_id, plan_id, status, current_period_end)
+                            values (:id, :user, '11111111-1111-1111-1111-111111111111', 'ACTIVE', now() + interval '30 days')
+                            """)
+                    .param("id", UUID.randomUUID()).param("user", user.getId()).update();
+        }
+        log.info("seeded load test members");
     }
 
     private void seedUser(String name, String email, Role role) {
@@ -65,9 +88,9 @@ class DevDataSeeder implements ApplicationRunner {
             jdbc.sql("insert into locations (id, name, address) values (:id, :name, :address)")
                     .param("id", locationId).param("name", site[0]).param("address", site[1]).update();
             for (int day = 0; day < 5; day++) {
-                for (int hour = 9; hour < 13; hour++) {
+                for (int hour = 13; hour < 17; hour++) {
                     Instant start = base.plus(day, ChronoUnit.DAYS).plus(hour, ChronoUnit.HOURS);
-                    int capacity = day == 0 && hour == 9 ? 1 : 4;
+                    int capacity = day == 0 && hour == 13 ? 1 : 4;
                     jdbc.sql("insert into slots (id, location_id, starts_at, ends_at, capacity) values (:id, :loc, :s, :e, :cap)")
                             .param("id", UUID.randomUUID()).param("loc", locationId)
                             .param("s", java.sql.Timestamp.from(start))

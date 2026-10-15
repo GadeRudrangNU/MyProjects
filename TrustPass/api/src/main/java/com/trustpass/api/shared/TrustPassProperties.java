@@ -57,6 +57,6 @@ public record TrustPassProperties(
             @DefaultValue({"http://localhost:5173", "http://localhost:5174"}) List<String> allowedOrigins) {
     }
 
-    public record Seed(@DefaultValue("false") boolean enabled) {
+    public record Seed(@DefaultValue("false") boolean enabled, @DefaultValue("false") boolean loadUsers) {
     }
 }

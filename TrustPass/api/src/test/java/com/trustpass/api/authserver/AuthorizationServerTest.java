@@ -96,11 +96,14 @@ class AuthorizationServerTest extends IntegrationTest {
         }
         assertThat(location(resumed)).contains("/oauth2/consent");
 
+        Matcher stateMatcher = Pattern.compile("[?&]state=([^&]+)").matcher(location(resumed));
+        assertThat(stateMatcher.find()).isTrue();
+        String consentState = URLDecoder.decode(stateMatcher.group(1), StandardCharsets.UTF_8);
         HttpResponse<String> consent = get(client, location(resumed));
         assertThat(consent.statusCode()).isEqualTo(200);
         assertThat(consent.body()).contains("verified person over 21").contains("never shared");
 
-        StringBuilder body = new StringBuilder(form(Map.of("client_id", "partner-demo", "state", "state-xyz", "_csrf", csrf(consent.body()))));
+        StringBuilder body = new StringBuilder(form(Map.of("client_id", "partner-demo", "state", consentState, "_csrf", csrf(consent.body()))));
         for (String s : scope.split(" ")) {
             body.append("&scope=").append(enc(s));
         }

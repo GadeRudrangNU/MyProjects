@@ -9,6 +9,10 @@
   </parent>
   <artifactId>common</artifactId>
 
+  <properties>
+    <jib.skip>true</jib.skip>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>io.zonky.test</groupId>

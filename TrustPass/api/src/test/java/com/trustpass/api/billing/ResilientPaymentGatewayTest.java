@@ -23,7 +23,7 @@ public class ResilientPaymentGatewayTest {
                 new TrustPassProperties.Payment(decline, outage, 1, 5, timeoutMs),
                 new TrustPassProperties.Storage("uploads", 1024),
                 new TrustPassProperties.Cors(List.of()),
-                new TrustPassProperties.Seed(false),
+                new TrustPassProperties.Seed(false, false),
                 "http://localhost:5173");
     }
 
