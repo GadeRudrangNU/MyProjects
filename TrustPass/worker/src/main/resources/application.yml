@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: trustpass-worker
+  mail:
+    host: localhost
+    port: ${trustpass.mail.smtp-port:3025}
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus,metrics
+  tracing:
+    sampling:
+      probability: 1.0
+
+logging:
+  structured:
+    format:
+      console: logstash
