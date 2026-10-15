@@ -1,0 +1,85 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f1ea;
+  --fg: #2a1d12;
+  --card: #fffdf9;
+  --accent: #7a3b12;
+  --ok: #1b6b3a;
+  --no: #a4161a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1d140c;
+    --fg: #f3e8da;
+    --card: #281b10;
+    --accent: #e0a066;
+    --ok: #62d28f;
+    --no: #ff8a8f;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+main {
+  width: min(92vw, 520px);
+  padding: 2rem;
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+button {
+  font: inherit;
+  padding: 0.7rem 1.3rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  cursor: pointer;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--accent);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.ok {
+  color: var(--ok);
+}
+
+.no {
+  color: var(--no);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}
