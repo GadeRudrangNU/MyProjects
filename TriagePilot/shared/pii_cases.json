@@ -1,0 +1,12 @@
+[
+  {"in": "Reach me at jane.doe@example.com please", "out": "Reach me at [EMAIL] please"},
+  {"in": "Server 10.20.30.40 is down", "out": "Server [IP] is down"},
+  {"in": "call 617-555-0142 now", "out": "call [PHONE] now"},
+  {"in": "call (617) 555 0142 now", "out": "call [PHONE] now"},
+  {"in": "my number is +1 617.555.0142.", "out": "my number is [PHONE]."},
+  {"in": "mail a.b@c.io and ip 192.168.0.1 and 212-555-0100", "out": "mail [EMAIL] and ip [IP] and [PHONE]"},
+  {"in": "ticket INC1000001 opened at version 3.2.1", "out": "ticket INC1000001 opened at version 3.2.1"},
+  {"in": "no personal data here", "out": "no personal data here"},
+  {"in": "999.999.999.999 is not an address", "out": "999.999.999.999 is not an address"},
+  {"in": "", "out": ""}
+]
