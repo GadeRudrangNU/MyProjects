@@ -67,11 +67,10 @@ same machine, and answers in JSON that has to match a schema.
 approval, a client script and UI actions on the incident form, ACLs, a dashboard and ATF tests. Everything the
 agent receives is authenticated as an integration user that can do nothing else.
 
-**Testing without a hosted instance.** I wrote a small local instance that runs those same ServiceNow scripts
-(GlideRecord, business rules, flows, ACLs, scripted REST, the form with its client script). The agent talks to it
-over the real Table API and REST endpoints, so the same agent code works against a developer instance. The agent
-has 54 tests, the ServiceNow scripts have 25 tests plus 5 ATF-style tests, and model answers are recorded so the
-tests give the same result every time.
+**Testing.** A small local instance runs the same ServiceNow scripts (GlideRecord, business rules, flows, ACLs,
+scripted REST, the incident form with its client script). The agent talks to it over the Table API and REST
+endpoints, the same ones a developer instance exposes. The agent has 54 tests, the ServiceNow scripts have 25 tests
+plus 5 ATF-style tests, and model answers are recorded so the tests give the same result every time.
 
 ## Results
 
