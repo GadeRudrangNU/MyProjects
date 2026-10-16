@@ -1,0 +1,121 @@
+{
+  "scope": "x_tp",
+  "name": "TriagePilot",
+  "properties": {
+    "x_tp.agent_url": "http://127.0.0.1:8000",
+    "x_tp.agent_token": "local-dev-token",
+    "x_tp.auto_route_threshold": "0.85",
+    "x_tp.approval_group": "TP Service Desk"
+  },
+  "roles": ["x_tp_integration", "x_tp_admin", "itil", "approver_user"],
+  "categories": ["Access", "Administrative rights", "HR Support", "Hardware", "Internal Project", "Miscellaneous", "Purchase", "Storage"],
+  "tables": {
+    "x_tp_ai_triage_run": {
+      "label": "AI Triage Run",
+      "fields": {
+        "incident": "reference:incident",
+        "run_key": "string",
+        "mod_count": "integer",
+        "status": "choice:queued,running,completed,needs_review,failed",
+        "outcome": "choice:pending,auto_routed,approval_requested,accepted,rejected,failed",
+        "suggested_category": "string",
+        "suggested_group": "reference:sys_user_group",
+        "confidence": "decimal",
+        "path": "choice:fast,llm",
+        "reasoning": "string",
+        "reply_draft": "string",
+        "cited_articles": "string",
+        "similar_incidents": "string",
+        "latency_ms": "integer",
+        "attempts": "integer",
+        "trace": "json",
+        "error_message": "string",
+        "approval": "reference:sysapproval_approver"
+      }
+    },
+    "x_tp_ai_feedback": {
+      "label": "AI Triage Feedback",
+      "fields": {
+        "run": "reference:x_tp_ai_triage_run",
+        "incident": "reference:incident",
+        "decision": "choice:accepted,rejected,rerun",
+        "reason": "string",
+        "actor": "reference:sys_user"
+      }
+    },
+    "x_tp_knowledge_draft": {
+      "label": "Knowledge Draft Log",
+      "fields": {
+        "incident": "reference:incident",
+        "status": "choice:drafted,skipped_duplicate,failed",
+        "reason": "string",
+        "article_number": "string",
+        "nearest_article": "string",
+        "similarity": "decimal"
+      }
+    },
+    "x_tp_ticket_import": {
+      "label": "Ticket Import (staging)",
+      "fields": { "ticket_id": "string", "document": "string", "topic_group": "string" }
+    }
+  },
+  "incident_fields": {
+    "u_imported": "boolean",
+    "u_ai_suggestion_state": "choice:none,pending,applied_auto,accepted,rejected,applied",
+    "u_final_category": "string",
+    "u_corpus_ref": "string",
+    "u_reject_reason": "string"
+  },
+  "business_rules": [
+    { "name": "Queue triage on new incident", "table": "incident", "when": "async", "operations": ["insert"], "condition": { "all": [{ "field": "u_imported", "op": "=", "value": "false" }] }, "script": "business_rules/triage_on_insert.js" },
+    { "name": "Remember resolved category", "table": "incident", "when": "before", "operations": ["update"], "condition": { "all": [{ "field": "state", "op": "changesTo", "value": "6" }] }, "script": "business_rules/capture_final_category.js" },
+    { "name": "Draft article on resolve", "table": "incident", "when": "async", "operations": ["update"], "condition": { "all": [{ "field": "state", "op": "changesTo", "value": "6" }, { "field": "u_imported", "op": "=", "value": "false" }, { "field": "close_notes", "op": "isNotEmpty" }] }, "script": "business_rules/draft_article_on_resolve.js" },
+    { "name": "Apply approval decision", "table": "sysapproval_approver", "when": "after", "operations": ["update"], "condition": { "all": [{ "field": "source_table", "op": "=", "value": "incident" }, { "field": "state", "op": "changes" }, { "field": "u_handled_by_feedback", "op": "!=", "value": "true" }] }, "script": "business_rules/approval_decision.js" }
+  ],
+  "script_includes": ["TriagePII", "TriageClient", "TriageRouter", "TriageFeedback", "TriageAjax", "TriageMetrics"],
+  "rest_resources": [
+    { "method": "POST", "path": "/api/x_tp/triage/result", "script": "scripted_rest/triage_result.js", "roles": ["x_tp_integration"] },
+    { "method": "POST", "path": "/api/x_tp/triage/knowledge_result", "script": "scripted_rest/knowledge_result.js", "roles": ["x_tp_integration"] },
+    { "method": "GET", "path": "/api/x_tp/triage/metrics", "script": "scripted_rest/metrics.js", "roles": ["itil", "x_tp_admin"] }
+  ],
+  "flows": ["flows/route_triage_result.json"],
+  "client_scripts": [{ "name": "AI suggestion banner", "table": "incident", "type": "onLoad", "script": "client_scripts/incident_ai_banner.js" }],
+  "ui_actions": [
+    { "name": "Accept AI suggestion", "table": "incident", "onclick": "acceptSuggestion()", "condition": { "field": "u_ai_suggestion_state", "op": "=", "value": "pending" }, "script": "ui_actions/accept_suggestion.js" },
+    { "name": "Reject AI suggestion", "table": "incident", "onclick": "rejectSuggestion()", "condition": { "field": "u_ai_suggestion_state", "op": "=", "value": "pending" }, "script": "ui_actions/reject_suggestion.js" },
+    { "name": "Re-run triage", "table": "incident", "onclick": "rerunTriage()", "condition": { "field": "u_imported", "op": "=", "value": "false" }, "script": "ui_actions/rerun_triage.js" }
+  ],
+  "acls": [
+    { "table": "x_tp_ai_triage_run", "operation": "read", "roles": ["itil", "x_tp_admin", "x_tp_integration"] },
+    { "table": "x_tp_ai_triage_run", "operation": "write", "roles": ["x_tp_integration", "x_tp_admin"] },
+    { "table": "x_tp_ai_triage_run", "operation": "create", "roles": ["x_tp_integration", "x_tp_admin"] },
+    { "table": "x_tp_ai_feedback", "operation": "read", "roles": ["itil", "x_tp_admin"] },
+    { "table": "x_tp_ai_feedback", "operation": "create", "roles": ["itil", "x_tp_admin"] },
+    { "table": "x_tp_knowledge_draft", "operation": "read", "roles": ["itil", "x_tp_admin"] },
+    { "table": "x_tp_knowledge_draft", "operation": "create", "roles": ["x_tp_integration", "x_tp_admin"] },
+    { "table": "kb_knowledge", "operation": "create", "roles": ["x_tp_integration", "itil", "x_tp_admin"] },
+    { "table": "kb_knowledge", "operation": "read", "roles": ["*"] },
+    { "table": "incident", "operation": "read", "roles": ["itil", "x_tp_admin", "x_tp_integration"] },
+    { "table": "incident", "operation": "create", "roles": ["*"] },
+    { "table": "incident", "operation": "write", "roles": ["itil", "x_tp_admin"] },
+    { "table": "sysapproval_approver", "operation": "read", "roles": ["itil", "approver_user", "x_tp_admin"] },
+    { "table": "sysapproval_approver", "operation": "write", "roles": ["approver_user", "x_tp_admin"] }
+  ],
+  "groups": [
+    "TP Access Management",
+    "TP Admin Rights",
+    "TP HR Support",
+    "TP Hardware Support",
+    "TP Project Desk",
+    "TP Service Desk Triage",
+    "TP Procurement",
+    "TP Storage Team",
+    "TP Service Desk"
+  ],
+  "users": [
+    { "user_name": "svc_triagepilot", "name": "TriagePilot Integration", "password": "triage-local", "roles": ["x_tp_integration"] },
+    { "user_name": "desk.agent", "name": "Dana Whitaker", "password": "agent-local", "roles": ["itil", "approver_user"], "groups": ["TP Service Desk"] },
+    { "user_name": "admin", "name": "System Administrator", "password": "admin-local", "roles": ["x_tp_admin", "itil", "approver_user"] },
+    { "user_name": "emp.beth", "name": "Beth Marlow", "password": "emp-local", "roles": [] }
+  ]
+}

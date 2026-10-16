@@ -1,0 +1,26 @@
+{
+  "suite": "TriagePilot",
+  "note": "Each step is a Run Server Side Script step. Steps of one test run in order and share outputs.",
+  "tests": [
+    {
+      "name": "New incident queues a triage run",
+      "steps": ["atf/t1_new_incident_queues_run.js"]
+    },
+    {
+      "name": "Callback updates the run record",
+      "steps": ["atf/t2_callback_updates_run.js"]
+    },
+    {
+      "name": "Low confidence creates an approval, high confidence routes on its own",
+      "steps": ["atf/t3_routing.js"]
+    },
+    {
+      "name": "A user without the integration role is blocked",
+      "steps": ["atf/t4_acl_blocks_user.js"]
+    },
+    {
+      "name": "Duplicate trigger does not create a second run",
+      "steps": ["atf/t5_duplicate_trigger.js"]
+    }
+  ]
+}

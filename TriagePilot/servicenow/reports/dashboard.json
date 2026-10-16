@@ -1,0 +1,16 @@
+{
+  "dashboard": "TriagePilot",
+  "reports": [
+    { "title": "Runs by outcome", "type": "pie", "table": "x_tp_ai_triage_run", "group_by": "outcome" },
+    { "title": "Fast path vs LLM path", "type": "pie", "table": "x_tp_ai_triage_run", "filter": "statusINcompleted,needs_review", "group_by": "path" },
+    { "title": "Failed runs", "type": "single_score", "table": "x_tp_ai_triage_run", "filter": "status=failed" },
+    { "title": "Runs waiting for a person", "type": "single_score", "table": "x_tp_ai_triage_run", "filter": "outcome=approval_requested" },
+    { "title": "Average latency by day", "type": "line", "table": "x_tp_ai_triage_run", "aggregate": "AVG", "field": "latency_ms", "group_by": "sys_created_on" },
+    { "title": "Feedback decisions", "type": "bar", "table": "x_tp_ai_feedback", "group_by": "decision" },
+    { "title": "Rejections by category", "type": "bar", "table": "x_tp_ai_triage_run", "filter": "outcome=rejected", "group_by": "suggested_category" },
+    { "title": "Knowledge drafts", "type": "bar", "table": "x_tp_knowledge_draft", "group_by": "status" }
+  ],
+  "scripted_widgets": [
+    { "title": "Auto-routed share, routing accuracy, acceptance rate, p95 latency, accuracy by category", "source": "GET /api/x_tp/triage/metrics (TriageMetrics script include)" }
+  ]
+}

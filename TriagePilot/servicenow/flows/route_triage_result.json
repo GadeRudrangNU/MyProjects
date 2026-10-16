@@ -1,0 +1,18 @@
+{
+  "name": "TriagePilot - Route triage result",
+  "description": "Applies the agent's suggestion on its own when it is confident, otherwise asks the Service Desk to approve it.",
+  "trigger": {
+    "type": "record_updated",
+    "table": "x_tp_ai_triage_run",
+    "condition": { "field": "status", "op": "changesTo", "values": ["completed", "needs_review", "failed"] }
+  },
+  "steps": [
+    {
+      "name": "Route the result",
+      "type": "script_action",
+      "inputs": { "run": "trigger.current" },
+      "script": "new TriageRouter().route(run);",
+      "notes": "Auto-applies category and group when status is completed, confidence >= x_tp.auto_route_threshold and priority is not 1 or 2. Otherwise creates a sysapproval_approver record for the group in x_tp.approval_group. Failed runs only leave a work note."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Ticket import to incident",
+  "data_source": { "name": "Historical tickets CSV", "type": "File", "format": "CSV", "import_set_table": "x_tp_ticket_import" },
+  "target_table": "incident",
+  "field_map": [
+    { "source": "document", "target": "description" },
+    { "source": "topic_group", "target": "category" },
+    { "source": "ticket_id", "target": "u_corpus_ref" }
+  ],
+  "scripts": [{ "when": "onBefore", "script": "import/transform_on_before.js" }],
+  "run_business_rules": false
+}
