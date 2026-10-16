@@ -1,0 +1,800 @@
+truth,classifier,confidence,hybrid,path,zero_shot
+Access,Access,0.9598,Access,fast,Access
+Access,HR Support,0.503,Access,llm,Access
+Access,Access,0.931,Access,fast,Access
+Access,Access,0.544,Access,llm,Access
+Access,Access,0.9846,Access,fast,Access
+Access,Access,0.8719,Access,fast,Access
+Access,Access,0.7513,Access,llm,Access
+Access,Access,0.6292,Access,llm,Access
+Access,Access,0.6935,Access,llm,Access
+Access,Access,0.8409,Access,llm,Access
+Access,Hardware,0.4518,Access,llm,Hardware
+Access,Hardware,0.8067,Access,llm,Access
+Access,Access,0.8805,Access,fast,Access
+Access,Access,0.8706,Access,fast,Miscellaneous
+Access,Hardware,0.6468,Access,llm,Storage
+Access,Access,0.8091,Access,llm,Access
+Access,Access,0.8194,Access,llm,Miscellaneous
+Access,Access,0.9279,Access,fast,Access
+Access,Hardware,0.5084,Access,llm,Access
+Access,Access,0.4728,Access,llm,Hardware
+Access,Access,0.4545,Access,llm,Miscellaneous
+Access,Access,0.7438,Access,llm,Access
+Access,Access,0.9495,Access,fast,Access
+Access,Access,0.4796,HR Support,llm,HR Support
+Access,Access,0.9552,Access,fast,Access
+Access,Access,0.9906,Access,fast,Access
+Access,Access,0.8273,Access,llm,Access
+Access,Access,0.7742,Access,llm,Miscellaneous
+Access,Access,0.9094,Access,fast,Miscellaneous
+Access,Access,0.9681,Access,fast,Access
+Access,Access,0.9679,Access,fast,Access
+Access,Hardware,0.5296,Access,llm,Administrative rights
+Access,Access,0.7778,Internal Project,llm,Internal Project
+Access,Access,0.9927,Access,fast,Access
+Access,Access,0.7879,Access,llm,Access
+Access,Access,0.911,Access,fast,Access
+Access,Access,0.583,Access,llm,Access
+Access,Access,0.8248,Access,llm,Access
+Access,Access,0.7261,Access,llm,Access
+Access,Access,0.7254,Access,llm,Access
+Access,Access,0.8467,Access,llm,Access
+Access,Access,0.9499,Access,fast,Miscellaneous
+Access,Access,0.9589,Access,fast,Access
+Access,Hardware,0.47,Access,llm,Miscellaneous
+Access,Access,0.926,Access,fast,Purchase
+Access,Hardware,0.5513,Access,llm,Access
+Access,Access,0.9915,Access,fast,Access
+Access,Access,0.5126,Access,llm,Access
+Access,Access,0.9559,Access,fast,Purchase
+Access,Access,0.8716,Access,fast,Storage
+Access,Access,0.8943,Access,fast,Access
+Access,Access,0.7371,Access,llm,Access
+Access,Hardware,0.7149,Hardware,llm,Hardware
+Access,Access,0.9825,Access,fast,Access
+Access,Access,0.9389,Access,fast,Access
+Access,Access,0.9844,Access,fast,Access
+Access,Access,0.9102,Access,fast,Access
+Access,Access,0.5425,Access,llm,Access
+Access,Access,0.7792,Access,llm,Administrative rights
+Access,Access,0.8868,Access,fast,Access
+Access,Access,0.6776,Access,llm,Access
+Access,Access,0.461,Access,llm,Access
+Access,Access,0.6685,Access,llm,Miscellaneous
+Access,Access,0.6077,Access,llm,Access
+Access,Access,0.9332,Access,fast,Administrative rights
+Access,Miscellaneous,0.5403,Miscellaneous,llm,Miscellaneous
+Access,Access,0.9125,Access,fast,Access
+Access,Access,0.8566,Access,fast,Access
+Access,Access,0.9204,Access,fast,Access
+Access,Access,0.5885,Access,llm,Access
+Access,Hardware,0.4409,Hardware,llm,Miscellaneous
+Access,Access,0.5817,Access,llm,Access
+Access,Access,0.5162,Access,llm,Access
+Access,Access,0.6309,Access,llm,Access
+Access,Access,0.9481,Access,fast,Access
+Access,Access,0.9524,Access,fast,Access
+Access,Access,0.9064,Access,fast,Access
+Access,Access,0.947,Access,fast,Access
+Access,Access,0.8596,Access,fast,Access
+Access,Access,0.9805,Access,fast,Access
+Access,Access,0.9356,Access,fast,Access
+Access,Access,0.9638,Access,fast,Access
+Access,Access,0.9502,Access,fast,Access
+Access,Access,0.8089,Access,llm,Access
+Access,Access,0.9094,Access,fast,Miscellaneous
+Access,Access,0.546,Access,llm,Access
+Access,Access,0.8148,Access,llm,Access
+Access,Access,0.5291,Miscellaneous,llm,Miscellaneous
+Access,Access,0.8116,Access,llm,HR Support
+Access,Access,0.879,Access,fast,Access
+Access,Access,0.8802,Access,fast,Access
+Access,HR Support,0.5,Administrative rights,llm,Administrative rights
+Access,Access,0.7634,Access,llm,HR Support
+Access,HR Support,0.8165,Access,llm,Access
+Access,Access,0.5069,Access,llm,Administrative rights
+Access,Access,0.6155,Access,llm,Access
+Access,Access,0.8866,Access,fast,Access
+Access,Hardware,0.4355,Access,llm,Internal Project
+Access,Administrative rights,0.5072,Access,llm,Administrative rights
+Access,Access,0.7909,Access,llm,Access
+Access,Hardware,0.4685,Access,llm,Access
+Access,Access,0.9129,Access,fast,Access
+Access,Access,0.732,Access,llm,Access
+Access,Access,0.8845,Access,fast,Access
+Access,Access,0.5621,Access,llm,Access
+Access,Access,0.6321,Access,llm,Access
+Access,Access,0.9721,Access,fast,Access
+Access,Miscellaneous,0.5443,Access,llm,Miscellaneous
+Access,Access,0.5576,Access,llm,Access
+Access,Access,0.7024,Access,llm,Access
+Access,Access,0.9423,Access,fast,Access
+Access,Access,0.9685,Access,fast,Access
+Access,Access,0.8409,Access,llm,Access
+Access,Hardware,0.3233,HR Support,llm,HR Support
+Access,Hardware,0.4203,Access,llm,Access
+Access,Access,0.8876,Access,fast,Access
+Access,Miscellaneous,0.5303,Miscellaneous,llm,Access
+Access,Access,0.8068,Access,llm,Access
+Access,Access,0.834,Access,llm,Access
+Administrative rights,Administrative rights,0.8553,Administrative rights,fast,Administrative rights
+Administrative rights,Hardware,0.5745,Miscellaneous,llm,HR Support
+Administrative rights,Administrative rights,0.8474,Administrative rights,llm,Administrative rights
+Administrative rights,Hardware,0.8698,Hardware,fast,Miscellaneous
+Administrative rights,Administrative rights,0.6592,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.7327,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.4946,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.9408,Administrative rights,fast,Administrative rights
+Administrative rights,Hardware,0.6854,Hardware,llm,Hardware
+Administrative rights,Administrative rights,0.758,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.7913,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.6478,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.7061,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.8379,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.8204,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.8901,Administrative rights,fast,Administrative rights
+Administrative rights,Administrative rights,0.5812,Administrative rights,llm,Miscellaneous
+Administrative rights,Administrative rights,0.5443,Administrative rights,llm,Administrative rights
+Administrative rights,Miscellaneous,0.4296,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.5236,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.8203,Administrative rights,llm,Administrative rights
+Administrative rights,HR Support,0.6088,HR Support,llm,Miscellaneous
+Administrative rights,Administrative rights,0.6416,Administrative rights,llm,Administrative rights
+Administrative rights,Administrative rights,0.4685,Administrative rights,llm,Administrative rights
+Administrative rights,Hardware,0.6004,Administrative rights,llm,Administrative rights
+Administrative rights,Hardware,0.6088,Administrative rights,llm,Miscellaneous
+Administrative rights,Administrative rights,0.5085,Administrative rights,llm,Administrative rights
+Administrative rights,Hardware,0.811,Administrative rights,llm,Administrative rights
+Administrative rights,Miscellaneous,0.5022,Miscellaneous,llm,Storage
+HR Support,HR Support,0.9719,HR Support,fast,HR Support
+HR Support,HR Support,0.7195,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.5378,HR Support,llm,Access
+HR Support,HR Support,0.7934,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.979,HR Support,fast,HR Support
+HR Support,HR Support,0.9738,HR Support,fast,HR Support
+HR Support,HR Support,0.8126,HR Support,llm,Miscellaneous
+HR Support,Hardware,0.3409,HR Support,llm,HR Support
+HR Support,HR Support,0.8009,HR Support,llm,HR Support
+HR Support,HR Support,0.6105,HR Support,llm,Access
+HR Support,HR Support,0.6337,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.9154,HR Support,fast,HR Support
+HR Support,HR Support,0.8337,HR Support,llm,HR Support
+HR Support,HR Support,0.8835,HR Support,fast,HR Support
+HR Support,HR Support,0.9063,HR Support,fast,Access
+HR Support,HR Support,0.6546,Access,llm,Access
+HR Support,HR Support,0.9133,HR Support,fast,HR Support
+HR Support,HR Support,0.9446,HR Support,fast,HR Support
+HR Support,HR Support,0.9763,HR Support,fast,HR Support
+HR Support,HR Support,0.4611,HR Support,llm,Administrative rights
+HR Support,Access,0.5183,Access,llm,Access
+HR Support,HR Support,0.8061,HR Support,llm,HR Support
+HR Support,HR Support,0.604,HR Support,llm,HR Support
+HR Support,HR Support,0.5047,HR Support,llm,Access
+HR Support,Hardware,0.6729,Purchase,llm,Miscellaneous
+HR Support,HR Support,0.9677,HR Support,fast,HR Support
+HR Support,HR Support,0.7799,Hardware,llm,Hardware
+HR Support,HR Support,0.9852,HR Support,fast,HR Support
+HR Support,HR Support,0.9705,HR Support,fast,HR Support
+HR Support,HR Support,0.8857,HR Support,fast,Access
+HR Support,HR Support,0.8286,HR Support,llm,HR Support
+HR Support,Hardware,0.4856,Miscellaneous,llm,Miscellaneous
+HR Support,Hardware,0.8551,Hardware,fast,HR Support
+HR Support,HR Support,0.7228,HR Support,llm,HR Support
+HR Support,HR Support,0.5323,HR Support,llm,HR Support
+HR Support,Access,0.4882,HR Support,llm,HR Support
+HR Support,HR Support,0.9441,HR Support,fast,HR Support
+HR Support,HR Support,0.9242,HR Support,fast,Administrative rights
+HR Support,HR Support,0.8795,HR Support,fast,HR Support
+HR Support,Hardware,0.6391,HR Support,llm,Miscellaneous
+HR Support,Hardware,0.9047,Hardware,fast,Administrative rights
+HR Support,HR Support,0.9173,HR Support,fast,HR Support
+HR Support,Hardware,0.6324,Hardware,llm,Hardware
+HR Support,HR Support,0.9299,HR Support,fast,HR Support
+HR Support,HR Support,0.8486,HR Support,llm,HR Support
+HR Support,HR Support,0.9358,HR Support,fast,HR Support
+HR Support,HR Support,0.8815,HR Support,fast,Miscellaneous
+HR Support,HR Support,0.7239,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.3665,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.6825,HR Support,llm,HR Support
+HR Support,HR Support,0.8388,HR Support,llm,HR Support
+HR Support,Hardware,0.5842,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.839,HR Support,llm,HR Support
+HR Support,Hardware,0.9247,Hardware,fast,Administrative rights
+HR Support,HR Support,0.6704,HR Support,llm,HR Support
+HR Support,HR Support,0.5413,HR Support,llm,HR Support
+HR Support,HR Support,0.6414,Access,llm,Access
+HR Support,HR Support,0.6116,Access,llm,Access
+HR Support,HR Support,0.6783,HR Support,llm,HR Support
+HR Support,HR Support,0.6769,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.9452,HR Support,fast,HR Support
+HR Support,HR Support,0.8495,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.8652,HR Support,fast,HR Support
+HR Support,HR Support,0.973,HR Support,fast,HR Support
+HR Support,HR Support,0.8989,HR Support,fast,Miscellaneous
+HR Support,HR Support,0.5265,HR Support,llm,Administrative rights
+HR Support,HR Support,0.8972,HR Support,fast,Miscellaneous
+HR Support,HR Support,0.6349,HR Support,llm,Access
+HR Support,HR Support,0.9096,HR Support,fast,HR Support
+HR Support,HR Support,0.84,Access,llm,Access
+HR Support,HR Support,0.8263,HR Support,llm,HR Support
+HR Support,HR Support,0.7877,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.6969,HR Support,llm,HR Support
+HR Support,Hardware,0.4198,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.8471,HR Support,llm,HR Support
+HR Support,Hardware,0.6,Administrative rights,llm,Miscellaneous
+HR Support,HR Support,0.4169,Access,llm,Miscellaneous
+HR Support,Internal Project,0.4931,HR Support,llm,Access
+HR Support,HR Support,0.8774,HR Support,fast,Access
+HR Support,HR Support,0.8885,HR Support,fast,HR Support
+HR Support,HR Support,0.951,HR Support,fast,Miscellaneous
+HR Support,Hardware,0.7639,HR Support,llm,Internal Project
+HR Support,Hardware,0.4904,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.9706,HR Support,fast,HR Support
+HR Support,Hardware,0.491,Access,llm,Access
+HR Support,HR Support,0.9695,HR Support,fast,Access
+HR Support,HR Support,0.8527,HR Support,fast,HR Support
+HR Support,HR Support,0.562,HR Support,llm,Administrative rights
+HR Support,HR Support,0.5436,HR Support,llm,HR Support
+HR Support,Miscellaneous,0.5727,Miscellaneous,llm,Access
+HR Support,HR Support,0.7561,HR Support,llm,Miscellaneous
+HR Support,Miscellaneous,0.3748,Hardware,llm,Administrative rights
+HR Support,HR Support,0.7907,HR Support,llm,HR Support
+HR Support,HR Support,0.5596,HR Support,llm,HR Support
+HR Support,HR Support,0.8723,HR Support,fast,HR Support
+HR Support,HR Support,0.585,HR Support,llm,Access
+HR Support,HR Support,0.8781,HR Support,fast,HR Support
+HR Support,HR Support,0.7873,HR Support,llm,HR Support
+HR Support,HR Support,0.9579,HR Support,fast,HR Support
+HR Support,HR Support,0.9325,HR Support,fast,HR Support
+HR Support,Miscellaneous,0.4713,HR Support,llm,HR Support
+HR Support,HR Support,0.8734,HR Support,fast,Access
+HR Support,HR Support,0.7764,HR Support,llm,HR Support
+HR Support,Hardware,0.5502,Access,llm,Access
+HR Support,HR Support,0.7322,HR Support,llm,Access
+HR Support,HR Support,0.7554,HR Support,llm,HR Support
+HR Support,HR Support,0.9832,HR Support,fast,HR Support
+HR Support,HR Support,0.7018,HR Support,llm,HR Support
+HR Support,HR Support,0.9722,HR Support,fast,HR Support
+HR Support,Hardware,0.6684,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.5408,Access,llm,Access
+HR Support,HR Support,0.8628,HR Support,fast,HR Support
+HR Support,HR Support,0.8502,HR Support,fast,Access
+HR Support,HR Support,0.5383,HR Support,llm,HR Support
+HR Support,HR Support,0.8109,HR Support,llm,HR Support
+HR Support,Access,0.6314,Access,llm,HR Support
+HR Support,Hardware,0.5954,Access,llm,HR Support
+HR Support,Access,0.35,HR Support,llm,Access
+HR Support,HR Support,0.9609,HR Support,fast,HR Support
+HR Support,HR Support,0.8119,HR Support,llm,HR Support
+HR Support,HR Support,0.3033,HR Support,llm,Miscellaneous
+HR Support,Miscellaneous,0.7015,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.9578,HR Support,fast,HR Support
+HR Support,HR Support,0.7373,Access,llm,Access
+HR Support,HR Support,0.9089,HR Support,fast,Access
+HR Support,HR Support,0.4225,HR Support,llm,HR Support
+HR Support,HR Support,0.6259,HR Support,llm,Access
+HR Support,HR Support,0.9689,HR Support,fast,HR Support
+HR Support,HR Support,0.9497,HR Support,fast,HR Support
+HR Support,HR Support,0.5143,HR Support,llm,Miscellaneous
+HR Support,Access,0.5901,Access,llm,HR Support
+HR Support,HR Support,0.8901,HR Support,fast,HR Support
+HR Support,HR Support,0.4964,HR Support,llm,Miscellaneous
+HR Support,Hardware,0.6127,HR Support,llm,HR Support
+HR Support,HR Support,0.7938,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.9454,HR Support,fast,HR Support
+HR Support,HR Support,0.6094,HR Support,llm,HR Support
+HR Support,HR Support,0.7333,Access,llm,Access
+HR Support,HR Support,0.7306,HR Support,llm,Administrative rights
+HR Support,Miscellaneous,0.4482,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.9447,HR Support,fast,HR Support
+HR Support,HR Support,0.9657,HR Support,fast,HR Support
+HR Support,HR Support,0.7343,HR Support,llm,HR Support
+HR Support,HR Support,0.9156,HR Support,fast,Miscellaneous
+HR Support,Hardware,0.386,Miscellaneous,llm,Internal Project
+HR Support,Hardware,0.6688,Hardware,llm,Hardware
+HR Support,HR Support,0.7759,HR Support,llm,Access
+HR Support,HR Support,0.661,HR Support,llm,HR Support
+HR Support,HR Support,0.7674,HR Support,llm,Access
+HR Support,HR Support,0.8865,HR Support,fast,Miscellaneous
+HR Support,HR Support,0.7194,HR Support,llm,HR Support
+HR Support,HR Support,0.6978,Internal Project,llm,Access
+HR Support,HR Support,0.9254,HR Support,fast,Access
+HR Support,HR Support,0.6118,HR Support,llm,Access
+HR Support,HR Support,0.5758,HR Support,llm,Internal Project
+HR Support,HR Support,0.8898,HR Support,fast,HR Support
+HR Support,HR Support,0.9753,HR Support,fast,HR Support
+HR Support,Miscellaneous,0.5661,HR Support,llm,HR Support
+HR Support,HR Support,0.8387,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.9018,HR Support,fast,Access
+HR Support,Hardware,0.4722,Hardware,llm,Miscellaneous
+HR Support,HR Support,0.8383,HR Support,llm,HR Support
+HR Support,HR Support,0.7136,HR Support,llm,HR Support
+HR Support,HR Support,0.7861,HR Support,llm,Access
+HR Support,HR Support,0.5976,Miscellaneous,llm,Miscellaneous
+HR Support,HR Support,0.7239,HR Support,llm,HR Support
+HR Support,HR Support,0.7399,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.8609,HR Support,fast,HR Support
+HR Support,HR Support,0.7218,Miscellaneous,llm,Administrative rights
+HR Support,HR Support,0.7575,HR Support,llm,Miscellaneous
+HR Support,HR Support,0.6456,HR Support,llm,Access
+HR Support,HR Support,0.9586,HR Support,fast,HR Support
+HR Support,HR Support,0.8384,HR Support,llm,HR Support
+HR Support,HR Support,0.8417,HR Support,llm,HR Support
+HR Support,HR Support,0.9288,HR Support,fast,HR Support
+HR Support,HR Support,0.7555,HR Support,llm,HR Support
+HR Support,HR Support,0.9247,HR Support,fast,HR Support
+HR Support,HR Support,0.9385,HR Support,fast,Miscellaneous
+HR Support,HR Support,0.8736,HR Support,fast,HR Support
+HR Support,HR Support,0.8776,HR Support,fast,HR Support
+HR Support,Hardware,0.3669,Access,llm,Access
+HR Support,Hardware,0.5109,Access,llm,Access
+HR Support,HR Support,0.8613,HR Support,fast,Access
+Hardware,Hardware,0.631,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.581,Hardware,llm,Hardware
+Hardware,Hardware,0.8937,Hardware,fast,Hardware
+Hardware,Hardware,0.9495,Hardware,fast,Hardware
+Hardware,HR Support,0.6222,HR Support,llm,HR Support
+Hardware,Hardware,0.9194,Hardware,fast,Hardware
+Hardware,Hardware,0.7083,Access,llm,Access
+Hardware,Hardware,0.8647,Hardware,fast,Hardware
+Hardware,Hardware,0.8171,Hardware,llm,Hardware
+Hardware,Hardware,0.6221,Hardware,llm,Access
+Hardware,Hardware,0.9442,Hardware,fast,Access
+Hardware,Access,0.8423,Access,llm,Miscellaneous
+Hardware,Hardware,0.509,Access,llm,Access
+Hardware,Hardware,0.5459,Hardware,llm,Purchase
+Hardware,Hardware,0.8758,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9218,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9661,Hardware,fast,Hardware
+Hardware,Hardware,0.8401,Hardware,llm,Hardware
+Hardware,Hardware,0.8973,Hardware,fast,Access
+Hardware,Miscellaneous,0.7503,Miscellaneous,llm,Hardware
+Hardware,Hardware,0.7173,Access,llm,Access
+Hardware,Hardware,0.843,Hardware,llm,Hardware
+Hardware,Hardware,0.7989,Hardware,llm,Administrative rights
+Hardware,HR Support,0.5093,Access,llm,Access
+Hardware,Hardware,0.9597,Hardware,fast,Hardware
+Hardware,HR Support,0.5608,HR Support,llm,Access
+Hardware,Hardware,0.892,Hardware,fast,Access
+Hardware,Hardware,0.7309,Hardware,llm,Hardware
+Hardware,Administrative rights,0.5521,Storage,llm,Storage
+Hardware,Hardware,0.7358,Hardware,llm,Access
+Hardware,Hardware,0.7224,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.917,Hardware,fast,Hardware
+Hardware,Hardware,0.9447,Hardware,fast,Hardware
+Hardware,Hardware,0.9189,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7882,Hardware,llm,Hardware
+Hardware,Hardware,0.8277,Hardware,llm,Access
+Hardware,Hardware,0.922,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9086,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.6546,Miscellaneous,llm,HR Support
+Hardware,Hardware,0.8543,Hardware,fast,Administrative rights
+Hardware,Hardware,0.953,Hardware,fast,Hardware
+Hardware,Hardware,0.8722,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.8772,Hardware,fast,Access
+Hardware,Hardware,0.853,Hardware,fast,Hardware
+Hardware,Hardware,0.9538,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.8975,Hardware,fast,Hardware
+Hardware,Access,0.4207,Access,llm,Miscellaneous
+Hardware,Hardware,0.6627,Hardware,llm,Hardware
+Hardware,HR Support,0.7895,HR Support,llm,Miscellaneous
+Hardware,Hardware,0.7388,Hardware,llm,Access
+Hardware,Hardware,0.6642,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.9446,Hardware,fast,Hardware
+Hardware,Hardware,0.8854,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9498,Hardware,fast,Hardware
+Hardware,Hardware,0.861,Hardware,fast,Hardware
+Hardware,Hardware,0.8777,Hardware,fast,HR Support
+Hardware,Hardware,0.9457,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.8769,Hardware,fast,Access
+Hardware,Hardware,0.9535,Hardware,fast,Hardware
+Hardware,Hardware,0.8001,Hardware,llm,Administrative rights
+Hardware,Hardware,0.9735,Hardware,fast,Hardware
+Hardware,Hardware,0.9118,Hardware,fast,Miscellaneous
+Hardware,Access,0.5757,Access,llm,Access
+Hardware,Hardware,0.9377,Hardware,fast,Hardware
+Hardware,Hardware,0.8817,Hardware,fast,Hardware
+Hardware,Hardware,0.8772,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.83,Hardware,llm,Administrative rights
+Hardware,Hardware,0.9208,Hardware,fast,Hardware
+Hardware,Hardware,0.8822,Hardware,fast,Hardware
+Hardware,Hardware,0.743,Hardware,llm,Hardware
+Hardware,Hardware,0.8851,Hardware,fast,Hardware
+Hardware,Hardware,0.8185,Hardware,llm,Internal Project
+Hardware,Miscellaneous,0.5995,Miscellaneous,llm,HR Support
+Hardware,Hardware,0.7986,Internal Project,llm,Miscellaneous
+Hardware,Hardware,0.9515,Hardware,fast,Hardware
+Hardware,Hardware,0.8994,Hardware,fast,Hardware
+Hardware,Hardware,0.5413,Purchase,llm,Purchase
+Hardware,Hardware,0.9375,Hardware,fast,Access
+Hardware,Hardware,0.3889,Hardware,llm,Internal Project
+Hardware,Hardware,0.7215,Miscellaneous,llm,HR Support
+Hardware,Hardware,0.6917,Hardware,llm,Hardware
+Hardware,Hardware,0.9362,Hardware,fast,Hardware
+Hardware,Hardware,0.9107,Hardware,fast,Storage
+Hardware,Hardware,0.7861,Internal Project,llm,Internal Project
+Hardware,Hardware,0.5389,Hardware,llm,Access
+Hardware,Hardware,0.8207,HR Support,llm,HR Support
+Hardware,Hardware,0.9378,Hardware,fast,Hardware
+Hardware,Hardware,0.6562,Hardware,llm,Access
+Hardware,Hardware,0.7577,Miscellaneous,llm,Miscellaneous
+Hardware,HR Support,0.4248,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.6656,Hardware,llm,Hardware
+Hardware,Hardware,0.5521,Access,llm,Access
+Hardware,Hardware,0.9607,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.955,Hardware,fast,Hardware
+Hardware,Hardware,0.9012,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7927,Hardware,llm,Miscellaneous
+Hardware,Administrative rights,0.4634,Administrative rights,llm,Miscellaneous
+Hardware,Hardware,0.8124,Hardware,llm,Access
+Hardware,Hardware,0.8386,HR Support,llm,Miscellaneous
+Hardware,Hardware,0.7652,Access,llm,Access
+Hardware,Hardware,0.9345,Hardware,fast,Hardware
+Hardware,HR Support,0.7664,Hardware,llm,Access
+Hardware,Hardware,0.92,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.8511,Hardware,fast,Access
+Hardware,Hardware,0.8794,Hardware,fast,Access
+Hardware,Hardware,0.4952,Access,llm,Miscellaneous
+Hardware,Hardware,0.7827,HR Support,llm,Access
+Hardware,Hardware,0.8613,Hardware,fast,Hardware
+Hardware,Hardware,0.6484,Storage,llm,Access
+Hardware,Hardware,0.8897,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.8625,Hardware,fast,Hardware
+Hardware,Hardware,0.9474,Hardware,fast,Hardware
+Hardware,Hardware,0.7114,Hardware,llm,Hardware
+Hardware,Hardware,0.8959,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9335,Hardware,fast,Miscellaneous
+Hardware,HR Support,0.32,Access,llm,Miscellaneous
+Hardware,Hardware,0.9032,Hardware,fast,Access
+Hardware,Hardware,0.6699,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.7041,Hardware,llm,Hardware
+Hardware,Hardware,0.8464,HR Support,llm,HR Support
+Hardware,Hardware,0.7871,Internal Project,llm,HR Support
+Hardware,Hardware,0.8429,Hardware,llm,Access
+Hardware,Hardware,0.8627,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.6737,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.9634,Hardware,fast,Hardware
+Hardware,Administrative rights,0.6299,Hardware,llm,Administrative rights
+Hardware,Hardware,0.7462,Administrative rights,llm,Administrative rights
+Hardware,Hardware,0.9276,Hardware,fast,Hardware
+Hardware,Hardware,0.9276,Hardware,fast,Hardware
+Hardware,Hardware,0.6392,Hardware,llm,Hardware
+Hardware,Hardware,0.5032,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.598,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.6034,Access,llm,Miscellaneous
+Hardware,Hardware,0.8329,Hardware,llm,Hardware
+Hardware,Hardware,0.8654,Hardware,fast,Hardware
+Hardware,HR Support,0.6755,Hardware,llm,Hardware
+Hardware,Hardware,0.7173,HR Support,llm,Access
+Hardware,Hardware,0.9539,Hardware,fast,Storage
+Hardware,Hardware,0.6032,Hardware,llm,Hardware
+Hardware,Hardware,0.4977,Access,llm,Miscellaneous
+Hardware,Hardware,0.9099,Hardware,fast,Hardware
+Hardware,Hardware,0.8207,Hardware,llm,Access
+Hardware,Miscellaneous,0.5839,Miscellaneous,llm,HR Support
+Hardware,Hardware,0.4318,Hardware,llm,Access
+Hardware,Hardware,0.9379,Hardware,fast,Hardware
+Hardware,Hardware,0.5837,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.7519,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.7887,Miscellaneous,llm,Access
+Hardware,Hardware,0.7517,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.9466,Hardware,fast,Hardware
+Hardware,Hardware,0.4972,Access,llm,Access
+Hardware,Hardware,0.9209,Hardware,fast,Purchase
+Hardware,Hardware,0.9012,Hardware,fast,Access
+Hardware,Storage,0.3409,Hardware,llm,Hardware
+Hardware,Hardware,0.6208,Hardware,llm,Hardware
+Hardware,Hardware,0.7981,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.6095,Access,llm,Access
+Hardware,Hardware,0.6839,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.9597,Hardware,fast,Hardware
+Hardware,Hardware,0.9282,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.4753,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.6427,Hardware,llm,Hardware
+Hardware,Hardware,0.8801,Hardware,fast,Storage
+Hardware,Hardware,0.6399,Hardware,llm,Access
+Hardware,Hardware,0.935,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7567,Hardware,llm,Access
+Hardware,Hardware,0.9126,Hardware,fast,Hardware
+Hardware,Hardware,0.9729,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.8726,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7979,Hardware,llm,Access
+Hardware,Hardware,0.9412,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7432,Hardware,llm,Administrative rights
+Hardware,Hardware,0.6419,Hardware,llm,Storage
+Hardware,Hardware,0.6174,Storage,llm,Storage
+Hardware,Hardware,0.859,Hardware,fast,Hardware
+Hardware,Hardware,0.905,Hardware,fast,Hardware
+Hardware,Hardware,0.9212,Hardware,fast,Purchase
+Hardware,Hardware,0.8558,Hardware,fast,Miscellaneous
+Hardware,HR Support,0.495,HR Support,llm,Access
+Hardware,Hardware,0.9062,Hardware,fast,Storage
+Hardware,HR Support,0.4311,HR Support,llm,Storage
+Hardware,Hardware,0.8069,Hardware,llm,Access
+Hardware,Hardware,0.8705,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7852,Miscellaneous,llm,Miscellaneous
+Hardware,Hardware,0.5961,Administrative rights,llm,Administrative rights
+Hardware,Hardware,0.5801,Miscellaneous,llm,HR Support
+Hardware,Hardware,0.9187,Hardware,fast,Hardware
+Hardware,Hardware,0.8712,Hardware,fast,Hardware
+Hardware,Miscellaneous,0.5048,Miscellaneous,llm,Miscellaneous
+Hardware,HR Support,0.683,Access,llm,Access
+Hardware,Hardware,0.9044,Hardware,fast,Hardware
+Hardware,Hardware,0.9228,Hardware,fast,Hardware
+Hardware,Hardware,0.8529,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.4872,Hardware,llm,Hardware
+Hardware,Hardware,0.5485,Hardware,llm,Hardware
+Hardware,Hardware,0.9464,Hardware,fast,Hardware
+Hardware,Hardware,0.496,Purchase,llm,Purchase
+Hardware,Hardware,0.9407,Hardware,fast,Storage
+Hardware,Hardware,0.6467,Storage,llm,Storage
+Hardware,Hardware,0.8867,Hardware,fast,Hardware
+Hardware,Hardware,0.9526,Hardware,fast,Hardware
+Hardware,Hardware,0.8986,Hardware,fast,Hardware
+Hardware,Hardware,0.6635,Access,llm,Access
+Hardware,Hardware,0.9432,Hardware,fast,Hardware
+Hardware,Miscellaneous,0.3776,Miscellaneous,llm,Internal Project
+Hardware,Hardware,0.946,Hardware,fast,Hardware
+Hardware,Miscellaneous,0.7358,Hardware,llm,Hardware
+Hardware,Hardware,0.8091,Hardware,llm,Miscellaneous
+Hardware,Hardware,0.4108,Hardware,llm,Hardware
+Hardware,Hardware,0.7792,HR Support,llm,HR Support
+Hardware,Miscellaneous,0.5506,Access,llm,Access
+Hardware,Hardware,0.8895,Hardware,fast,Hardware
+Hardware,Hardware,0.9086,Hardware,fast,Hardware
+Hardware,Hardware,0.8898,Hardware,fast,Access
+Hardware,Hardware,0.9347,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.6646,Hardware,llm,Hardware
+Hardware,Hardware,0.9254,Hardware,fast,Hardware
+Hardware,Hardware,0.9079,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9106,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.9288,Hardware,fast,Hardware
+Hardware,Hardware,0.9511,Hardware,fast,Hardware
+Hardware,HR Support,0.5769,Hardware,llm,Hardware
+Hardware,Hardware,0.6824,Hardware,llm,Hardware
+Hardware,Hardware,0.7827,Access,llm,Miscellaneous
+Hardware,Hardware,0.7539,Hardware,llm,Hardware
+Hardware,Hardware,0.8782,Hardware,fast,Miscellaneous
+Hardware,Hardware,0.7864,Access,llm,Access
+Hardware,Hardware,0.8853,Hardware,fast,Hardware
+Internal Project,Internal Project,0.9748,Internal Project,fast,Internal Project
+Internal Project,Internal Project,0.6689,Internal Project,llm,Miscellaneous
+Internal Project,Internal Project,0.5263,Miscellaneous,llm,Miscellaneous
+Internal Project,Internal Project,0.4973,Miscellaneous,llm,HR Support
+Internal Project,Internal Project,0.6822,Internal Project,llm,Internal Project
+Internal Project,Hardware,0.4233,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.8253,Internal Project,llm,Access
+Internal Project,Internal Project,0.9061,Internal Project,fast,Access
+Internal Project,HR Support,0.4589,Hardware,llm,Miscellaneous
+Internal Project,Internal Project,0.5546,Miscellaneous,llm,Access
+Internal Project,Internal Project,0.7502,Internal Project,llm,Internal Project
+Internal Project,Hardware,0.4683,Internal Project,llm,Miscellaneous
+Internal Project,Internal Project,0.4412,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.7519,Internal Project,llm,Internal Project
+Internal Project,Hardware,0.6536,Internal Project,llm,Miscellaneous
+Internal Project,Internal Project,0.4631,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.7204,Internal Project,llm,Access
+Internal Project,Internal Project,0.6853,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.9568,Internal Project,fast,Internal Project
+Internal Project,Internal Project,0.7507,Internal Project,llm,Miscellaneous
+Internal Project,Internal Project,0.953,Internal Project,fast,Miscellaneous
+Internal Project,HR Support,0.5493,HR Support,llm,Access
+Internal Project,Internal Project,0.8378,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.6953,Internal Project,llm,Internal Project
+Internal Project,HR Support,0.7568,HR Support,llm,Miscellaneous
+Internal Project,Internal Project,0.905,Internal Project,fast,Internal Project
+Internal Project,Internal Project,0.7221,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.8399,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.9056,Internal Project,fast,Miscellaneous
+Internal Project,Internal Project,0.7793,Hardware,llm,Hardware
+Internal Project,Internal Project,0.963,Internal Project,fast,Internal Project
+Internal Project,Internal Project,0.9581,Internal Project,fast,Internal Project
+Internal Project,Internal Project,0.6994,Internal Project,llm,HR Support
+Internal Project,Internal Project,0.8062,Internal Project,llm,Internal Project
+Internal Project,Internal Project,0.9742,Internal Project,fast,Internal Project
+Miscellaneous,Miscellaneous,0.7485,Miscellaneous,llm,Access
+Miscellaneous,Miscellaneous,0.9314,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.7395,Access,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8435,Access,llm,Access
+Miscellaneous,Miscellaneous,0.8236,Miscellaneous,llm,Miscellaneous
+Miscellaneous,HR Support,0.7809,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.86,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.9331,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8795,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Hardware,0.5822,Hardware,llm,Administrative rights
+Miscellaneous,Miscellaneous,0.6612,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.5857,Access,llm,Access
+Miscellaneous,Miscellaneous,0.9152,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.9609,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8516,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Hardware,0.6425,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8875,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.6948,Miscellaneous,llm,Access
+Miscellaneous,Hardware,0.6376,Miscellaneous,llm,Storage
+Miscellaneous,Miscellaneous,0.4555,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.9265,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8472,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8297,Miscellaneous,llm,Administrative rights
+Miscellaneous,Hardware,0.7825,Miscellaneous,llm,Miscellaneous
+Miscellaneous,HR Support,0.4066,HR Support,llm,HR Support
+Miscellaneous,Miscellaneous,0.9058,Miscellaneous,fast,Access
+Miscellaneous,Miscellaneous,0.4159,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9039,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.6191,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9212,Miscellaneous,fast,Hardware
+Miscellaneous,Hardware,0.7127,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9503,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8877,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.6585,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8166,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.9277,Miscellaneous,fast,Miscellaneous
+Miscellaneous,HR Support,0.6921,HR Support,llm,Access
+Miscellaneous,Hardware,0.7194,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.5481,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.943,Miscellaneous,fast,Access
+Miscellaneous,Miscellaneous,0.9776,Miscellaneous,fast,Access
+Miscellaneous,Hardware,0.6623,Miscellaneous,llm,Miscellaneous
+Miscellaneous,HR Support,0.5591,HR Support,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9423,Miscellaneous,fast,HR Support
+Miscellaneous,Miscellaneous,0.7809,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.7622,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Hardware,0.5661,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9234,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.962,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8197,Miscellaneous,llm,Miscellaneous
+Miscellaneous,HR Support,0.5126,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9314,Miscellaneous,fast,Hardware
+Miscellaneous,Miscellaneous,0.5087,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.7935,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.5885,Miscellaneous,llm,HR Support
+Miscellaneous,HR Support,0.5477,Hardware,llm,Hardware
+Miscellaneous,Access,0.5244,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.7058,Hardware,llm,Hardware
+Miscellaneous,Miscellaneous,0.8429,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.4569,HR Support,llm,HR Support
+Miscellaneous,Miscellaneous,0.9074,Miscellaneous,fast,HR Support
+Miscellaneous,Miscellaneous,0.7314,HR Support,llm,HR Support
+Miscellaneous,Miscellaneous,0.5023,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.7933,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.6605,Miscellaneous,llm,Miscellaneous
+Miscellaneous,HR Support,0.7953,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.4123,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9385,Miscellaneous,fast,Access
+Miscellaneous,Miscellaneous,0.5027,Miscellaneous,llm,Access
+Miscellaneous,Miscellaneous,0.8623,Miscellaneous,fast,Access
+Miscellaneous,Miscellaneous,0.8279,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.4916,Access,llm,Access
+Miscellaneous,Miscellaneous,0.4944,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.9088,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.7599,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.5686,Miscellaneous,llm,Administrative rights
+Miscellaneous,Miscellaneous,0.4214,Access,llm,Access
+Miscellaneous,Miscellaneous,0.5601,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9124,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8264,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.777,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Hardware,0.4624,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.933,Miscellaneous,fast,Access
+Miscellaneous,HR Support,0.8142,HR Support,llm,Access
+Miscellaneous,Miscellaneous,0.692,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.7759,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8082,Miscellaneous,llm,Access
+Miscellaneous,Miscellaneous,0.9637,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.6074,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9223,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Hardware,0.7165,Miscellaneous,llm,HR Support
+Miscellaneous,Miscellaneous,0.9073,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.9515,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.5565,Hardware,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8563,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Hardware,0.7127,Hardware,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.8406,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Access,0.619,Internal Project,llm,Internal Project
+Miscellaneous,Miscellaneous,0.7976,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.881,Miscellaneous,fast,HR Support
+Miscellaneous,Miscellaneous,0.6115,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9272,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.8995,Miscellaneous,fast,HR Support
+Miscellaneous,Miscellaneous,0.9551,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.6501,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.5594,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.6372,Access,llm,Access
+Miscellaneous,Miscellaneous,0.8632,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.6938,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9331,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.823,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.7997,Miscellaneous,llm,Access
+Miscellaneous,Miscellaneous,0.3588,Storage,llm,Storage
+Miscellaneous,Miscellaneous,0.8924,Miscellaneous,fast,HR Support
+Miscellaneous,Miscellaneous,0.7084,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Hardware,0.4563,Miscellaneous,llm,Miscellaneous
+Miscellaneous,Miscellaneous,0.9092,Miscellaneous,fast,Miscellaneous
+Miscellaneous,Miscellaneous,0.9017,Miscellaneous,fast,Miscellaneous
+Purchase,Purchase,0.8546,Purchase,fast,Miscellaneous
+Purchase,Purchase,0.9952,Purchase,fast,Purchase
+Purchase,Purchase,0.8221,Purchase,llm,Miscellaneous
+Purchase,Hardware,0.6452,Hardware,llm,Hardware
+Purchase,Purchase,0.834,Purchase,llm,Purchase
+Purchase,Purchase,0.872,Purchase,fast,Purchase
+Purchase,Hardware,0.8347,Hardware,llm,Administrative rights
+Purchase,Purchase,0.9722,Purchase,fast,Purchase
+Purchase,Purchase,0.7993,Purchase,llm,Purchase
+Purchase,Hardware,0.7815,Purchase,llm,Purchase
+Purchase,Purchase,0.9892,Purchase,fast,Purchase
+Purchase,Purchase,0.7295,Purchase,llm,Purchase
+Purchase,Purchase,0.8755,Purchase,fast,Purchase
+Purchase,Purchase,0.9936,Purchase,fast,Purchase
+Purchase,Purchase,0.8499,Purchase,llm,Administrative rights
+Purchase,Purchase,0.9235,Purchase,fast,Purchase
+Purchase,Purchase,0.8352,Purchase,llm,Purchase
+Purchase,Hardware,0.6871,Purchase,llm,Purchase
+Purchase,Purchase,0.7327,Purchase,llm,Purchase
+Purchase,Miscellaneous,0.7735,Purchase,llm,Purchase
+Purchase,Purchase,0.9966,Purchase,fast,Purchase
+Purchase,Purchase,0.9889,Purchase,fast,Purchase
+Purchase,Purchase,0.8243,Purchase,llm,Purchase
+Purchase,Purchase,0.7477,Purchase,llm,Miscellaneous
+Purchase,Purchase,0.9954,Purchase,fast,Purchase
+Purchase,Purchase,0.9337,Purchase,fast,Purchase
+Purchase,Purchase,0.9953,Purchase,fast,Purchase
+Purchase,Administrative rights,0.3555,Administrative rights,llm,Administrative rights
+Purchase,Purchase,0.931,Purchase,fast,Miscellaneous
+Purchase,Purchase,0.8126,Purchase,llm,Purchase
+Purchase,Purchase,0.9936,Purchase,fast,Purchase
+Purchase,Purchase,0.9953,Purchase,fast,Purchase
+Purchase,Purchase,0.8869,Purchase,fast,Purchase
+Purchase,Purchase,0.9543,Purchase,fast,Purchase
+Purchase,Purchase,0.8459,Purchase,llm,Purchase
+Purchase,Purchase,0.7817,Purchase,llm,Purchase
+Purchase,Purchase,0.9692,Purchase,fast,Purchase
+Purchase,Purchase,0.9931,Purchase,fast,Purchase
+Purchase,Purchase,0.672,Purchase,llm,Purchase
+Purchase,Purchase,0.9592,Purchase,fast,Purchase
+Purchase,Purchase,0.9831,Purchase,fast,Purchase
+Storage,Storage,0.8763,Storage,fast,Miscellaneous
+Storage,Hardware,0.4852,Storage,llm,Storage
+Storage,Storage,0.9806,Storage,fast,Storage
+Storage,Storage,0.894,Storage,fast,Access
+Storage,Storage,0.5688,Storage,llm,Storage
+Storage,Storage,0.5629,Storage,llm,Miscellaneous
+Storage,Storage,0.5635,Storage,llm,Internal Project
+Storage,Storage,0.6226,Storage,llm,Storage
+Storage,Storage,0.4878,Storage,llm,Access
+Storage,Storage,0.7919,Access,llm,Administrative rights
+Storage,Administrative rights,0.367,Administrative rights,llm,Miscellaneous
+Storage,Storage,0.9805,Storage,fast,Storage
+Storage,Storage,0.6987,Storage,llm,Storage
+Storage,Storage,0.4689,Miscellaneous,llm,Access
+Storage,Storage,0.9776,Storage,fast,Storage
+Storage,Storage,0.9727,Storage,fast,Storage
+Storage,HR Support,0.4271,Storage,llm,Internal Project
+Storage,Hardware,0.5712,Storage,llm,Access
+Storage,Storage,0.893,Storage,fast,Storage
+Storage,Storage,0.7983,Storage,llm,Administrative rights
+Storage,Storage,0.5183,Storage,llm,Miscellaneous
+Storage,Storage,0.8292,Storage,llm,Internal Project
+Storage,Storage,0.8127,Storage,llm,Storage
+Storage,Storage,0.9515,Storage,fast,Storage
+Storage,Storage,0.8377,Storage,llm,Storage
+Storage,Storage,0.5774,Storage,llm,Access
+Storage,Storage,0.6095,Storage,llm,Storage
+Storage,Storage,0.5452,Storage,llm,Access
+Storage,Storage,0.4792,Storage,llm,Access
+Storage,Storage,0.9043,Storage,fast,Access
+Storage,Miscellaneous,0.4935,Miscellaneous,llm,Miscellaneous
+Storage,Storage,0.9822,Storage,fast,Storage
+Storage,Storage,0.5107,Storage,llm,Administrative rights
+Storage,Storage,0.748,Storage,llm,Storage
+Storage,Storage,0.9139,Storage,fast,Storage
+Storage,HR Support,0.4013,Miscellaneous,llm,Miscellaneous
+Storage,Storage,0.8362,Storage,llm,Access
+Storage,Access,0.5887,Access,llm,Access
+Storage,Storage,0.8431,Storage,llm,HR Support
+Storage,Storage,0.9081,Storage,fast,Storage
+Storage,Storage,0.8741,Storage,fast,Access
+Storage,Storage,0.9327,Storage,fast,Storage
+Storage,Storage,0.9728,Storage,fast,Storage
+Storage,Storage,0.8353,Storage,llm,Access
+Storage,Storage,0.8622,Storage,fast,Access
+Storage,Storage,0.98,Storage,fast,Storage

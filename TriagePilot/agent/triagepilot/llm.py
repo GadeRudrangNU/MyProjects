@@ -42,31 +42,34 @@ class StructuredLlm:
         p.write_text(json.dumps(self.cassette, indent=1, sort_keys=True), encoding="utf-8")
 
     @retry(retry=retry_if_exception_type(httpx.TransportError), stop=stop_after_attempt(3), wait=wait_exponential(min=0.5, max=4), reraise=True)
-    def _call(self, system: str, user: str, schema: dict) -> str:
+    def _call(self, system: str, user: str, schema: dict, max_tokens: int) -> str:
         r = self.client.post(
             "/api/chat",
             json={
                 "model": self.s.llm_model,
                 "stream": False,
                 "format": schema,
-                "options": {"temperature": self.s.llm_temperature, "seed": 7, "num_ctx": 4096},
+                "options": {"temperature": self.s.llm_temperature, "seed": 7, "num_ctx": 4096, "num_predict": max_tokens},
                 "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
             },
         )
         r.raise_for_status()
         return r.json()["message"]["content"]
 
-    def run(self, task: str, system: str, user: str, schema: type[T]) -> T:
+    def run(self, task: str, system: str, user: str, schema: type[T], max_tokens: int = 256) -> T:
         key = _key(self.s.llm_model, task, system, user)
         if self.s.llm_mode == "replay":
             if key not in self.cassette:
                 raise CassetteMiss(f"no recorded answer for task {task}")
             return schema.model_validate(self.cassette[key])
         try:
-            raw = self._call(system, user, schema.model_json_schema())
+            raw = self._call(system, user, schema.model_json_schema(), max_tokens)
         except (httpx.TransportError, httpx.HTTPStatusError) as exc:
             raise LlmUnavailable(str(exc)) from exc
-        out = schema.model_validate(json.loads(raw))
+        try:
+            out = schema.model_validate(json.loads(raw))
+        except json.JSONDecodeError as exc:
+            raise ValueError(f"model did not return complete JSON: {exc}") from exc
         if self.s.llm_mode == "record":
             self.cassette[key] = out.model_dump()
             self._save()

@@ -97,7 +97,7 @@ function incidentForm(inst, user, params) {
     <div class="row" data-field="state"><label>State</label><select name="state" ${canEdit ? "" : "disabled"}>${Object.entries(STATES)
       .map(([k, v]) => `<option value="${k}" ${k === rec.state ? "selected" : ""}>${v}</option>`)
       .join("")}</select></div>
-    <div class="row" data-field="u_ai_suggestion_state"><label>AI suggestion</label><input name="u_ai_suggestion_state" value="${esc(rec.u_ai_suggestion_state)}" disabled></div>
+    <div class="row" data-field="u_ai_suggestion_state"><label>AI suggestion</label><select name="u_ai_suggestion_state" disabled>${Object.entries({ none: "None", ...AI_LABEL }).filter(([k]) => k !== "none" || true).map(([k, v]) => `<option value="${k}" ${k === (rec.u_ai_suggestion_state || "none") ? "selected" : ""}>${esc(v || "None")}</option>`).join("")}</select></div>
     <div class="row wide" data-field="u_reject_reason"><label>Reason for rejecting the AI suggestion</label><input name="u_reject_reason" value=""></div>
     <div class="row wide" data-field="close_notes"><label>Close notes</label><textarea name="close_notes" rows="2" ${canEdit ? "" : "disabled"}>${esc(rec.close_notes)}</textarea></div>
     <div class="row wide" data-field="work_notes"><label>Work notes</label><textarea name="work_notes" rows="2" ${canEdit ? "" : "disabled"}></textarea></div>

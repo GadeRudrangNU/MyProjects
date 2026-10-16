@@ -105,6 +105,7 @@ class TriageResult(Strict):
     reply_draft: str = ""
     cited_articles: list[str] = Field(default_factory=list)
     similar_incidents: list[str] = Field(default_factory=list)
+    retrieved_articles: list[str] = Field(default_factory=list)
     latency_ms: int = 0
     attempts: int = 1
     errors: list[str] = Field(default_factory=list)

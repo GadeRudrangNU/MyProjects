@@ -1,0 +1,18 @@
+{
+  "auto": {
+    "short_description": "Monitor on my desk has no signal",
+    "description": "The second monitor at my desk shows no signal since this morning. I checked the cable at both ends and tried another port on the laptop.",
+    "priority": "3"
+  },
+  "review": {
+    "short_description": "Purchase order for new keyboards",
+    "description": "Please raise a purchase order for five keyboards for the new starters. The quote is attached and the budget holder has approved it.",
+    "priority": "3"
+  },
+  "resolve": {
+    "short_description": "Desk phone has no dial tone",
+    "description": "The phone at my new desk has no dial tone since the office move. The number needs to be assigned to the new socket.",
+    "priority": "3",
+    "close_notes": "The number was still tied to the old socket. Moved it to the new socket in the telephony portal and re-patched the cable in the comms cabinet. Dial tone is back."
+  }
+}

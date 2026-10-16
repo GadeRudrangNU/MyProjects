@@ -1,0 +1,75 @@
+{
+  "tickets": 200,
+  "answered": 200,
+  "failed_runs": 0,
+  "needs_review": 1,
+  "auto_routed": 83,
+  "auto_routed_pct": 41.5,
+  "routing_accuracy_pct": 97.6,
+  "suggestion_accuracy_pct": 77.5,
+  "fast_path_pct": 42.0,
+  "approvals_requested": 117,
+  "grounding_violations": 0,
+  "validator_interventions": 3,
+  "latency_ms_p50": 6270,
+  "latency_ms_p95": 8782,
+  "wall_clock_s": 1356,
+  "dashboard_metrics": {
+    "total_runs": 200,
+    "answered": 200,
+    "failed_runs": 0,
+    "auto_routed": 83,
+    "auto_routed_pct": 41.5,
+    "routing_accuracy_pct": 97.6,
+    "acceptance_rate_pct": null,
+    "accepted": 0,
+    "rejected": 0,
+    "fast_path_pct": 42,
+    "llm_path_pct": 58,
+    "p95_latency_ms": 8777,
+    "accuracy_by_category": [
+      {
+        "category": "Access",
+        "total": 36,
+        "accuracy": 72.2
+      },
+      {
+        "category": "Administrative rights",
+        "total": 6,
+        "accuracy": 83.3
+      },
+      {
+        "category": "HR Support",
+        "total": 44,
+        "accuracy": 81.8
+      },
+      {
+        "category": "Hardware",
+        "total": 41,
+        "accuracy": 95.1
+      },
+      {
+        "category": "Internal Project",
+        "total": 16,
+        "accuracy": 81.3
+      },
+      {
+        "category": "Miscellaneous",
+        "total": 35,
+        "accuracy": 45.7
+      },
+      {
+        "category": "Purchase",
+        "total": 10,
+        "accuracy": 100
+      },
+      {
+        "category": "Storage",
+        "total": 12,
+        "accuracy": 83.3
+      }
+    ],
+    "articles_drafted": 0,
+    "articles_skipped": 0
+  }
+}

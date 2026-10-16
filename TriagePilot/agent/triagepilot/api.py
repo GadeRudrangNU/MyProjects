@@ -18,10 +18,11 @@ def create_app(settings: Settings | None = None, service: TriageService | None =
     async def lifespan(app: FastAPI):
         if service is None:
             svc = TriageService(build_deps(settings), RunStore(settings.runs_db))
-            try:
-                svc.deps.kb.sync()
-            except Exception:
-                pass
+            for step in (svc.recover, svc.deps.kb.sync):
+                try:
+                    step()
+                except Exception:
+                    pass
             app.state.service = svc
         else:
             app.state.service = service

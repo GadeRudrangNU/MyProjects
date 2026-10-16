@@ -26,6 +26,7 @@
         "reply_draft": "string",
         "cited_articles": "string",
         "similar_incidents": "string",
+        "retrieved_articles": "string",
         "latency_ms": "integer",
         "attempts": "integer",
         "trace": "json",

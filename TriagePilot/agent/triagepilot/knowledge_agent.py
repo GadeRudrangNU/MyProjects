@@ -50,7 +50,7 @@ class KnowledgeAgent:
             f"Category: {inc.category}\nResolution notes: {scrub(inc.close_notes)[:1200]}"
         )
         try:
-            art = self.llm.run("article", SYSTEM, user, LlmArticle)
+            art = self.llm.run("article", SYSTEM, user, LlmArticle, max_tokens=500)
         except (LlmUnavailable, ValidationError, ValueError) as exc:
             return ArticleOutcome(status="failed", reason=str(exc)[:200])
         body = f"<p><b>Symptoms</b></p><p>{art.symptoms}</p><p><b>Resolution</b></p><ol>" + "".join(f"<li>{s}</li>" for s in art.resolution_steps) + "</ol>"

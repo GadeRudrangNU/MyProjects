@@ -1,0 +1,201 @@
+truth,status,outcome,suggested,confidence,path,latency_ms,attempts,grounding_violation
+Purchase,completed,auto_routed,Purchase,0.9805,fast,6542,1,False
+HR Support,completed,approval_requested,Access,0.0149,llm,6411,1,False
+Internal Project,completed,auto_routed,Internal Project,0.9237,fast,4130,1,False
+Administrative rights,completed,approval_requested,Administrative rights,0.6319,llm,8777,1,False
+Access,completed,auto_routed,Access,0.9463,fast,3888,1,False
+Hardware,completed,auto_routed,Hardware,0.9059,fast,3489,1,False
+Internal Project,completed,auto_routed,Internal Project,0.9195,fast,5061,1,False
+HR Support,completed,auto_routed,Hardware,0.8572,fast,4156,1,False
+Access,completed,approval_requested,Miscellaneous,0.0739,llm,16886,2,False
+HR Support,completed,approval_requested,HR Support,0.5835,llm,6688,1,False
+HR Support,completed,auto_routed,HR Support,0.9446,fast,5528,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.1857,llm,8777,1,False
+Hardware,completed,auto_routed,Miscellaneous,0.8908,fast,7111,1,False
+HR Support,completed,auto_routed,HR Support,0.8758,fast,5417,1,False
+Hardware,completed,approval_requested,Hardware,0.6277,llm,6729,1,False
+Hardware,completed,approval_requested,Hardware,0.7174,llm,15538,2,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.5102,llm,7091,1,False
+Internal Project,completed,auto_routed,Internal Project,0.8672,fast,4963,1,False
+Hardware,completed,auto_routed,Hardware,0.8686,fast,4284,1,False
+Hardware,completed,approval_requested,Hardware,0.7326,llm,5921,1,False
+HR Support,completed,auto_routed,HR Support,0.968,fast,3529,1,False
+Purchase,completed,auto_routed,Purchase,0.9775,fast,6490,1,False
+Hardware,completed,approval_requested,HR Support,0.3208,llm,7569,1,False
+HR Support,completed,approval_requested,HR Support,0.8454,llm,8692,1,False
+Hardware,completed,auto_routed,Hardware,0.944,fast,3723,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.5894,llm,7937,1,False
+Access,needs_review,approval_requested,Access,0.8821,fast,10705,2,False
+Internal Project,completed,approval_requested,Miscellaneous,0.2722,llm,8240,1,False
+HR Support,completed,auto_routed,HR Support,0.8547,fast,4835,1,False
+Hardware,completed,auto_routed,Hardware,0.903,fast,4142,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.5881,llm,7803,1,False
+HR Support,completed,approval_requested,HR Support,0.4979,llm,8373,1,False
+Hardware,completed,approval_requested,HR Support,0.6559,llm,6707,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.0475,llm,8071,1,False
+HR Support,completed,approval_requested,Hardware,0.6468,llm,8308,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.5069,llm,6203,1,False
+Access,completed,auto_routed,Access,0.8967,fast,4629,1,False
+Internal Project,completed,approval_requested,Internal Project,0.6315,llm,7234,1,False
+Hardware,completed,auto_routed,Hardware,0.8642,fast,3478,1,False
+Internal Project,completed,approval_requested,Internal Project,0.766,llm,5885,1,False
+Miscellaneous,completed,auto_routed,Miscellaneous,0.8995,fast,4304,1,False
+Access,completed,auto_routed,Access,0.9544,fast,5867,1,False
+HR Support,completed,approval_requested,HR Support,0.6118,llm,9295,1,False
+Hardware,completed,approval_requested,HR Support,0.3427,llm,8161,1,False
+HR Support,completed,approval_requested,HR Support,0.7973,llm,7956,1,False
+Storage,completed,auto_routed,Storage,0.8962,fast,3859,1,False
+HR Support,completed,approval_requested,Access,0.2423,llm,6672,1,False
+Miscellaneous,completed,auto_routed,Miscellaneous,0.8624,fast,3820,1,False
+HR Support,completed,auto_routed,HR Support,0.8768,fast,4054,1,False
+HR Support,completed,auto_routed,HR Support,0.94,fast,5974,1,False
+Administrative rights,completed,approval_requested,Administrative rights,0.0701,llm,6761,1,False
+Hardware,completed,approval_requested,HR Support,0.6377,llm,7452,1,False
+Miscellaneous,completed,approval_requested,Internal Project,0.3399,llm,5878,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.4972,llm,5641,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.7563,llm,5969,1,False
+Hardware,completed,auto_routed,Hardware,0.8741,fast,2339,1,False
+Hardware,completed,auto_routed,Hardware,0.9188,fast,5119,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.7288,llm,8356,1,False
+Hardware,completed,approval_requested,Hardware,0.7472,llm,7491,1,False
+Hardware,completed,approval_requested,Hardware,0.6451,llm,7716,1,False
+HR Support,completed,approval_requested,HR Support,0.6902,llm,5805,1,False
+Hardware,completed,approval_requested,Hardware,0.7591,llm,5997,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.5109,llm,6897,1,False
+Storage,completed,approval_requested,Storage,0.7952,llm,7190,1,False
+Access,completed,approval_requested,Access,0.5414,llm,5643,1,False
+Storage,completed,auto_routed,Storage,0.9671,fast,4187,1,False
+Hardware,completed,auto_routed,Hardware,0.9545,fast,4262,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.8177,llm,5878,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.3254,llm,7438,1,False
+Internal Project,completed,auto_routed,Internal Project,0.9207,fast,4857,1,False
+HR Support,completed,auto_routed,HR Support,0.9573,fast,3986,1,False
+Storage,completed,approval_requested,Storage,0.6488,llm,5534,1,False
+Hardware,completed,auto_routed,Hardware,0.9151,fast,5656,1,False
+Access,completed,approval_requested,Access,0.7138,llm,6734,1,False
+Purchase,completed,approval_requested,Purchase,0.8147,llm,7582,1,False
+Hardware,completed,approval_requested,Hardware,0.8339,llm,5863,1,False
+Hardware,completed,auto_routed,Hardware,0.9136,fast,5463,1,False
+Purchase,completed,auto_routed,Purchase,0.9906,fast,6458,1,False
+Purchase,completed,auto_routed,Purchase,0.9906,fast,7683,1,False
+HR Support,completed,auto_routed,HR Support,0.9613,fast,4483,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.448,llm,7330,1,False
+Hardware,completed,approval_requested,Hardware,0.8451,llm,6276,1,False
+Hardware,completed,approval_requested,Access,0.5607,llm,7202,1,False
+HR Support,completed,approval_requested,Miscellaneous,0.0443,llm,6478,1,False
+Access,completed,auto_routed,Access,0.8824,fast,3337,1,False
+HR Support,completed,auto_routed,HR Support,0.9673,fast,5857,1,False
+Access,completed,approval_requested,Access,0.3015,llm,6189,1,False
+Hardware,completed,approval_requested,Hardware,0.7515,llm,7092,1,False
+Hardware,completed,auto_routed,Hardware,0.8693,fast,4165,1,False
+Miscellaneous,completed,approval_requested,HR Support,0.3392,llm,7035,1,False
+HR Support,completed,auto_routed,HR Support,0.8651,fast,4417,1,False
+Hardware,completed,approval_requested,Hardware,0.8164,llm,9781,1,False
+Access,completed,approval_requested,Miscellaneous,0.4949,llm,7141,1,False
+Administrative rights,completed,approval_requested,Administrative rights,0.6839,llm,7015,1,False
+Access,completed,approval_requested,Access,0.5509,llm,8297,1,False
+Access,completed,approval_requested,HR Support,0.2864,llm,7892,1,False
+HR Support,completed,auto_routed,HR Support,0.8838,fast,4436,1,False
+HR Support,completed,approval_requested,Internal Project,0.3936,llm,8281,1,False
+Purchase,completed,approval_requested,Miscellaneous,0.7334,llm,5914,1,False
+Hardware,completed,approval_requested,Access,0.2864,llm,6287,1,False
+Hardware,completed,approval_requested,Hardware,0.7462,llm,5083,1,False
+HR Support,completed,approval_requested,HR Support,0.6822,llm,6648,1,False
+Purchase,completed,auto_routed,Purchase,0.9894,fast,5584,1,False
+HR Support,completed,approval_requested,HR Support,0.6059,llm,9494,1,False
+Access,completed,auto_routed,Access,0.9058,fast,4678,1,False
+HR Support,completed,approval_requested,HR Support,0.5778,llm,7085,1,False
+Storage,completed,approval_requested,Storage,0.0747,llm,6971,1,False
+Internal Project,completed,auto_routed,Internal Project,0.8839,fast,4434,1,False
+Storage,completed,auto_routed,Storage,0.9233,fast,4517,1,False
+Storage,completed,auto_routed,Storage,0.8819,fast,4098,1,False
+Access,completed,approval_requested,Internal Project,0.1626,llm,6226,1,False
+Purchase,completed,approval_requested,Purchase,0.4782,llm,7587,1,False
+HR Support,completed,approval_requested,HR Support,0.6603,llm,9072,1,False
+Hardware,completed,auto_routed,Hardware,0.8611,fast,4340,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.0738,llm,7199,1,False
+Hardware,completed,auto_routed,Hardware,0.908,fast,4305,1,False
+Access,completed,auto_routed,Access,0.8603,fast,4598,1,False
+Hardware,completed,approval_requested,Hardware,0.6822,llm,4856,1,False
+Hardware,completed,auto_routed,Hardware,0.9382,fast,4609,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.4435,llm,6407,1,False
+Internal Project,completed,approval_requested,Internal Project,0.6728,llm,7368,1,False
+Access,completed,approval_requested,Access,0.8433,llm,6265,1,False
+Internal Project,completed,auto_routed,Internal Project,0.8607,fast,7207,1,False
+HR Support,completed,auto_routed,HR Support,0.9513,fast,5142,1,False
+Miscellaneous,completed,approval_requested,Access,0.5676,llm,6281,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.6278,llm,7537,1,False
+Hardware,completed,approval_requested,Hardware,0.6311,llm,8339,1,False
+Access,completed,approval_requested,Access,0.7439,llm,8051,1,False
+HR Support,completed,approval_requested,HR Support,0.1649,llm,7259,1,False
+Access,completed,auto_routed,Access,0.9475,fast,3829,1,False
+Hardware,completed,auto_routed,Hardware,0.8905,fast,4704,1,False
+Access,completed,auto_routed,Access,0.89,fast,4106,1,False
+Internal Project,completed,auto_routed,Internal Project,0.869,fast,4993,1,False
+Hardware,completed,approval_requested,Administrative rights,0.3539,llm,8361,1,False
+Purchase,completed,auto_routed,Purchase,0.8945,fast,3777,1,False
+Access,completed,auto_routed,Access,0.8744,fast,4254,1,False
+HR Support,completed,approval_requested,HR Support,0.7617,llm,7064,1,False
+Hardware,completed,approval_requested,Hardware,0.7181,llm,7165,1,False
+Internal Project,completed,auto_routed,Internal Project,0.9114,fast,3207,1,False
+HR Support,completed,approval_requested,HR Support,0.6684,llm,6081,1,False
+Access,completed,approval_requested,Access,0.6028,llm,7282,1,False
+Access,completed,approval_requested,Access,0.7881,llm,7178,1,False
+HR Support,completed,approval_requested,HR Support,0.8257,llm,6097,1,False
+HR Support,completed,approval_requested,HR Support,0.6546,llm,8883,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.8205,llm,5755,1,False
+Hardware,completed,approval_requested,Hardware,0.747,llm,6956,1,False
+Miscellaneous,completed,auto_routed,Miscellaneous,0.9284,fast,3514,1,False
+Access,completed,auto_routed,Access,0.8622,fast,3683,1,False
+Administrative rights,completed,approval_requested,Storage,0.3857,llm,8243,1,False
+Access,completed,approval_requested,Access,0.7521,llm,8439,1,False
+HR Support,completed,approval_requested,Access,0.401,llm,4966,1,False
+Hardware,completed,auto_routed,Hardware,0.9473,fast,5333,1,False
+HR Support,completed,approval_requested,HR Support,0.849,llm,8359,1,False
+Administrative rights,completed,approval_requested,Miscellaneous,0.5244,llm,6696,1,False
+Access,completed,auto_routed,Access,0.9321,fast,4485,1,False
+HR Support,completed,auto_routed,HR Support,0.9097,fast,4818,1,False
+Hardware,completed,auto_routed,Hardware,0.8932,fast,4473,1,False
+Storage,completed,auto_routed,Storage,0.9238,fast,4975,1,False
+Purchase,completed,auto_routed,Purchase,0.9953,fast,6740,1,False
+Administrative rights,completed,approval_requested,Administrative rights,0.248,llm,7439,1,False
+HR Support,completed,approval_requested,Access,0.0292,llm,6595,1,False
+Hardware,completed,approval_requested,Hardware,0.4588,llm,6389,1,False
+Hardware,completed,auto_routed,Hardware,0.882,fast,4216,1,False
+Hardware,completed,auto_routed,Hardware,0.9269,fast,5597,1,False
+Access,completed,auto_routed,Access,0.9854,fast,5600,1,False
+Internal Project,completed,auto_routed,Internal Project,0.9737,fast,5221,1,False
+HR Support,completed,approval_requested,Miscellaneous,0.1164,llm,9403,1,False
+Access,completed,auto_routed,Access,0.8876,fast,4993,1,False
+Administrative rights,completed,approval_requested,Administrative rights,0.7691,llm,9468,1,False
+HR Support,completed,auto_routed,HR Support,0.8534,fast,4601,1,False
+Internal Project,completed,auto_routed,Internal Project,0.9536,fast,5207,1,False
+Hardware,completed,approval_requested,Access,0.0344,llm,7468,1,False
+HR Support,completed,approval_requested,HR Support,0.3159,llm,5299,1,False
+HR Support,completed,approval_requested,HR Support,0.6437,llm,6580,1,False
+Hardware,completed,auto_routed,Hardware,0.8895,fast,4092,1,False
+HR Support,completed,approval_requested,HR Support,0.4417,llm,7858,1,False
+Storage,completed,approval_requested,Storage,0.62,llm,6867,1,False
+Hardware,completed,auto_routed,Hardware,0.9248,fast,6509,1,False
+Access,completed,auto_routed,Access,0.9355,fast,5546,1,False
+Storage,completed,auto_routed,Storage,0.8755,fast,5903,1,False
+HR Support,completed,approval_requested,HR Support,0.8027,llm,7979,1,False
+Purchase,completed,auto_routed,Purchase,0.9931,fast,4870,1,False
+HR Support,completed,auto_routed,HR Support,0.9463,fast,5499,1,False
+Storage,completed,approval_requested,HR Support,0.5673,llm,5984,1,False
+Access,completed,approval_requested,HR Support,0.2834,llm,8041,1,False
+Hardware,completed,approval_requested,Access,0.323,llm,7007,1,False
+HR Support,completed,auto_routed,HR Support,0.9344,fast,6030,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.4082,llm,7002,1,False
+HR Support,completed,approval_requested,Access,0.0293,llm,8424,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.6356,llm,7060,1,False
+Hardware,completed,auto_routed,Hardware,0.9204,fast,4527,1,False
+Hardware,completed,approval_requested,Miscellaneous,0.0231,llm,7748,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.4411,llm,5796,1,False
+Storage,completed,approval_requested,Miscellaneous,0.6014,llm,8154,1,False
+Miscellaneous,completed,approval_requested,Storage,0.4833,llm,7446,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.8147,llm,7001,1,False
+Miscellaneous,completed,approval_requested,Miscellaneous,0.6829,llm,7000,1,False
+Access,completed,approval_requested,Access,0.8152,llm,6953,1,False
+Hardware,completed,auto_routed,Hardware,0.9181,fast,6070,1,False
+Access,completed,auto_routed,Access,0.9673,fast,5298,1,False

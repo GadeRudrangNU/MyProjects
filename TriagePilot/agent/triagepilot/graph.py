@@ -168,7 +168,7 @@ def build_graph(deps: Deps):
         if state.get("feedback"):
             user += "\nYour previous reply was rejected: " + "; ".join(state["feedback"])
         try:
-            out = deps.llm.run("draft", DRAFT_SYSTEM, user, LlmReply)
+            out = deps.llm.run("draft", DRAFT_SYSTEM, user, LlmReply, max_tokens=320)
         except (ValidationError, ValueError) as exc:
             return {"reply": "", "cited": [], "draft_errors": [f"reply invalid: {str(exc)[:120]}"], "trace": _step(state, "draft", t, source="llm", error="invalid")}
         except LlmUnavailable:
@@ -223,6 +223,7 @@ def build_graph(deps: Deps):
             reply_draft=state.get("reply", ""),
             cited_articles=state.get("cited", []) if ok else [],
             similar_incidents=[x.ref for x in state["similar"]],
+            retrieved_articles=[a.id for a in state["articles"]],
             attempts=state["passes"],
             errors=state["errors"],
             latency_ms=int((time.perf_counter() - state["t0"]) * 1000),

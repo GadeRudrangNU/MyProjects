@@ -1,0 +1,26 @@
+{
+ "612845ea10b1249efc81bc4b8a9f232289b3d92ed56b8e937a5c7de8e29b6147": {
+  "resolution_steps": [
+   "Reseat the network cable in the gate cabinet.",
+   "Restart the reader."
+  ],
+  "symptoms": "The badge reader at the car park gate shows a red light.",
+  "title": "Badge Reader at Car Park Gate Not Accepting Cards"
+ },
+ "9ef64abda74b0f250fcef609efa584fe48615b4a7e2232cff8fbf3cb283f5800": {
+  "cited_articles": [
+   "KB0010021"
+  ],
+  "reply": "This issue is related to storage. Please refer to KB0010021 for instructions on how to request more space on a shared drive."
+ },
+ "ce266693f8e5116fba2ef7302d77d0706a37cd3c06ae5cd7d0e82bc04bd22403": {
+  "cited_articles": [
+   "KB0010011"
+  ],
+  "reply": "Try holding the power button for ten seconds and restarting with the charger only. This is often helpful. If the issue persists, please contact the IT support team."
+ },
+ "e78fea8df5291a3e4f12622dcf8e621164174ea6e688c940c87271421a1b1b51": {
+  "category": "Storage",
+  "reason": "The ticket describes a situation where the disk is full, which is directly related to storage space issues, similar to past tickets about shared drive quotas being full."
+ }
+}

@@ -31,7 +31,7 @@ class StubLlm:
         self.answers = {k: list(v) if isinstance(v, list) else [v] for k, v in answers.items()}
         self.calls: list[tuple[str, str]] = []
 
-    def run(self, task, system, user, schema):
+    def run(self, task, system, user, schema, **_):
         self.calls.append((task, user))
         queue = self.answers.get(task)
         if not queue:

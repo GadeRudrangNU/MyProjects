@@ -60,6 +60,7 @@
     run.setValue('reply_draft', body.reply_draft || '');
     run.setValue('cited_articles', (body.cited_articles || []).join(','));
     run.setValue('similar_incidents', (body.similar_incidents || []).join(','));
+    run.setValue('retrieved_articles', (body.retrieved_articles || []).join(','));
     run.setValue('latency_ms', parseInt(body.latency_ms, 10) || 0);
     run.setValue('attempts', parseInt(body.attempts, 10) || 1);
     run.setValue('trace', JSON.stringify(body.trace || []));

@@ -1,0 +1,37 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: triagepilot
+      POSTGRES_PASSWORD: triagepilot
+      POSTGRES_DB: triagepilot
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U triagepilot"]
+      interval: 5s
+      retries: 10
+
+  agent:
+    build: ./agent
+    environment:
+      TP_VECTOR_BACKEND: pgvector
+      TP_DATABASE_URL: postgresql://triagepilot:triagepilot@db:5432/triagepilot
+      TP_OLLAMA_URL: http://host.docker.internal:11434
+      TP_SN_URL: ${TP_SN_URL:-http://host.docker.internal:8070}
+      TP_SN_USER: ${TP_SN_USER:-svc_triagepilot}
+      TP_SN_PASSWORD: ${TP_SN_PASSWORD:-triage-local}
+      TP_API_TOKEN: ${TP_API_TOKEN:-local-dev-token}
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./data/runtime:/app/data/runtime
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

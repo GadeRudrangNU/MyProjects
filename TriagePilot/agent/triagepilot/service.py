@@ -42,9 +42,18 @@ class TriageService:
         self.pool = ThreadPoolExecutor(max_workers=deps.settings.workers, thread_name_prefix="triage")
         self.knowledge = KnowledgeAgent(deps.llm, deps.kb, deps.embedder, deps.sn, deps.settings.duplicate_article_similarity)
 
+    def recover(self) -> int:
+        """Runs left over from a stopped agent can never finish; fail them so ServiceNow does not wait forever."""
+        stale = self.runs.unfinished()
+        for row in stale:
+            self.runs.mark(row["run_key"], "failed", error="agent restarted before the run finished")
+            if row["request"]:
+                self._report_failure(TriageRequest(**row["request"]), row["run_key"], RuntimeError("agent restarted before the run finished"))
+        return len(stale)
+
     def submit(self, req: TriageRequest, background: bool = True) -> TriageAccepted:
         key = run_key_for(req)
-        if not self.runs.claim(key, req.incident_sys_id, req.mod_count):
+        if not self.runs.claim(key, req.incident_sys_id, req.mod_count, req.model_dump()):
             existing = self.runs.get(key)
             return TriageAccepted(run_key=key, status=existing["status"] if existing else "queued", duplicate=True)
         if background:

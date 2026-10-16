@@ -229,3 +229,18 @@ def test_a_drafted_article_blocks_a_second_draft_but_is_never_cited(make_deps):
     assert again.status == "skipped_duplicate"
     vec = deps.embedder.encode(["Free up space on a full laptop disk. Updates fail because the disk is full."])[0]
     assert all(a.id != again.nearest for a in deps.kb.search(vec, 5))
+
+
+def test_runs_left_by_a_stopped_agent_are_failed_and_reported(make_deps, settings):
+    deps = make_deps(llm=StubLlm(draft=GOOD_REPLY))
+    store = RunStore(settings.runs_db)
+    from triagepilot.schemas import TriageRequest
+
+    req = TriageRequest(**BODY)
+    assert store.claim(f"{req.incident_sys_id}:0", req.incident_sys_id, 0, req.model_dump())
+    store.mark(f"{req.incident_sys_id}:0", "running")
+    service = TriageService(deps, store)
+    assert service.recover() == 1
+    assert store.get(f"{req.incident_sys_id}:0")["status"] == "failed"
+    assert deps.sn.results[-1]["status"] == "failed" and deps.sn.results[-1]["run_sys_id"] == "b" * 32
+    assert service.recover() == 0

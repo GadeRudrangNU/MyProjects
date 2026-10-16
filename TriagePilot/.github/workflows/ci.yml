@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: triagepilot
+          POSTGRES_PASSWORD: triagepilot
+          POSTGRES_DB: triagepilot
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U triagepilot" --health-interval 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e "agent[dev]"
+      - name: Tests
+        working-directory: agent
+        env:
+          TP_TEST_PGVECTOR_URL: postgresql://triagepilot:triagepilot@localhost:5432/triagepilot
+        run: pytest -q
+
+  servicenow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instance tests and ATF suite
+        run: |
+          node --test sim/tests/instance.test.js sim/tests/server.test.js
+          node sim/cli.js atf
