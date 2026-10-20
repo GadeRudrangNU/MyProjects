@@ -128,6 +128,5 @@ public sealed class RollbackService(
     }
 
     private static string Describe(GuardAssessment a) => FormattableString.Invariant(
-        $"New version error rate {a.Treatment.Rate * 100:0.0}% ({a.Treatment.Errors}/{a.Treatment.Requests}) vs " +
-        $"{a.Control.Rate * 100:0.0}% ({a.Control.Errors}/{a.Control.Requests}) on the old version, z={a.Z:0.0}, p={a.PValue:0.#####e+0}");
+        $"New version error rate {a.Treatment.Rate * 100:0.0}% ({a.Treatment.Errors}/{a.Treatment.Requests}) vs {a.Control.Rate * 100:0.0}% ({a.Control.Errors}/{a.Control.Requests}) on the old version, z={a.Z:0.0}, p={a.PValue:0.#####e+0}");
 }
