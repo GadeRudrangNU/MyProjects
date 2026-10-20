@@ -233,7 +233,7 @@ public sealed class FlagService(
         var parts = new List<string>
         {
             flag.Enabled ? "on" : "off",
-            $"{flag.RolloutPercent:0.##}% rollout"
+            FormattableString.Invariant($"{flag.RolloutPercent:0.##}% rollout")
         };
         if (flag.Conditions.Count > 0)
         {
@@ -256,7 +256,7 @@ public sealed class FlagService(
 
         if (before.RolloutPercent != after.RolloutPercent)
         {
-            changes.Add($"Rollout {before.RolloutPercent:0.##}% to {after.RolloutPercent:0.##}%");
+            changes.Add(FormattableString.Invariant($"Rollout {before.RolloutPercent:0.##}% to {after.RolloutPercent:0.##}%"));
         }
 
         var beforeRules = string.Join("; ", before.Conditions.Select(DescribeCondition));
