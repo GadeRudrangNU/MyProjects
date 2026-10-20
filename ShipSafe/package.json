@@ -1,0 +1,26 @@
+{
+  "name": "shipsafe",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "sdk/typescript",
+    "dashboard",
+    "demo",
+    "e2e"
+  ],
+  "scripts": {
+    "predev": "npm run build -w @shipsafe/sdk",
+    "dev": "concurrently -k -n server,dashboard,demo -c blue,magenta,green \"npm:dev:server\" \"npm:dev:dashboard\" \"npm:dev:demo\"",
+    "dev:server": "dotnet run --project src/ShipSafe.Server",
+    "dev:dashboard": "npm run dev -w dashboard",
+    "dev:demo": "npm run dev -w demo",
+    "build": "npm run build -w @shipsafe/sdk && npm run build -w dashboard",
+    "test": "npm test -w @shipsafe/sdk && dotnet test",
+    "typecheck": "npm run typecheck -w @shipsafe/sdk && npm run typecheck -w dashboard && npm run typecheck -w demo",
+    "e2e": "npm test -w e2e",
+    "simulate": "dotnet run --project tools/ShipSafe.Simulator -c Release"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,74 @@
+name: ShipSafe CI
+
+on:
+  push:
+    branches: [master]
+    paths: ["ShipSafe/**", ".github/workflows/shipsafe-ci.yml"]
+  pull_request:
+    paths: ["ShipSafe/**", ".github/workflows/shipsafe-ci.yml"]
+
+defaults:
+  run:
+    working-directory: ShipSafe
+
+jobs:
+  dotnet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: dotnet build ShipSafe.sln -c Release
+      - name: Test with coverage gate
+        run: >
+          dotnet test tests/ShipSafe.Tests -c Release
+          -p:CollectCoverage=true
+          -p:CoverletOutputFormat=cobertura
+          -p:CoverletOutput=./coverage/
+          -p:Threshold=85
+          -p:ThresholdType=line
+          -p:ThresholdStat=total
+          "-p:Include=[ShipSafe.*]*"
+          "-p:Exclude=[ShipSafe.Tests]*"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shipsafe-coverage
+          path: ShipSafe/tests/ShipSafe.Tests/coverage/
+
+  node:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ShipSafe/package-lock.json
+      - run: npm ci
+      - run: npm run build -w @shipsafe/sdk
+      - run: npm test -w @shipsafe/sdk
+      - run: npm run typecheck
+      - run: npm run build -w dashboard
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ShipSafe/package-lock.json
+      - run: npm ci
+      - run: npm run build -w @shipsafe/sdk
+      - run: npx playwright install --with-deps chromium
+      - run: npm run e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: shipsafe-playwright-traces
+          path: ShipSafe/e2e/test-results/

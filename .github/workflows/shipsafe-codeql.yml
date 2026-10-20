@@ -1,0 +1,41 @@
+name: ShipSafe CodeQL
+
+on:
+  push:
+    branches: [master]
+    paths: ["ShipSafe/**", ".github/workflows/shipsafe-codeql.yml"]
+  pull_request:
+    paths: ["ShipSafe/**", ".github/workflows/shipsafe-codeql.yml"]
+  schedule:
+    - cron: "41 5 * * 1"
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - language: csharp
+            build-mode: manual
+          - language: javascript-typescript
+            build-mode: none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        if: matrix.language == 'csharp'
+        with:
+          dotnet-version: 8.0.x
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+      - name: Build
+        if: matrix.language == 'csharp'
+        run: dotnet build ShipSafe/ShipSafe.sln -c Release
+      - uses: github/codeql-action/analyze@v3
+        with:
+          category: /language:${{ matrix.language }}

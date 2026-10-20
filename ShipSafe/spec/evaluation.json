@@ -1,0 +1,8189 @@
+[
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "off-flag",
+   "enabled": false,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "disabled"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "everyone",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "nobody",
+   "enabled": true,
+   "rolloutPercent": 0,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "half",
+   "enabled": true,
+   "rolloutPercent": 50,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "fractional",
+   "enabled": true,
+   "rolloutPercent": 12.34,
+   "conditions": []
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "canada",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "country",
+     "operator": "in",
+     "values": [
+      "CA"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "not-free",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "notIn",
+     "values": [
+      "free"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "outsideRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "beta-canada-quarter",
+   "enabled": true,
+   "rolloutPercent": 25,
+   "conditions": [
+    {
+     "attribute": "plan",
+     "operator": "in",
+     "values": [
+      "beta",
+      "pro"
+     ]
+    },
+    {
+     "attribute": "Country",
+     "operator": "in",
+     "values": [
+      "ca",
+      "us"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-1"
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-2",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": true,
+  "reason": "inRollout"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-3",
+   "attributes": {
+    "COUNTRY": "ca",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-4",
+   "attributes": {
+    "country": "US",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-5",
+   "attributes": {
+    "country": "GB",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-6",
+   "attributes": {
+    "plan": "Beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "üser-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "pro"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "user-8",
+   "attributes": {
+    "country": "DE",
+    "plan": "enterprise"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-0",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-1",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-2",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-3",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-4",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-5",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-6",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-7",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-8",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-9",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-10",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-11",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-12",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-13",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-14",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-15",
+   "attributes": {
+    "country": "CA",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-16",
+   "attributes": {
+    "country": "US",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-17",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-18",
+   "attributes": {
+    "country": "US",
+    "plan": "free"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ },
+ {
+  "flag": {
+   "description": "",
+   "guard": {
+    "enabled": true,
+    "mode": "auto",
+    "minSamples": 100,
+    "alpha": 0.001,
+    "minDifference": 0.05,
+    "windowSeconds": 30
+   },
+   "version": 1,
+   "updatedAt": "2026-01-01T00:00:00+00:00",
+   "key": "by-id",
+   "enabled": true,
+   "rolloutPercent": 100,
+   "conditions": [
+    {
+     "attribute": "id",
+     "operator": "in",
+     "values": [
+      "user-1",
+      "USER-2"
+     ]
+    }
+   ]
+  },
+  "user": {
+   "id": "bulk-19",
+   "attributes": {
+    "country": "CA",
+    "plan": "beta"
+   }
+  },
+  "enabled": false,
+  "reason": "conditionNotMet"
+ }
+]

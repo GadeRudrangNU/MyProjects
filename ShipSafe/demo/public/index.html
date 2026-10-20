@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Store</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f59e0b'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Acme Store</h1>
+      <span class="pill" id="connection" data-testid="connection">Connecting…</span>
+    </header>
+
+    <main>
+      <section class="panel" aria-labelledby="shopper-title">
+        <h2 id="shopper-title">Shopper</h2>
+        <div class="fields">
+          <label>User
+            <input id="user-id" data-testid="user-id" value="" autocomplete="off" />
+          </label>
+          <label>Country
+            <select id="country" data-testid="country">
+              <option>US</option>
+              <option>CA</option>
+              <option>GB</option>
+            </select>
+          </label>
+          <label>Plan
+            <select id="plan" data-testid="plan">
+              <option>free</option>
+              <option>pro</option>
+              <option>beta</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="cart">
+          <span>Trail running shoes</span>
+          <strong>$84.00</strong>
+        </div>
+
+        <div id="checkout" class="checkout" data-testid="checkout" data-variant="classic">
+          <span class="badge" id="checkout-badge" hidden>NEW</span>
+          <h3 id="checkout-title">Checkout</h3>
+          <p id="checkout-copy">Step 1 of 3: address, payment, review.</p>
+          <button id="place-order" data-testid="place-order" class="order">Continue</button>
+        </div>
+        <p id="order-result" data-testid="order-result" class="result" role="status"></p>
+        <p class="hint">This shopper is bucketed by user id, so they always see the same checkout.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="release-title">
+        <h2 id="release-title">Release control</h2>
+        <p class="flag-line" id="flag-status" data-testid="flag-status">Loading flag…</p>
+
+        <div class="buttons">
+          <button id="traffic-toggle" data-testid="traffic-toggle">Start traffic</button>
+          <button id="bug-toggle" data-testid="bug-toggle" class="warn">Ship a bad build</button>
+          <button id="rerelease" data-testid="rerelease">Fix and re-release</button>
+        </div>
+
+        <div id="rollback-banner" class="banner" data-testid="rollback-banner" role="alert" hidden></div>
+
+        <h3>Last <span id="window">30</span> seconds</h3>
+        <div class="results">
+          <div class="result-card new">
+            <span class="label">New checkout</span>
+            <strong id="rate-on" data-testid="rate-on">–</strong>
+            <span class="muted" id="count-on">0 requests</span>
+          </div>
+          <div class="result-card classic">
+            <span class="label">Classic checkout</span>
+            <strong id="rate-off" data-testid="rate-off">–</strong>
+            <span class="muted" id="count-off">0 requests</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
