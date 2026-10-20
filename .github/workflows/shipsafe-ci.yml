@@ -23,6 +23,7 @@ jobs:
       - name: Test with coverage gate
         run: >
           dotnet test tests/ShipSafe.Tests -c Release
+          --logger GitHubActions
           -p:CollectCoverage=true
           -p:CoverletOutputFormat=cobertura
           -p:CoverletOutput=./coverage/
