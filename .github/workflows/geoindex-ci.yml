@@ -1,0 +1,39 @@
+name: GeoIndex CI
+
+on:
+  push:
+    branches: [master]
+    paths: ["GeoIndex/**", ".github/workflows/geoindex-ci.yml"]
+  pull_request:
+    paths: ["GeoIndex/**", ".github/workflows/geoindex-ci.yml"]
+
+defaults:
+  run:
+    working-directory: GeoIndex
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - run: chmod +x gradlew
+      - name: Test with 85% coverage gate
+        run: ./gradlew check --console=plain
+      - name: Compile benchmarks
+        run: ./gradlew jmhClasses --console=plain
+      - name: Smoke load test
+        run: >
+          ./gradlew loadTest --console=plain
+          -PloadArgs="--points 50000 --duration 5 --warmup 2 --update-rate 5000 --nearest-rate 1000 --within-rate 100"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: geoindex-reports
+          path: |
+            GeoIndex/build/reports/jacoco/
+            GeoIndex/build/reports/tests/

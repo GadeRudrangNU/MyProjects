@@ -1,0 +1,38 @@
+CPU samples: 4915
+
+Top frames by self time (where the CPU is actually spent)
+   28.0%    1374  java.util.concurrent.ConcurrentHashMap.get
+   12.6%     620  java.util.TimSort.mergeLo
+   10.7%     525  io.geoindex.index.SpatialIndexKt.rankedNeighbors
+    8.4%     411  java.util.TimSort.mergeHi
+    7.0%     346  java.util.TimSort.mergeForceCollapse
+    6.0%     296  io.geoindex.loadgen.LoadRunner.awaitNanoTime
+    4.7%     233  io.geoindex.service.GeoService.within
+    2.7%     134  java.util.TimSort.binarySort
+    2.4%     118  java.lang.String.equals
+    2.2%     109  io.geoindex.index.QuadTreeIndex.withinRadius
+    1.6%      81  java.util.concurrent.ConcurrentHashMap.transfer
+    1.6%      79  java.util.HashMap.putVal
+
+Top project methods on the stack (who asked for it)
+   46.2%    2270  io.geoindex.index.SpatialIndexKt.rankedNeighbors
+   30.6%    1504  io.geoindex.index.StripedIndex.isCurrent
+    6.0%     296  io.geoindex.loadgen.LoadRunner.awaitNanoTime
+    5.1%     252  io.geoindex.service.GeoService.within
+    3.2%     155  io.geoindex.index.QuadTreeIndex.withinRadius
+    2.0%      99  io.geoindex.index.StripedIndex.upsert
+    1.1%      55  io.geoindex.index.QuadTreeIndex.nearest
+    0.8%      41  io.geoindex.service.ExpiryQueue$$Lambda+0x0000025d01109a10.1277933280.invoke
+    0.7%      32  io.geoindex.service.GeoService.apply
+    0.5%      27  io.geoindex.loadgen.LoadRunner.preload$lambda$5$lambda$3
+    0.5%      24  io.geoindex.data.SyntheticCity.querySample
+    0.4%      22  io.geoindex.service.ExpiryQueue.heap$lambda$1
+
+Allocation pressure by class (sampled, weighted)
+   25.6%  java.util.HashMap$Node
+   20.5%  io.geoindex.service.Located
+   17.1%  [Ljava.lang.Object;
+   16.1%  io.geoindex.index.Neighbor
+   10.5%  java.lang.Double
+    3.9%  [Ljava.util.HashMap$Node;
+    3.4%  io.geoindex.index.QuadTreeIndex$Entry

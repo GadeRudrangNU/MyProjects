@@ -1,0 +1,45 @@
+{
+    "target": "inprocess",
+    "index": "quadtree",
+    "points": 1000000,
+    "dataset": "synthetic",
+    "durationSeconds": 20,
+    "threads": 8,
+    "targetUpdatesPerSecond": 20000,
+    "updateBatchSize": 100,
+    "targetNearestPerSecond": 3000,
+    "targetWithinPerSecond": 300,
+    "updateBatch": {
+        "operations": 4000,
+        "perSecond": 200.0,
+        "meanMs": 1.191062176,
+        "p50Ms": 0.791039,
+        "p90Ms": 2.148351,
+        "p99Ms": 6.979583,
+        "p999Ms": 11.001855,
+        "maxMs": 14.811135
+    },
+    "nearest": {
+        "operations": 60000,
+        "perSecond": 3000.0,
+        "meanMs": 0.09596930013333334,
+        "p50Ms": 0.067327,
+        "p90Ms": 0.104255,
+        "p99Ms": 0.626687,
+        "p999Ms": 4.182015,
+        "maxMs": 12.763135
+    },
+    "within": {
+        "operations": 6000,
+        "perSecond": 300.0,
+        "meanMs": 9.539188682666667,
+        "p50Ms": 2.426879,
+        "p90Ms": 29.048831,
+        "p99Ms": 59.113471,
+        "p999Ms": 89.260031,
+        "maxMs": 106.364927
+    },
+    "achievedUpdatesPerSecond": 20000.0,
+    "rejectedBatches": 0,
+    "errors": 0
+}

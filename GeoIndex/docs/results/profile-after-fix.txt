@@ -1,0 +1,41 @@
+CPU samples: 1926 (excluding 5329 samples of the load generator waiting for its next scheduled operation)
+
+Top frames by self time (where the CPU is actually spent)
+   16.5%     317  io.geoindex.data.SyntheticCity.querySample
+   12.0%     231  java.util.ArrayList.add
+   10.2%     196  java.util.TimSort.mergeLo
+    9.0%     174  java.util.PriorityQueue.siftUpUsingComparator
+    8.0%     154  io.geoindex.index.SpatialIndexKt.rankedNeighbors
+    7.1%     137  java.util.TimSort.reverseRange
+    6.2%     120  java.util.TimSort.mergeHi
+    3.1%      60  java.util.concurrent.ConcurrentHashMap.transfer
+    2.5%      48  io.geoindex.index.QuadTreeIndex.insertIntoCell
+    2.1%      40  java.util.concurrent.atomic.AtomicLongFieldUpdater$CASUpdater.accessCheck
+    1.4%      27  io.geoindex.index.QuadTreeIndex.withinRadius
+    1.3%      25  io.geoindex.index.QuadTreeIndex$Node.add
+
+Top project methods on the stack (who asked for it)
+   36.0%     693  io.geoindex.index.SpatialIndexKt.rankedNeighbors
+   16.5%     318  io.geoindex.data.SyntheticCity.querySample
+   10.9%     210  io.geoindex.index.QuadTreeIndex.nearest
+    9.6%     184  io.geoindex.index.QuadTreeIndex.withinRadius
+    5.8%     111  io.geoindex.index.StripedIndex.upsert
+    5.6%     107  io.geoindex.service.GeoService.within
+    2.5%      48  io.geoindex.index.QuadTreeIndex.insertIntoCell
+    1.8%      35  io.geoindex.loadgen.LoadRunner.preload$lambda$5$lambda$3
+    1.8%      34  io.geoindex.service.GeoService.apply
+    1.3%      25  io.geoindex.index.QuadTreeIndex$Node.add
+    0.9%      17  io.geoindex.loadgen.LoadRunner.runWorker
+    0.8%      16  io.geoindex.index.SpatialIndexKt.squaredDistance
+
+Allocation pressure by class (sampled, weighted)
+   20.2%  [Ljava.lang.Object;
+   18.3%  io.geoindex.service.Located
+   17.9%  io.geoindex.index.Neighbor
+   14.7%  java.util.HashMap$Node
+    9.0%  java.lang.Double
+    7.5%  io.geoindex.index.QuadTreeIndex$Entry
+    3.0%  io.geoindex.data.LatLon
+    2.3%  [Ljava.util.HashMap$Node;
+    1.0%  io.geoindex.service.PositionUpdate
+    1.0%  java.lang.String
