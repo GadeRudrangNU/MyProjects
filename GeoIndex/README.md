@@ -101,4 +101,3 @@ Benchmarks and load tests run on a synthetic city: a fixed-seed mixture of Gauss
 | CI | GitHub Actions |
 | Demo map | Leaflet with OpenStreetMap tiles |
 
-Everything is free and runs with `./gradlew run`. There is no database, because the index lives in memory, and no containers. Build, test, benchmark and profiling commands are in [docs/development.md](docs/development.md).
