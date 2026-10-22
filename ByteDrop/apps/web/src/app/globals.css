@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --border: #d9e0ea;
+  --input: #94a3b8;
+  --primary: #4338ca;
+  --primary-foreground: #ffffff;
+  --accent: #eef2ff;
+  --accent-foreground: #312e81;
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+  --success: #166534;
+  --success-bg: #dcfce7;
+  --warning: #92400e;
+  --warning-bg: #fef3c7;
+  --danger-bg: #fee2e2;
+  --danger: #991b1b;
+  --ring: #4338ca;
+  --chart-1: #4338ca;
+  --chart-2: #0e7490;
+  --chart-3: #b45309;
+  --chart-4: #be185d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1020;
+    --foreground: #e2e8f0;
+    --card: #111830;
+    --muted: #1a2340;
+    --muted-foreground: #a3b0c6;
+    --border: #28344f;
+    --input: #64748b;
+    --primary: #a5b4fc;
+    --primary-foreground: #0b1020;
+    --accent: #1e2750;
+    --accent-foreground: #c7d2fe;
+    --destructive: #f87171;
+    --destructive-foreground: #0b1020;
+    --success: #86efac;
+    --success-bg: #14301f;
+    --warning: #fcd34d;
+    --warning-bg: #35280c;
+    --danger-bg: #3b1519;
+    --danger: #fca5a5;
+    --ring: #a5b4fc;
+    --chart-1: #a5b4fc;
+    --chart-2: #67e8f9;
+    --chart-3: #fcd34d;
+    --chart-4: #f9a8d4;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+  --color-ring: var(--ring);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    color-scheme: light dark;
+  }
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

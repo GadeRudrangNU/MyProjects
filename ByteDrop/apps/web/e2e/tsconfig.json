@@ -1,0 +1,6 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "incremental": false, "types": ["node"], "paths": { "@/*": ["../src/*"] } },
+  "include": ["./**/*.ts", "../playwright.config.ts"],
+  "exclude": []
+}

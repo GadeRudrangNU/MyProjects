@@ -1,0 +1,29 @@
+{
+  "name": "bytedrop",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@12.11.2",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "node scripts/dev.mjs",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "db:generate": "pnpm --filter @bytedrop/api db:generate",
+    "bundle-size": "pnpm --filter @bytedrop/web bundle-size",
+    "lhci": "pnpm --filter @bytedrop/web lhci",
+    "e2e": "pnpm --filter @bytedrop/web e2e",
+    "loadtest": "node scripts/loadtest.mjs",
+    "incident": "pnpm --filter @bytedrop/api incident",
+    "gifs": "node scripts/record-gifs.mjs",
+    "verify": "pnpm typecheck && pnpm test && pnpm build && pnpm bundle-size"
+  },
+  "devDependencies": {
+    "autocannon": "^8.0.0",
+    "gifenc": "^1.0.3",
+    "turbo": "^2.11.8",
+    "typescript": "^5.9.0"
+  }
+}

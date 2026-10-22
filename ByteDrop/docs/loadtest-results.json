@@ -1,0 +1,112 @@
+{
+  "generatedAt": "2026-10-15T20:01:17.677Z",
+  "connections": 64,
+  "secondsPerScenario": 6,
+  "ports": {
+    "pg": 54360,
+    "api": 4100,
+    "worker": 4101,
+    "receiver": 4110,
+    "web": 3100
+  },
+  "results": [
+    {
+      "scenario": "Baseline: GET /health",
+      "note": "framework floor, no database",
+      "requestsPerSecond": 2044,
+      "latencyMs": {
+        "p50": 25,
+        "p97_5": 83,
+        "p99": 104,
+        "max": 159
+      },
+      "throughputMBps": 0.8,
+      "non2xx": 0,
+      "errors": 0
+    },
+    {
+      "scenario": "Delivery: original file (200)",
+      "note": "143 KB body",
+      "requestsPerSecond": 127,
+      "latencyMs": {
+        "p50": 577,
+        "p97_5": 755,
+        "p99": 760,
+        "max": 770
+      },
+      "throughputMBps": 17.8,
+      "non2xx": 0,
+      "errors": 0
+    },
+    {
+      "scenario": "Delivery: conditional request (304)",
+      "note": "no body",
+      "requestsPerSecond": 997,
+      "latencyMs": {
+        "p50": 55,
+        "p97_5": 181,
+        "p99": 197,
+        "max": 268
+      },
+      "throughputMBps": 0.5,
+      "non2xx": 5980,
+      "errors": 0
+    },
+    {
+      "scenario": "Delivery: cached image transform",
+      "note": "w=400 webp from the disk cache",
+      "requestsPerSecond": 736,
+      "latencyMs": {
+        "p50": 86,
+        "p97_5": 154,
+        "p99": 163,
+        "max": 174
+      },
+      "throughputMBps": 2.2,
+      "non2xx": 0,
+      "errors": 0
+    },
+    {
+      "scenario": "Delivery: range request (206)",
+      "note": "first 64 KB",
+      "requestsPerSecond": 271,
+      "latencyMs": {
+        "p50": 258,
+        "p97_5": 317,
+        "p99": 320,
+        "max": 333
+      },
+      "throughputMBps": 17.1,
+      "non2xx": 0,
+      "errors": 0
+    },
+    {
+      "scenario": "API: list files (API key)",
+      "note": "cursor-paginated query",
+      "requestsPerSecond": 182,
+      "latencyMs": {
+        "p50": 336,
+        "p97_5": 519,
+        "p99": 575,
+        "max": 864
+      },
+      "throughputMBps": 1,
+      "non2xx": 0,
+      "errors": 0
+    },
+    {
+      "scenario": "API: analytics (API key)",
+      "note": "7 days of hourly rollups",
+      "requestsPerSecond": 33,
+      "latencyMs": {
+        "p50": 1599,
+        "p97_5": 2784,
+        "p99": 2786,
+        "max": 2826
+      },
+      "throughputMBps": 0.1,
+      "non2xx": 0,
+      "errors": 0
+    }
+  ]
+}

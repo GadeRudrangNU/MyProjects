@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Runbook
+    url: https://github.com/OWNER/bytedrop/blob/main/RUNBOOK.md
+    about: Diagnosing slow delivery, webhook backlogs, full disks and failed uploads

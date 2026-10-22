@@ -1,0 +1,1461 @@
+{
+  "generatedAt": "2026-10-15T19:22:09.344Z",
+  "results": [
+    {
+      "scenario": "before",
+      "description": "Original settings: long receiver timeout, no circuit breaker, 2 delivery slots",
+      "settings": {
+        "WEBHOOK_TIMEOUT_MS": 8000,
+        "WEBHOOK_BREAKER": "off",
+        "WEBHOOK_CONCURRENCY": 2
+      },
+      "events": 24,
+      "healthyDelivered": 24,
+      "secondsUntilAllHealthyDelivered": 103.201,
+      "healthyLagSeconds": {
+        "p50": 48.85,
+        "p95": 89.399,
+        "max": 97.014
+      },
+      "peakBacklog": 47,
+      "attemptsAtStuckReceiver": 25,
+      "attemptOutcomes": [
+        "{outcome=\"success\"} 24",
+        "{outcome=\"timeout\"} 23"
+      ],
+      "timeline": [
+        {
+          "t": 0.3,
+          "backlog": 2,
+          "healthyDelivered": 0,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 0.8,
+          "backlog": 5,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 1.3,
+          "backlog": 9,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 1.8,
+          "backlog": 13,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 2.3,
+          "backlog": 17,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 2.8,
+          "backlog": 21,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 3.2,
+          "backlog": 25,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 3.7,
+          "backlog": 29,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 4.2,
+          "backlog": 33,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 4.7,
+          "backlog": 37,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 5.1,
+          "backlog": 41,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 5.6,
+          "backlog": 45,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 5.9,
+          "backlog": 47,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 6.6,
+          "backlog": 47,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 7.3,
+          "backlog": 47,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 7.9,
+          "backlog": 47,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 8.4,
+          "backlog": 47,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 8.9,
+          "backlog": 46,
+          "healthyDelivered": 2,
+          "stuckAttempts": 1
+        },
+        {
+          "t": 9.5,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 10,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 10.5,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 11,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 11.5,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 12,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 12.5,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 13.1,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 13.6,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 14.1,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 14.6,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 15.1,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 15.6,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 16.1,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 16.6,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 17.2,
+          "backlog": 45,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 17.7,
+          "backlog": 44,
+          "healthyDelivered": 4,
+          "stuckAttempts": 3
+        },
+        {
+          "t": 18.2,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 18.7,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 19.2,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 19.7,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 20.2,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 20.7,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 21.2,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 21.7,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 22.3,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 22.8,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 23.3,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 23.8,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 24.3,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 24.8,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 25.3,
+          "backlog": 43,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 25.9,
+          "backlog": 42,
+          "healthyDelivered": 6,
+          "stuckAttempts": 5
+        },
+        {
+          "t": 26.4,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 26.9,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 27.4,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 27.9,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 28.4,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 28.9,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 29.4,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 30,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 30.5,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 31,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 31.5,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 32,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 32.5,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 33,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 33.5,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 34.1,
+          "backlog": 41,
+          "healthyDelivered": 7,
+          "stuckAttempts": 6
+        },
+        {
+          "t": 34.6,
+          "backlog": 40,
+          "healthyDelivered": 8,
+          "stuckAttempts": 7
+        },
+        {
+          "t": 35.1,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 35.6,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 36.1,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 36.6,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 37.1,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 37.7,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 38.2,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 38.7,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 39.2,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 39.7,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 40.2,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 40.7,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 41.2,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 41.8,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 42.3,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 42.8,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 8
+        },
+        {
+          "t": 43.3,
+          "backlog": 38,
+          "healthyDelivered": 10,
+          "stuckAttempts": 9
+        },
+        {
+          "t": 43.8,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 44.3,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 44.8,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 45.3,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 45.9,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 46.4,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 46.9,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 47.4,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 47.9,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 48.4,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 49,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 49.5,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 50,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 50.5,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 51,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 10
+        },
+        {
+          "t": 51.5,
+          "backlog": 36,
+          "healthyDelivered": 12,
+          "stuckAttempts": 11
+        },
+        {
+          "t": 52,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 52.5,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 53.1,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 53.6,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 54.1,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 54.6,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 55.1,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 55.6,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 56.1,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 56.6,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 57.2,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 57.7,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 58.2,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 58.7,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 59.2,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 59.7,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 12
+        },
+        {
+          "t": 60.2,
+          "backlog": 34,
+          "healthyDelivered": 14,
+          "stuckAttempts": 13
+        },
+        {
+          "t": 60.7,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 61.2,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 61.8,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 62.3,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 62.8,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 63.3,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 63.8,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 64.3,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 64.8,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 65.4,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 65.9,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 66.4,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 66.9,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 67.4,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 67.9,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 68.4,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 14
+        },
+        {
+          "t": 68.9,
+          "backlog": 32,
+          "healthyDelivered": 16,
+          "stuckAttempts": 15
+        },
+        {
+          "t": 69.4,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 70,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 70.5,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 71,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 71.5,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 72,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 72.5,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 73,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 73.5,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 74,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 74.6,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 75.1,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 75.6,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 76.1,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 76.6,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 16
+        },
+        {
+          "t": 77.1,
+          "backlog": 30,
+          "healthyDelivered": 18,
+          "stuckAttempts": 17
+        },
+        {
+          "t": 77.6,
+          "backlog": 30,
+          "healthyDelivered": 18,
+          "stuckAttempts": 17
+        },
+        {
+          "t": 78.1,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 78.6,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 79.2,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 79.7,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 80.2,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 80.7,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 81.2,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 81.7,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 82.2,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 82.7,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 83.3,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 83.8,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 84.3,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 84.8,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 85.3,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 18
+        },
+        {
+          "t": 85.8,
+          "backlog": 28,
+          "healthyDelivered": 20,
+          "stuckAttempts": 19
+        },
+        {
+          "t": 86.3,
+          "backlog": 28,
+          "healthyDelivered": 20,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 86.8,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 87.4,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 87.9,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 88.4,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 88.9,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 89.4,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 89.9,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 90.4,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 90.9,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 91.4,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 91.9,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 92.5,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 93,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 93.5,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 94,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 20
+        },
+        {
+          "t": 94.5,
+          "backlog": 26,
+          "healthyDelivered": 22,
+          "stuckAttempts": 21
+        },
+        {
+          "t": 95,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 95.5,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 96,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 96.6,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 97.1,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 97.6,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 98.1,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 98.6,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 99.1,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 99.6,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 100.1,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 100.6,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 101.2,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 101.7,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 102.2,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 22
+        },
+        {
+          "t": 102.7,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 23
+        },
+        {
+          "t": 103.2,
+          "backlog": 24,
+          "healthyDelivered": 24,
+          "stuckAttempts": 23
+        },
+        {
+          "t": 103.2,
+          "backlog": 24,
+          "healthyDelivered": 24,
+          "stuckAttempts": 23
+        }
+      ]
+    },
+    {
+      "scenario": "after",
+      "description": "Fixed settings: short receiver timeout and a per-endpoint circuit breaker, same 2 slots",
+      "settings": {
+        "WEBHOOK_TIMEOUT_MS": 1000,
+        "WEBHOOK_BREAKER": "on",
+        "WEBHOOK_BREAKER_THRESHOLD": 3,
+        "WEBHOOK_BREAKER_COOLDOWN_MS": 30000,
+        "WEBHOOK_CONCURRENCY": 2
+      },
+      "events": 24,
+      "healthyDelivered": 24,
+      "secondsUntilAllHealthyDelivered": 14.672,
+      "healthyLagSeconds": {
+        "p50": 5.38,
+        "p95": 8.024,
+        "max": 8.307
+      },
+      "peakBacklog": 40,
+      "attemptsAtStuckReceiver": 4,
+      "attemptOutcomes": [
+        "{outcome=\"success\"} 24",
+        "{outcome=\"timeout\"} 4"
+      ],
+      "timeline": [
+        {
+          "t": 0.3,
+          "backlog": 2,
+          "healthyDelivered": 0,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 0.8,
+          "backlog": 5,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 1.3,
+          "backlog": 9,
+          "healthyDelivered": 1,
+          "stuckAttempts": 0
+        },
+        {
+          "t": 1.7,
+          "backlog": 12,
+          "healthyDelivered": 2,
+          "stuckAttempts": 1
+        },
+        {
+          "t": 2.2,
+          "backlog": 15,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 2.7,
+          "backlog": 19,
+          "healthyDelivered": 3,
+          "stuckAttempts": 2
+        },
+        {
+          "t": 3.4,
+          "backlog": 22,
+          "healthyDelivered": 4,
+          "stuckAttempts": 3
+        },
+        {
+          "t": 3.9,
+          "backlog": 25,
+          "healthyDelivered": 5,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 4.3,
+          "backlog": 28,
+          "healthyDelivered": 6,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 4.8,
+          "backlog": 31,
+          "healthyDelivered": 7,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 5.3,
+          "backlog": 34,
+          "healthyDelivered": 8,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 5.8,
+          "backlog": 38,
+          "healthyDelivered": 8,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 6,
+          "backlog": 40,
+          "healthyDelivered": 8,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 6.5,
+          "backlog": 39,
+          "healthyDelivered": 9,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 7,
+          "backlog": 38,
+          "healthyDelivered": 10,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 7.6,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 8.1,
+          "backlog": 37,
+          "healthyDelivered": 11,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 8.6,
+          "backlog": 36,
+          "healthyDelivered": 12,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 9.1,
+          "backlog": 35,
+          "healthyDelivered": 13,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 9.6,
+          "backlog": 34,
+          "healthyDelivered": 14,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 10.1,
+          "backlog": 33,
+          "healthyDelivered": 15,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 10.6,
+          "backlog": 32,
+          "healthyDelivered": 16,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 11.1,
+          "backlog": 31,
+          "healthyDelivered": 17,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 11.6,
+          "backlog": 30,
+          "healthyDelivered": 18,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 12.1,
+          "backlog": 29,
+          "healthyDelivered": 19,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 12.6,
+          "backlog": 28,
+          "healthyDelivered": 20,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 13.1,
+          "backlog": 27,
+          "healthyDelivered": 21,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 13.7,
+          "backlog": 26,
+          "healthyDelivered": 22,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 14.2,
+          "backlog": 25,
+          "healthyDelivered": 23,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 14.7,
+          "backlog": 24,
+          "healthyDelivered": 24,
+          "stuckAttempts": 4
+        },
+        {
+          "t": 14.7,
+          "backlog": 24,
+          "healthyDelivered": 24,
+          "stuckAttempts": 4
+        }
+      ]
+    }
+  ]
+}

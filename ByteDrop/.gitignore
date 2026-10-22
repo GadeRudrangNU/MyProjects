@@ -1,0 +1,16 @@
+node_modules
+dist
+.next
+.turbo
+.data
+coverage
+*.log
+.env
+.env.local
+playwright-report
+test-results
+.lighthouseci
+*.tsbuildinfo
+next-env.d.ts
+.next-*
+.data*
